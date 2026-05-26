@@ -1,0 +1,193 @@
+{
+  "timestamp": "20260525_102456",
+  "level": "L2",
+  "dataset": "data/mock_events_L2.json",
+  "macro_filter": {
+    "vix": [
+      18.0,
+      100.0
+    ]
+  },
+  "n_train": 150,
+  "n_test": 50,
+  "results": [
+    {
+      "name": "concat_raw",
+      "precision_at_5": 0.75,
+      "precision_at_10": 0.715,
+      "reaction_corr": 0.3548,
+      "conditional_quality": 0.635,
+      "utility_at_5": 0.46,
+      "fit_time_s": 6.17,
+      "eval_time_s": 0.45,
+      "wall_time_s": 6.63,
+      "notes": "-",
+      "extras": {}
+    },
+    {
+      "name": "concat_eq",
+      "precision_at_5": 0.765,
+      "precision_at_10": 0.735,
+      "reaction_corr": 0.3823,
+      "conditional_quality": 0.595,
+      "utility_at_5": 0.455,
+      "fit_time_s": 0.0,
+      "eval_time_s": 0.17,
+      "wall_time_s": 0.17,
+      "notes": "-",
+      "extras": {}
+    },
+    {
+      "name": "factorized",
+      "precision_at_5": 0.72,
+      "precision_at_10": 0.6175,
+      "reaction_corr": 0.3765,
+      "conditional_quality": 1.0,
+      "utility_at_5": 0.485,
+      "fit_time_s": 0.0,
+      "eval_time_s": 0.12,
+      "wall_time_s": 0.12,
+      "notes": "-",
+      "extras": {}
+    },
+    {
+      "name": "contrastive",
+      "precision_at_5": 0.565,
+      "precision_at_10": 0.5325,
+      "reaction_corr": 0.1868,
+      "conditional_quality": 0.53,
+      "utility_at_5": 0.37,
+      "fit_time_s": 0.66,
+      "eval_time_s": 0.22,
+      "wall_time_s": 0.88,
+      "notes": "-",
+      "extras": {}
+    },
+    {
+      "name": "contrastive_v2",
+      "precision_at_5": 0.62,
+      "precision_at_10": 0.5825,
+      "reaction_corr": 0.3619,
+      "conditional_quality": 0.64,
+      "utility_at_5": 0.4,
+      "fit_time_s": 1.57,
+      "eval_time_s": 0.21,
+      "wall_time_s": 1.78,
+      "notes": "-",
+      "extras": {}
+    },
+    {
+      "name": "graph_experimental",
+      "precision_at_5": 0.83,
+      "precision_at_10": 0.7575,
+      "reaction_corr": 0.2864,
+      "conditional_quality": 0.655,
+      "utility_at_5": 0.515,
+      "fit_time_s": 0.0,
+      "eval_time_s": 0.2,
+      "wall_time_s": 0.21,
+      "notes": "experimental",
+      "extras": {}
+    },
+    {
+      "name": "llm_structured",
+      "precision_at_5": 0.82,
+      "precision_at_10": 0.765,
+      "reaction_corr": 0.375,
+      "conditional_quality": 0.625,
+      "utility_at_5": 0.49,
+      "fit_time_s": 414.56,
+      "eval_time_s": 115.61,
+      "wall_time_s": 530.16,
+      "notes": "12 LLM failures",
+      "extras": {
+        "dominant_narrative": {
+          "demand_shift": 63,
+          "margin_compression": 53,
+          "growth_acceleration": 109,
+          "growth_deceleration": 29,
+          "macro_pressure": 74,
+          "guidance_cut": 1,
+          "margin_expansion": 17,
+          "guidance_raise": 4,
+          "supply_constraint": 2
+        },
+        "surprise_type": {
+          "negative_miss": 74,
+          "positive_beat": 142,
+          "in_line": 102,
+          "guidance_only": 27,
+          "mixed": 7
+        },
+        "risk_asymmetry": {
+          "downside": 154,
+          "upside": 152,
+          "balanced": 46
+        },
+        "implicit_cycle_phase": {
+          "mid": 200,
+          "early": 44,
+          "late": 34,
+          "recovery": 45,
+          "recession": 29
+        },
+        "confidence_level": {
+          "3": 187,
+          "5": 12,
+          "2": 20,
+          "4": 133
+        }
+      }
+    },
+    {
+      "name": "llm_structured_v2",
+      "precision_at_5": 0.85,
+      "precision_at_10": 0.8025,
+      "reaction_corr": 0.3951,
+      "conditional_quality": 0.66,
+      "utility_at_5": 0.535,
+      "fit_time_s": 392.28,
+      "eval_time_s": 132.82,
+      "wall_time_s": 525.1,
+      "notes": "4 LLM failures",
+      "extras": {
+        "event_polarity": {
+          "negative": 109,
+          "positive": 170,
+          "neutral": 73
+        },
+        "surprise_magnitude": {
+          "moderate": 160,
+          "large": 38,
+          "minimal": 154
+        },
+        "dominant_driver": {
+          "demand": 164,
+          "margins": 53,
+          "guidance": 40,
+          "macro": 78,
+          "operational": 12,
+          "competitive": 5
+        },
+        "risk_asymmetry": {
+          "downside": 134,
+          "upside": 170,
+          "balanced": 48
+        },
+        "cycle_phase": {
+          "mid": 236,
+          "recovery": 61,
+          "recession": 22,
+          "early": 11,
+          "late": 22
+        },
+        "confidence_level": {
+          "3": 147,
+          "5": 115,
+          "2": 24,
+          "4": 66
+        }
+      }
+    }
+  ]
+}

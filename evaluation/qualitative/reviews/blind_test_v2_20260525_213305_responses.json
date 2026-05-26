@@ -1,0 +1,1464 @@
+{
+  "review_id": "blind_test_v2_20260525_213305",
+  "completed_at": "2026-05-26T11:03:21",
+  "responses": [
+    {
+      "query_id": 1,
+      "candidate_label": "A",
+      "notes": "",
+      "ratings": {
+        "same_surprise": 4,
+        "mental_precedent": 1,
+        "same_regime": 5,
+        "same_dynamic": 1
+      }
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "B",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "C",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "D",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 1,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "E",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "F",
+      "notes": "causa probabile covid per il candidato",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "G",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "H",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 4,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "I",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 4,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "A",
+      "notes": "HPE colpita da lockdown, GWW trimestrale positiva pre-covid",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "B",
+      "notes": "",
+      "ratings": {
+        "mental_precedent": 3,
+        "same_surprise": 5,
+        "same_regime": 5,
+        "same_dynamic": 4
+      }
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "C",
+      "notes": "stesso mese, impatto covid negativo su entrambe",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "D",
+      "notes": "Stesso shock Covid, crollo ricavi a doppia cifra",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "E",
+      "notes": "Stesso shock pandemico, ma dinamiche settoriali differenti",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "F",
+      "notes": "Settori opposti: HPE bloccata, FDX spinta dall'e-commerce",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 4,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "G",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "H",
+      "notes": "Stesso impatto Covid sui ricavi, ma CPAY lancia buyback",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "I",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "A",
+      "notes": "Stesso mese e tassi, ottime trimestrali in crescita",
+      "ratings": {
+        "same_dynamic": 2,
+        "mental_precedent": 4,
+        "same_surprise": 5,
+        "same_regime": 5
+      }
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "B",
+      "notes": "Entrambe trimestrali record, ma macro 2022 sfavorevole a WSM",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "C",
+      "notes": "Stesso ciclo 2021 ed entrambi beat+raise",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "D",
+      "notes": "Stessa settimana, stesso macroclima e grafici speculari",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 5
+      }
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "E",
+      "notes": "Trimestrali eccezionali con andamento grafico identico",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 5,
+        "mental_precedent": 5
+      }
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "F",
+      "notes": "Stesso macroclima estivo, ma andamenti grafici opposti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "G",
+      "notes": "VIX simile, ma contesti di tassi opposti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "H",
+      "notes": "Settori affini, stesso mese e macroclima identico",
+      "ratings": {
+        "mental_precedent": 4,
+        "same_surprise": 5,
+        "same_regime": 5,
+        "same_dynamic": 4
+      }
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "I",
+      "notes": "STE alza l'outlook, KMB taglia per inflazione",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 4,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "A",
+      "notes": "Stesso macroclima 2019, ma trend grafici opposti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "B",
+      "notes": "Settori distanti e tassi macroeconomici non comparabili",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "C",
+      "notes": "Entrambe ottime trimestrali, ma contesti macro distanti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "D",
+      "notes": "Contesti macro opposti e trend grafici speculari",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "E",
+      "notes": "Entrambe trimestrali record, ma macro e settori distanti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "F",
+      "notes": "Stesso macroclima calmo, traiettoria grafica speculare",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 3,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "G",
+      "notes": "Titoli growth speculari, stessa dinamica sell-the-news",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 4,
+        "same_surprise": 5,
+        "mental_precedent": 5
+      }
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "H",
+      "notes": "Entrambe ottime trimestrali, ma macro 2023 differente",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "I",
+      "notes": "Stesso settore e settimana, ottime trimestrali, direzione grafica diversa",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "A",
+      "notes": "Stesso regime macro di tassi alti, settori distanti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 3,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "B",
+      "notes": "Entrambe notizie positive, ma andamenti grafici opposti",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "C",
+      "notes": "Entrambe ottime trimestrali, ma regimi dei tassi opposti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "D",
+      "notes": "Stessa settimana e tassi alti, ma grafici speculari",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_surprise": 5,
+        "same_regime": 5,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "E",
+      "notes": "Entrambe ottime trimestrali, trend rialzista comune",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 5,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "F",
+      "notes": "Entrambe ottime trimestrali, ma regimi macro diversi",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "G",
+      "notes": "Stesso clima di tassi alti, ma crollo industriale specifico",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "H",
+      "notes": "Tassi identici e grafici in perfetta sincronia",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 5
+      }
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "I",
+      "notes": "AJG espansiva, IEX frena sulla guidance",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "A",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 5,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "B",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "C",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "D",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "E",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "F",
+      "notes": "",
+      "cannot_evaluate": true
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "G",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "H",
+      "notes": "Stesso settore e settimana, grafici speculari in rialzo",
+      "ratings": {
+        "same_dynamic": 5,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 5
+      }
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "I",
+      "notes": "",
+      "ratings": {
+        "mental_precedent": 2,
+        "same_surprise": 5,
+        "same_regime": 3,
+        "same_dynamic": 2
+      }
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "A",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "B",
+      "notes": "",
+      "ratings": {
+        "mental_precedent": 2,
+        "same_surprise": 4,
+        "same_regime": 4,
+        "same_dynamic": 1
+      }
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "C",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "D",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "E",
+      "notes": "",
+      "ratings": {
+        "mental_precedent": 2,
+        "same_surprise": 5,
+        "same_regime": 3,
+        "same_dynamic": 1
+      }
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "F",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 5,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "G",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "H",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "I",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "A",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "B",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "C",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "D",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "E",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "F",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "G",
+      "notes": "Stessi tassi, ma grafici del tutto divergenti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 4,
+        "same_surprise": 5,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "H",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "mental_precedent": 2,
+        "same_surprise": 5
+      }
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "I",
+      "notes": "Ottime trimestrali, ma macro e settori distanti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 5,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "A",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 1,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "B",
+      "notes": "Settori differenti, tassi ed eventi non allineati",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "mental_precedent": 1,
+        "same_surprise": 1
+      }
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "C",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "D",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "E",
+      "notes": "",
+      "ratings": {
+        "mental_precedent": 2,
+        "same_surprise": 1,
+        "same_regime": 4,
+        "same_dynamic": 2
+      }
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "F",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 1,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "G",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 1,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "H",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "I",
+      "notes": "Stesso settore e allarme inflazione, grafici divergenti",
+      "ratings": {
+        "same_dynamic": 5,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "A",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "B",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "C",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "D",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "E",
+      "notes": "Stessa macro iniziale, ma ESS crolla nel 2020",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "F",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "G",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "H",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "A",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "B",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_surprise": 5,
+        "same_regime": 1,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "C",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "D",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "E",
+      "notes": "Stesso evento beat+raise, ma grafici divergenti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 4,
+        "same_surprise": 5,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "F",
+      "notes": "Stesso settore e notizia beat+raise coerente",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 4,
+        "same_surprise": 5,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "G",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 4,
+        "same_surprise": 5,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "H",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "I",
+      "notes": "Stessa macro, ottima sincronia grafica nel finale",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "A",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "B",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "C",
+      "notes": "Stessa macro nel 2020, solidi rally post-evento\n",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "D",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "E",
+      "notes": "Stessa macro nel 2020, grafici altamente sintonizzati",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 5,
+        "same_surprise": 3,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "F",
+      "notes": "Settori e notizie distanti, trend finali positivi",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "G",
+      "notes": "Stessa macro nel 2020, ma TSCO decolla",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "H",
+      "notes": "Stessa macro nel 2020, grafici altamente sintonizzati",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 5
+      }
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "I",
+      "notes": "Grafici del tutto speculari, tassi ed eventi opposti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "A",
+      "notes": "Stesso ciclo manifatturiero 2019, grafici altamente sintonizzat\n",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 4,
+        "same_surprise": 4,
+        "mental_precedent": 5
+      }
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "B",
+      "notes": "Notizie opposte, tassi e grafici non allineati",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "C",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "D",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "E",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 4,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "F",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "G",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 1,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "H",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "I",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "A",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 1,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "B",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "C",
+      "notes": "Stessa macro 2023, ma grafici divergenti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "D",
+      "notes": "Stesso clima e notizia beat+raise, grafici speculari",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "E",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "F",
+      "notes": "Notizie positive, ma grafici del tutto capovolti",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 4,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "G",
+      "notes": "Notizie e macro opposte, grafici divergenti nel finale",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "H",
+      "notes": "Notizie positive, ma grafici divergenti nel finale",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 4,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "I",
+      "notes": "Stesso giorno, grafici sintonizzati al millimetro dalla macro",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 1,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "A",
+      "notes": "Stessa macro nel 2020, grafici altamente sintonizzati",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "B",
+      "notes": "Stessa macro e tagli Covid, ottima sintonizzazione",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 5,
+        "same_surprise": 5,
+        "mental_precedent": 4
+      }
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "C",
+      "notes": "Stessa macro nel 2020, ma grafici divergenti",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "D",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 2
+      }
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "E",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      }
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "F",
+      "notes": "Stessa macro nel 2020, grafici altamente sintonizzati",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 5
+      }
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "G",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      }
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "H",
+      "notes": "",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "timestamp": "20260525_104143",
+  "level": "L3",
+  "dataset": "data/mock_events_L3.json",
+  "macro_filter": {
+    "vix": [
+      18.0,
+      100.0
+    ]
+  },
+  "n_train": 200,
+  "n_test": 67,
+  "results": [
+    {
+      "name": "concat_raw",
+      "precision_at_5": 0.495,
+      "precision_at_10": 0.4175,
+      "reaction_corr": 0.2369,
+      "conditional_quality": 0.7,
+      "utility_at_5": 0.24,
+      "fit_time_s": 5.99,
+      "eval_time_s": 0.25,
+      "wall_time_s": 6.24,
+      "notes": "-",
+      "extras": {}
+    },
+    {
+      "name": "concat_eq",
+      "precision_at_5": 0.51,
+      "precision_at_10": 0.4625,
+      "reaction_corr": 0.2975,
+      "conditional_quality": 0.68,
+      "utility_at_5": 0.23,
+      "fit_time_s": 0.0,
+      "eval_time_s": 0.21,
+      "wall_time_s": 0.22,
+      "notes": "-",
+      "extras": {}
+    },
+    {
+      "name": "factorized",
+      "precision_at_5": 0.375,
+      "precision_at_10": 0.31,
+      "reaction_corr": 0.287,
+      "conditional_quality": 1.0,
+      "utility_at_5": 0.185,
+      "fit_time_s": 0.0,
+      "eval_time_s": 0.15,
+      "wall_time_s": 0.15,
+      "notes": "-",
+      "extras": {}
+    },
+    {
+      "name": "contrastive",
+      "precision_at_5": 0.385,
+      "precision_at_10": 0.3875,
+      "reaction_corr": 0.3126,
+      "conditional_quality": 0.68,
+      "utility_at_5": 0.195,
+      "fit_time_s": 0.89,
+      "eval_time_s": 0.27,
+      "wall_time_s": 1.17,
+      "notes": "-",
+      "extras": {}
+    },
+    {
+      "name": "contrastive_v2",
+      "precision_at_5": 0.52,
+      "precision_at_10": 0.4725,
+      "reaction_corr": 0.2976,
+      "conditional_quality": 0.64,
+      "utility_at_5": 0.29,
+      "fit_time_s": 1.95,
+      "eval_time_s": 0.27,
+      "wall_time_s": 2.21,
+      "notes": "-",
+      "extras": {}
+    },
+    {
+      "name": "contrastive_v3",
+      "precision_at_5": 0.45,
+      "precision_at_10": 0.4275,
+      "reaction_corr": 0.2593,
+      "conditional_quality": 0.675,
+      "utility_at_5": 0.25,
+      "fit_time_s": 2.39,
+      "eval_time_s": 0.27,
+      "wall_time_s": 2.66,
+      "notes": "-",
+      "extras": {}
+    },
+    {
+      "name": "graph_experimental",
+      "precision_at_5": 0.6,
+      "precision_at_10": 0.53,
+      "reaction_corr": 0.199,
+      "conditional_quality": 0.71,
+      "utility_at_5": 0.29,
+      "fit_time_s": 0.0,
+      "eval_time_s": 0.28,
+      "wall_time_s": 0.28,
+      "notes": "experimental",
+      "extras": {}
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "L3": {
+    "dataset": "/Users/coding/Desktop/esperimento/data/mock_events_L3.json",
+    "n_train": 200,
+    "n_test": 67,
+    "n_unique_texts": 200,
+    "precision_at_5": 0.56,
+    "precision_at_10": 0.5475,
+    "reaction_corr": 0.303,
+    "conditional_quality": 0.705,
+    "utility_at_5": 0.28,
+    "fit_time_s": 654.69,
+    "eval_time_s": 0.44,
+    "fail_count": 8,
+    "fail_rate": 0.04,
+    "distribution": {
+      "event_polarity": {
+        "positive": 108,
+        "negative": 47,
+        "neutral": 45
+      },
+      "surprise_magnitude": {
+        "large": 11,
+        "moderate": 71,
+        "minimal": 118
+      },
+      "dominant_driver": {
+        "demand": 87,
+        "margins": 35,
+        "guidance": 18,
+        "macro": 39,
+        "competitive": 8,
+        "operational": 13
+      },
+      "risk_asymmetry": {
+        "upside": 102,
+        "downside": 74,
+        "balanced": 24
+      },
+      "cycle_phase": {
+        "early": 0,
+        "mid": 133,
+        "late": 52,
+        "recession": 0,
+        "recovery": 15
+      },
+      "confidence_level": {
+        "1": 0,
+        "2": 6,
+        "3": 106,
+        "4": 33,
+        "5": 55
+      }
+    }
+  },
+  "L4": {
+    "dataset": "/Users/coding/Desktop/esperimento/data/mock_events_L4.json",
+    "n_train": 140,
+    "n_test": 47,
+    "n_unique_texts": 160,
+    "precision_at_5": 0.6,
+    "precision_at_10": 0.58,
+    "reaction_corr": 0.492,
+    "conditional_quality": 0.62,
+    "utility_at_5": 0.515,
+    "fit_time_s": 0.0,
+    "eval_time_s": 0.28,
+    "fail_count": 0,
+    "fail_rate": 0.0,
+    "distribution": {
+      "event_polarity": {
+        "positive": 86,
+        "negative": 40,
+        "neutral": 34
+      },
+      "surprise_magnitude": {
+        "large": 9,
+        "moderate": 58,
+        "minimal": 93
+      },
+      "dominant_driver": {
+        "demand": 71,
+        "margins": 26,
+        "guidance": 16,
+        "macro": 31,
+        "competitive": 6,
+        "operational": 10
+      },
+      "risk_asymmetry": {
+        "upside": 86,
+        "downside": 59,
+        "balanced": 15
+      },
+      "cycle_phase": {
+        "early": 0,
+        "mid": 109,
+        "late": 36,
+        "recession": 0,
+        "recovery": 15
+      },
+      "confidence_level": {
+        "1": 0,
+        "2": 5,
+        "3": 80,
+        "4": 24,
+        "5": 51
+      }
+    }
+  },
+  "L5": {
+    "dataset": "/Users/coding/Desktop/esperimento/data/mock_events_L5.json",
+    "n_train": 170,
+    "n_test": 57,
+    "n_unique_texts": 158,
+    "precision_at_5": 0.645,
+    "precision_at_10": 0.5825,
+    "reaction_corr": 0.5314,
+    "conditional_quality": 0.71,
+    "utility_at_5": 0.64,
+    "fit_time_s": 454.86,
+    "eval_time_s": 0.38,
+    "fail_count": 4,
+    "fail_rate": 0.0253,
+    "distribution": {
+      "event_polarity": {
+        "positive": 80,
+        "negative": 57,
+        "neutral": 21
+      },
+      "surprise_magnitude": {
+        "large": 10,
+        "moderate": 61,
+        "minimal": 87
+      },
+      "dominant_driver": {
+        "demand": 65,
+        "margins": 24,
+        "guidance": 10,
+        "macro": 42,
+        "competitive": 4,
+        "operational": 13
+      },
+      "risk_asymmetry": {
+        "upside": 77,
+        "downside": 69,
+        "balanced": 12
+      },
+      "cycle_phase": {
+        "early": 0,
+        "mid": 92,
+        "late": 57,
+        "recession": 0,
+        "recovery": 9
+      },
+      "confidence_level": {
+        "1": 0,
+        "2": 16,
+        "3": 75,
+        "4": 25,
+        "5": 42
+      }
+    }
+  }
+}

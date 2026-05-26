@@ -1,0 +1,110 @@
+{
+  "L1": {
+    "dataset": "/Users/coding/Desktop/esperimento/data/mock_events_L1.json",
+    "n_train": 132,
+    "n_test": 44,
+    "n_unique_texts": 17,
+    "precision_at_5": 0.99,
+    "precision_at_10": 0.98,
+    "reaction_corr": 0.5473,
+    "conditional_quality": 0.57,
+    "utility_at_5": 0.84,
+    "fit_time_s": 48.64,
+    "eval_time_s": 0.31,
+    "fail_count": 0,
+    "fail_rate": 0.0,
+    "distribution": {
+      "event_polarity": {
+        "positive": 7,
+        "negative": 6,
+        "neutral": 4
+      },
+      "surprise_magnitude": {
+        "large": 3,
+        "moderate": 4,
+        "minimal": 10
+      },
+      "dominant_driver": {
+        "demand": 9,
+        "margins": 2,
+        "guidance": 2,
+        "macro": 4,
+        "competitive": 0,
+        "operational": 0
+      },
+      "risk_asymmetry": {
+        "upside": 6,
+        "downside": 7,
+        "balanced": 4
+      },
+      "cycle_phase": {
+        "early": 1,
+        "mid": 11,
+        "late": 5,
+        "recession": 0,
+        "recovery": 0
+      },
+      "confidence_level": {
+        "1": 0,
+        "2": 3,
+        "3": 10,
+        "4": 0,
+        "5": 4
+      }
+    }
+  },
+  "L2": {
+    "dataset": "/Users/coding/Desktop/esperimento/data/mock_events_L2.json",
+    "n_train": 150,
+    "n_test": 50,
+    "n_unique_texts": 160,
+    "precision_at_5": 0.815,
+    "precision_at_10": 0.795,
+    "reaction_corr": 0.3954,
+    "conditional_quality": 0.62,
+    "utility_at_5": 0.525,
+    "fit_time_s": 0.0,
+    "eval_time_s": 0.37,
+    "fail_count": 0,
+    "fail_rate": 0.0,
+    "distribution": {
+      "event_polarity": {
+        "positive": 86,
+        "negative": 40,
+        "neutral": 34
+      },
+      "surprise_magnitude": {
+        "large": 9,
+        "moderate": 58,
+        "minimal": 93
+      },
+      "dominant_driver": {
+        "demand": 71,
+        "margins": 26,
+        "guidance": 16,
+        "macro": 31,
+        "competitive": 6,
+        "operational": 10
+      },
+      "risk_asymmetry": {
+        "upside": 86,
+        "downside": 59,
+        "balanced": 15
+      },
+      "cycle_phase": {
+        "early": 0,
+        "mid": 109,
+        "late": 36,
+        "recession": 0,
+        "recovery": 15
+      },
+      "confidence_level": {
+        "1": 0,
+        "2": 5,
+        "3": 80,
+        "4": 24,
+        "5": 51
+      }
+    }
+  }
+}

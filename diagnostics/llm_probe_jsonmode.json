@@ -1,0 +1,2652 @@
+{
+  "counters": {
+    "ok": 140,
+    "vocab_violation": 36
+  },
+  "field_violations": {
+    "surprise": 20,
+    "narrative": 16
+  },
+  "results": [
+    {
+      "id": "evt_0042",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 7.210829019546509
+    },
+    {
+      "id": "evt_0054",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.0896377563476562
+    },
+    {
+      "id": "evt_0153",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.068037986755371
+    },
+    {
+      "id": "evt_0027",
+      "cluster": "A",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_raise'",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"guidance_raise\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "guidance_raise",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 3.1026642322540283
+    },
+    {
+      "id": "evt_0006",
+      "cluster": "A",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_raise'",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"guidance_raise\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "guidance_raise",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.9755477905273438
+    },
+    {
+      "id": "evt_0066",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.029599189758301
+    },
+    {
+      "id": "evt_0151",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.029391050338745
+    },
+    {
+      "id": "evt_0064",
+      "cluster": "B",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_cut'",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"guidance_cut\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "guidance_cut",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.124476194381714
+    },
+    {
+      "id": "evt_0103",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 3.132314920425415
+    },
+    {
+      "id": "evt_0078",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_deceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_deceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.1263999938964844
+    },
+    {
+      "id": "evt_0050",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_deceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_deceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.080307960510254
+    },
+    {
+      "id": "evt_0076",
+      "cluster": "B",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_cut'",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"guidance_cut\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "guidance_cut",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.1706371307373047
+    },
+    {
+      "id": "evt_0065",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_deceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_deceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.1236979961395264
+    },
+    {
+      "id": "evt_0044",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.98587703704834
+    },
+    {
+      "id": "evt_0080",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.056953191757202
+    },
+    {
+      "id": "evt_0015",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 3.089318037033081
+    },
+    {
+      "id": "evt_0132",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.0110361576080322
+    },
+    {
+      "id": "evt_0086",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.0941057205200195
+    },
+    {
+      "id": "evt_0073",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.9781010150909424
+    },
+    {
+      "id": "evt_0021",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 3.0164098739624023
+    },
+    {
+      "id": "evt_0090",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 3.0601999759674072
+    },
+    {
+      "id": "evt_0020",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 3.0800249576568604
+    },
+    {
+      "id": "evt_0014",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 3.041425943374634
+    },
+    {
+      "id": "evt_0060",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.000861167907715
+    },
+    {
+      "id": "evt_0099",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.9812259674072266
+    },
+    {
+      "id": "evt_0079",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7748911380767822
+    },
+    {
+      "id": "evt_0166",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7160308361053467
+    },
+    {
+      "id": "evt_0143",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.7654900550842285
+    },
+    {
+      "id": "evt_0175",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.77905011177063
+    },
+    {
+      "id": "evt_0057",
+      "cluster": "B",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_cut'",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"guidance_cut\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "guidance_cut",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.916002035140991
+    },
+    {
+      "id": "evt_0034",
+      "cluster": "A",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_raise'",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"guidance_raise\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "guidance_raise",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.817775249481201
+    },
+    {
+      "id": "evt_0010",
+      "cluster": "A",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_raise'",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"guidance_raise\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "guidance_raise",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.708261013031006
+    },
+    {
+      "id": "evt_0141",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.8837039470672607
+    },
+    {
+      "id": "evt_0097",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.9418089389801025
+    },
+    {
+      "id": "evt_0051",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_deceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_deceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.8567419052124023
+    },
+    {
+      "id": "evt_0026",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.8558120727539062
+    },
+    {
+      "id": "evt_0005",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 2.886727809906006
+    },
+    {
+      "id": "evt_0152",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.780148983001709
+    },
+    {
+      "id": "evt_0160",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.8132259845733643
+    },
+    {
+      "id": "evt_0017",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.8648898601531982
+    },
+    {
+      "id": "evt_0109",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.9121620655059814
+    },
+    {
+      "id": "evt_0106",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.7639570236206055
+    },
+    {
+      "id": "evt_0022",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 2.83199405670166
+    },
+    {
+      "id": "evt_0104",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.8477671146392822
+    },
+    {
+      "id": "evt_0169",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.6247730255126953
+    },
+    {
+      "id": "evt_0115",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 3
+      },
+      "t": 2.6339099407196045
+    },
+    {
+      "id": "evt_0056",
+      "cluster": "B",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_cut'",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"guidance_cut\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "guidance_cut",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7666549682617188
+    },
+    {
+      "id": "evt_0117",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.779797077178955
+    },
+    {
+      "id": "evt_0001",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 2.7634360790252686
+    },
+    {
+      "id": "evt_0007",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.8811960220336914
+    },
+    {
+      "id": "evt_0101",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.8394768238067627
+    },
+    {
+      "id": "evt_0049",
+      "cluster": "B",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_cut'",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"guidance_cut\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "guidance_cut",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.8500468730926514
+    },
+    {
+      "id": "evt_0081",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 3
+      },
+      "t": 2.692354202270508
+    },
+    {
+      "id": "evt_0096",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 3
+      },
+      "t": 2.5577211380004883
+    },
+    {
+      "id": "evt_0150",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.776538848876953
+    },
+    {
+      "id": "evt_0019",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 2.830479145050049
+    },
+    {
+      "id": "evt_0074",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_deceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_deceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.882658004760742
+    },
+    {
+      "id": "evt_0164",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.676352024078369
+    },
+    {
+      "id": "evt_0107",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 3
+      },
+      "t": 2.6802921295166016
+    },
+    {
+      "id": "evt_0167",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.688509225845337
+    },
+    {
+      "id": "evt_0009",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.829418897628784
+    },
+    {
+      "id": "evt_0139",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7531471252441406
+    },
+    {
+      "id": "evt_0163",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.732996940612793
+    },
+    {
+      "id": "evt_0162",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.551811933517456
+    },
+    {
+      "id": "evt_0039",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 2.9572319984436035
+    },
+    {
+      "id": "evt_0173",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7281439304351807
+    },
+    {
+      "id": "evt_0135",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 3.0817227363586426
+    },
+    {
+      "id": "evt_0136",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.7647171020507812
+    },
+    {
+      "id": "evt_0105",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 3
+      },
+      "t": 2.969660997390747
+    },
+    {
+      "id": "evt_0077",
+      "cluster": "B",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_cut'",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"guidance_cut\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "guidance_cut",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.1447529792785645
+    },
+    {
+      "id": "evt_0013",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 3.0597569942474365
+    },
+    {
+      "id": "evt_0037",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 3.056617021560669
+    },
+    {
+      "id": "evt_0094",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.01282000541687
+    },
+    {
+      "id": "evt_0036",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 3.2050859928131104
+    },
+    {
+      "id": "evt_0062",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.9987688064575195
+    },
+    {
+      "id": "evt_0161",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.858063220977783
+    },
+    {
+      "id": "evt_0082",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 3
+      },
+      "t": 3.0098249912261963
+    },
+    {
+      "id": "evt_0024",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 3.115861177444458
+    },
+    {
+      "id": "evt_0148",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 3.0124130249023438
+    },
+    {
+      "id": "evt_0149",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 3.0863468647003174
+    },
+    {
+      "id": "evt_0041",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.9576423168182373
+    },
+    {
+      "id": "evt_0123",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.98203182220459
+    },
+    {
+      "id": "evt_0016",
+      "cluster": "A",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_raise'",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"guidance_raise\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "guidance_raise",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 3.0988078117370605
+    },
+    {
+      "id": "evt_0030",
+      "cluster": "A",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_raise'",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"guidance_raise\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "guidance_raise",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.9367117881774902
+    },
+    {
+      "id": "evt_0033",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 3.0723118782043457
+    },
+    {
+      "id": "evt_0100",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.092482089996338
+    },
+    {
+      "id": "evt_0035",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 3.05731201171875
+    },
+    {
+      "id": "evt_0059",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_deceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_deceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.0821588039398193
+    },
+    {
+      "id": "evt_0155",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.9874560832977295
+    },
+    {
+      "id": "evt_0043",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.015052080154419
+    },
+    {
+      "id": "evt_0168",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.955911874771118
+    },
+    {
+      "id": "evt_0133",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.97668719291687
+    },
+    {
+      "id": "evt_0045",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_deceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_deceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.115758180618286
+    },
+    {
+      "id": "evt_0068",
+      "cluster": "B",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_cut'",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"guidance_cut\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "guidance_cut",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.0832998752593994
+    },
+    {
+      "id": "evt_0128",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.9773788452148438
+    },
+    {
+      "id": "evt_0113",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 3.2005069255828857
+    },
+    {
+      "id": "evt_0048",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.212064027786255
+    },
+    {
+      "id": "evt_0075",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.8871560096740723
+    },
+    {
+      "id": "evt_0085",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.2301628589630127
+    },
+    {
+      "id": "evt_0157",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 3.058432102203369
+    },
+    {
+      "id": "evt_0032",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 3.145318031311035
+    },
+    {
+      "id": "evt_0114",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 3.0413992404937744
+    },
+    {
+      "id": "evt_0052",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.972743034362793
+    },
+    {
+      "id": "evt_0029",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 3.059767246246338
+    },
+    {
+      "id": "evt_0038",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 2.8690428733825684
+    },
+    {
+      "id": "evt_0012",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 2.7963602542877197
+    },
+    {
+      "id": "evt_0003",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 2.7071306705474854
+    },
+    {
+      "id": "evt_0102",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 3.020965099334717
+    },
+    {
+      "id": "evt_0058",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.842910051345825
+    },
+    {
+      "id": "evt_0158",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.903308868408203
+    },
+    {
+      "id": "evt_0092",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.9503209590911865
+    },
+    {
+      "id": "evt_0147",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7711448669433594
+    },
+    {
+      "id": "evt_0061",
+      "cluster": "B",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_cut'",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"guidance_cut\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "guidance_cut",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.9276039600372314
+    },
+    {
+      "id": "evt_0171",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.799607992172241
+    },
+    {
+      "id": "evt_0121",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.988460063934326
+    },
+    {
+      "id": "evt_0140",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.851468086242676
+    },
+    {
+      "id": "evt_0170",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.752081871032715
+    },
+    {
+      "id": "evt_0142",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7858669757843018
+    },
+    {
+      "id": "evt_0053",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.8294618129730225
+    },
+    {
+      "id": "evt_0159",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7893831729888916
+    },
+    {
+      "id": "evt_0174",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.6749958992004395
+    },
+    {
+      "id": "evt_0172",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.5568621158599854
+    },
+    {
+      "id": "evt_0025",
+      "cluster": "A",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_raise'",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"guidance_raise\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "guidance_raise",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.919898748397827
+    },
+    {
+      "id": "evt_0122",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.9123969078063965
+    },
+    {
+      "id": "evt_0131",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.736762762069702
+    },
+    {
+      "id": "evt_0002",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.906312942504883
+    },
+    {
+      "id": "evt_0129",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7748639583587646
+    },
+    {
+      "id": "evt_0071",
+      "cluster": "B",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_cut'",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"guidance_cut\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "guidance_cut",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.885723829269409
+    },
+    {
+      "id": "evt_0144",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.7970306873321533
+    },
+    {
+      "id": "evt_0165",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.8235630989074707
+    },
+    {
+      "id": "evt_0067",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7971746921539307
+    },
+    {
+      "id": "evt_0091",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 3
+      },
+      "t": 2.7153818607330322
+    },
+    {
+      "id": "evt_0055",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.808769702911377
+    },
+    {
+      "id": "evt_0125",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 3.228925943374634
+    },
+    {
+      "id": "evt_0047",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_deceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_deceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.8635239601135254
+    },
+    {
+      "id": "evt_0084",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.8889780044555664
+    },
+    {
+      "id": "evt_0127",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.6681909561157227
+    },
+    {
+      "id": "evt_0008",
+      "cluster": "A",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_raise'",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"guidance_raise\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "guidance_raise",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.865496873855591
+    },
+    {
+      "id": "evt_0087",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 3
+      },
+      "t": 2.7516989707946777
+    },
+    {
+      "id": "evt_0098",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.8706700801849365
+    },
+    {
+      "id": "evt_0119",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.7211861610412598
+    },
+    {
+      "id": "evt_0146",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.901150941848755
+    },
+    {
+      "id": "evt_0116",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.8338229656219482
+    },
+    {
+      "id": "evt_0072",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.802793025970459
+    },
+    {
+      "id": "evt_0023",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 2.839646100997925
+    },
+    {
+      "id": "evt_0063",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.802097797393799
+    },
+    {
+      "id": "evt_0083",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 3
+      },
+      "t": 2.6483399868011475
+    },
+    {
+      "id": "evt_0069",
+      "cluster": "B",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"negative_miss\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "negative_miss",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.725336790084839
+    },
+    {
+      "id": "evt_0156",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.783097743988037
+    },
+    {
+      "id": "evt_0120",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7330877780914307
+    },
+    {
+      "id": "evt_0124",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.6763370037078857
+    },
+    {
+      "id": "evt_0138",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.7677760124206543
+    },
+    {
+      "id": "evt_0070",
+      "cluster": "B",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_cut'",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"guidance_cut\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "guidance_cut",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.778607130050659
+    },
+    {
+      "id": "evt_0134",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.8082542419433594
+    },
+    {
+      "id": "evt_0046",
+      "cluster": "B",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_cut'",
+      "raw": "{\n  \"dominant_narrative\": \"margin_compression\",\n  \"surprise_type\": \"guidance_cut\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "margin_compression",
+        "surprise_type": "guidance_cut",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.818847179412842
+    },
+    {
+      "id": "evt_0112",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 3
+      },
+      "t": 2.638794183731079
+    },
+    {
+      "id": "evt_0040",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 2.768076181411743
+    },
+    {
+      "id": "evt_0118",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.7911009788513184
+    },
+    {
+      "id": "evt_0093",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.859074115753174
+    },
+    {
+      "id": "evt_0111",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.963014841079712
+    },
+    {
+      "id": "evt_0028",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.8145639896392822
+    },
+    {
+      "id": "evt_0126",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.7482240200042725
+    },
+    {
+      "id": "evt_0108",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.7111501693725586
+    },
+    {
+      "id": "evt_0004",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"early\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "early",
+        "confidence_level": 4
+      },
+      "t": 2.752002000808716
+    },
+    {
+      "id": "evt_0088",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.714651107788086
+    },
+    {
+      "id": "evt_0130",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.6625242233276367
+    },
+    {
+      "id": "evt_0018",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.8717079162597656
+    },
+    {
+      "id": "evt_0095",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.8940510749816895
+    },
+    {
+      "id": "evt_0110",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"demand_shift\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "demand_shift",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.790607213973999
+    },
+    {
+      "id": "evt_0137",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.8075621128082275
+    },
+    {
+      "id": "evt_0089",
+      "cluster": "C",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"recovery\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "recovery",
+        "confidence_level": 4
+      },
+      "t": 2.8625879287719727
+    },
+    {
+      "id": "evt_0011",
+      "cluster": "A",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"positive_beat\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "positive_beat",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.7923378944396973
+    },
+    {
+      "id": "evt_0145",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.6564650535583496
+    },
+    {
+      "id": "evt_0031",
+      "cluster": "A",
+      "status": "vocab_violation",
+      "reason": "surprise='guidance_raise'",
+      "raw": "{\n  \"dominant_narrative\": \"growth_acceleration\",\n  \"surprise_type\": \"guidance_raise\",\n  \"risk_asymmetry\": \"upside\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 4\n}",
+      "parsed": {
+        "dominant_narrative": "growth_acceleration",
+        "surprise_type": "guidance_raise",
+        "risk_asymmetry": "upside",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 4
+      },
+      "t": 2.8506789207458496
+    },
+    {
+      "id": "evt_0154",
+      "cluster": "D",
+      "status": "ok",
+      "reason": "",
+      "raw": "{\n  \"dominant_narrative\": \"macro_pressure\",\n  \"surprise_type\": \"guidance_only\",\n  \"risk_asymmetry\": \"downside\",\n  \"implicit_cycle_phase\": \"recession\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "macro_pressure",
+        "surprise_type": "guidance_only",
+        "risk_asymmetry": "downside",
+        "implicit_cycle_phase": "recession",
+        "confidence_level": 3
+      },
+      "t": 2.8195018768310547
+    },
+    {
+      "id": "evt_0176",
+      "cluster": "NOISE",
+      "status": "vocab_violation",
+      "reason": "narrative='in_line'",
+      "raw": "{\n  \"dominant_narrative\": \"in_line\",\n  \"surprise_type\": \"in_line\",\n  \"risk_asymmetry\": \"balanced\",\n  \"implicit_cycle_phase\": \"mid\",\n  \"confidence_level\": 3\n}",
+      "parsed": {
+        "dominant_narrative": "in_line",
+        "surprise_type": "in_line",
+        "risk_asymmetry": "balanced",
+        "implicit_cycle_phase": "mid",
+        "confidence_level": 3
+      },
+      "t": 2.717705249786377
+    }
+  ]
+}

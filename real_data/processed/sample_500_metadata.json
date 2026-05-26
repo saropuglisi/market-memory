@@ -1,0 +1,139 @@
+{
+  "n_events": 500,
+  "n_failed_candidates": 332,
+  "year_dist": {
+    "2023": 70,
+    "2019": 66,
+    "2024": 86,
+    "2022": 79,
+    "2020": 77,
+    "2018": 41,
+    "2021": 67,
+    "2025": 14
+  },
+  "sector_dist": {
+    "Consumer Staples": 58,
+    "Health Care": 57,
+    "Consumer Discretionary": 51,
+    "Energy": 43,
+    "Utilities": 32,
+    "Industrials": 50,
+    "Real Estate": 48,
+    "Communication Services": 30,
+    "Financials": 46,
+    "Materials": 45,
+    "Information Technology": 40
+  },
+  "feature_stats": {
+    "macro_features": {
+      "vix": {
+        "mean": 20.07188,
+        "min": 10.85,
+        "max": 41.38
+      },
+      "yield_10y": {
+        "mean": 2.7338400000000003,
+        "min": 0.52,
+        "max": 4.98
+      },
+      "yield_curve_slope": {
+        "mean": 0.19326,
+        "min": -0.9800000000000004,
+        "max": 1.49
+      },
+      "credit_spread": {
+        "mean": 2.03074,
+        "min": 1.4,
+        "max": 3.37
+      },
+      "dxy": {
+        "mean": 99.46163989257812,
+        "min": 89.5199966430664,
+        "max": 112.93000030517578
+      }
+    },
+    "micro_features": {
+      "return_60d": {
+        "mean": 0.042507228238649,
+        "min": -0.43183549328821746,
+        "max": 0.7359573367481658
+      },
+      "realized_vol_60d": {
+        "mean": 0.3051998995169958,
+        "min": 0.10534129295660678,
+        "max": 1.1922578168773779
+      },
+      "drawdown_from_high": {
+        "mean": -0.1809950231296448,
+        "min": -0.8450886400018641,
+        "max": 0.0
+      },
+      "sector_return_60d": {
+        "mean": 0.029157857287638422,
+        "min": -0.22238563091580899,
+        "max": 0.4626486336818416
+      },
+      "relative_strength": {
+        "mean": 0.5097499208464771,
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    "semantic_features": {
+      "confidence_score": {
+        "mean": 0.6016408986797886,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "hedging_count": {
+        "mean": 1.568,
+        "min": 0.0,
+        "max": 17.0
+      },
+      "guidance_direction": {
+        "mean": 0.196,
+        "min": -1.0,
+        "max": 1.0
+      },
+      "uncertainty_markers": {
+        "mean": 6.83,
+        "min": 0.0,
+        "max": 55.0
+      }
+    },
+    "reaction_30d": {
+      "return": {
+        "mean": 0.025685353432084966,
+        "min": -0.5427751900932227,
+        "max": 0.5256061918896873
+      },
+      "realized_vol": {
+        "mean": 0.30744589320356913,
+        "min": 0.08018436595605442,
+        "max": 1.0854523259604156
+      },
+      "max_drawdown": {
+        "mean": -0.09108045525356609,
+        "min": -0.5615642748851487,
+        "max": -0.013591512258340785
+      },
+      "persistence": {
+        "mean": 0.5506666666666666,
+        "min": 0.36666666666666664,
+        "max": 0.8
+      }
+    }
+  },
+  "cleaning_stats": {
+    "removed_pct_mean": 4.5,
+    "removed_pct_max": 96.78,
+    "clean_len_mean": 9671,
+    "clean_len_min": 503,
+    "clean_len_max": 126153
+  },
+  "guidance_distribution": {
+    "0": 364,
+    "1": 117,
+    "-1": 19
+  }
+}

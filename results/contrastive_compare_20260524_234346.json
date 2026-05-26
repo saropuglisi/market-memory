@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260524_234346",
+  "results": [
+    {
+      "name": "concat_eq",
+      "P@5": 1.0,
+      "P@10": 0.985,
+      "ReactCorr": 0.5463,
+      "CondQual": 0.565,
+      "fit_s": 0.0,
+      "eval_s": 0.11
+    },
+    {
+      "name": "contrastive",
+      "P@5": 0.985,
+      "P@10": 0.895,
+      "ReactCorr": 0.3601,
+      "CondQual": 0.57,
+      "fit_s": 1.24,
+      "eval_s": 0.16
+    },
+    {
+      "name": "contrastive_v2",
+      "P@5": 0.89,
+      "P@10": 0.8225,
+      "ReactCorr": 0.5174,
+      "CondQual": 0.605,
+      "fit_s": 1.79,
+      "eval_s": 0.19
+    }
+  ]
+}

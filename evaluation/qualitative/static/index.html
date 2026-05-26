@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Blind Review v2 — Tinder mode</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --fg: #1c1c1e;
+    --muted: #6b7280;
+    --line: #e2e2e6;
+    --query: #1e3a8a;     /* deep blue */
+    --query-bg: #eaf0ff;
+    --cand:  #c2410c;     /* deep orange */
+    --cand-bg: #fff1e6;
+    --accent: #2766d6;
+    --warn: #d65a2d;
+    --ok: #16a34a;
+    --group-x: #6b46c1; --group-y: #0891b2; --group-z: #d97706;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--fg); background: var(--bg);
+    display: flex; flex-direction: column;
+    padding: 12px 18px; gap: 10px;
+    overflow: hidden;
+  }
+  /* ===== ZONE 1: header ===== */
+  .zone-header { flex: 0 0 auto; }
+  .header-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .header-row h1 { font-size: 14px; margin: 0; font-weight: 600; }
+  .progress-track { flex: 1; height: 8px; background: #e4e6ea; border-radius: 4px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--accent); transition: width .25s; }
+  .progress-fill.flash { background: var(--ok); transition: background .15s; }
+  .counter { font-size: 12px; color: var(--muted); white-space: nowrap; }
+  .deja-vu { font-size: 11px; color: var(--muted); font-style: italic; margin-top: 4px; }
+  .save-status { font-size: 11px; color: var(--muted); }
+
+  /* ===== ZONE 2: side-by-side summaries ===== */
+  .zone-summaries { flex: 0 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .summary-card {
+    border-radius: 8px; padding: 10px 14px;
+    border-left: 4px solid; position: relative;
+    font-size: 13px; line-height: 1.4;
+    min-height: 130px;
+  }
+  .summary-card.query { background: var(--query-bg); border-color: var(--query); }
+  .summary-card.cand  { background: var(--cand-bg);  border-color: var(--cand); }
+  .summary-card .tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; opacity: 0.85;
+  }
+  .summary-card.query .tag { color: var(--query); }
+  .summary-card.cand  .tag { color: var(--cand);  }
+  .summary-card .head {
+    margin: 2px 0 4px 0; font-size: 14px; font-weight: 600;
+  }
+  .summary-card .meta { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+  .summary-card .summary-text { font-size: 13px; color: #1d2937; }
+  .summary-card .summary-text.unavailable { color: var(--warn); font-style: italic; }
+  .summary-card .macro { font-size: 11px; color: var(--muted); margin-top: 6px; }
+  .group-badge {
+    position: absolute; top: 8px; right: 10px;
+    font-size: 10px; font-weight: 700; padding: 2px 8px;
+    border-radius: 10px; color: white; letter-spacing: 0.5px;
+  }
+  .group-X { background: var(--group-x); }
+  .group-Y { background: var(--group-y); }
+  .group-Z { background: var(--group-z); }
+
+  /* ===== ZONE 3: chart ===== */
+  .zone-chart { flex: 1 1 auto; min-height: 0; background: white;
+                border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px;
+                position: relative; }
+  .zone-chart canvas { width: 100% !important; height: 100% !important; }
+
+  /* ===== ZONE 4: rating ===== */
+  .zone-rating { flex: 0 0 auto; display: grid;
+                 grid-template-columns: 1fr auto; gap: 12px;
+                 background: white; border: 1px solid var(--line);
+                 border-radius: 8px; padding: 10px 14px; }
+  .metrics-block { display: grid; gap: 6px; }
+  .metric-row {
+    display: grid; grid-template-columns: 1fr auto; gap: 12px;
+    align-items: center; padding: 4px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .metric-row:last-child { border-bottom: none; }
+  .metric-row.active { background: #f7faff; border-radius: 4px; padding: 4px 8px; }
+  .metric-label { font-size: 13px; }
+  .metric-label .name { font-weight: 600; }
+  .metric-label .question { font-size: 11.5px; color: var(--muted); margin-top: 1px; }
+  .scale-btns { display: flex; gap: 4px; }
+  .scale-btns button {
+    width: 34px; height: 30px; font-size: 13px; font-weight: 600;
+    border: 1px solid var(--line); background: white;
+    cursor: pointer; border-radius: 4px;
+  }
+  .scale-btns button:hover { background: #eef3ff; border-color: var(--accent); }
+  .scale-btns button.selected { background: var(--accent); color: white; border-color: var(--accent); }
+
+  .right-col { display: flex; flex-direction: column; gap: 8px; align-items: stretch;
+               min-width: 260px; }
+  .notes-area textarea {
+    width: 100%; height: 42px; padding: 6px 8px; font: inherit; font-size: 12px;
+    border: 1px solid var(--line); border-radius: 4px; resize: none;
+  }
+  .actions { display: flex; gap: 8px; justify-content: flex-end; }
+  .btn { padding: 8px 16px; font: inherit; font-weight: 600;
+         border-radius: 5px; cursor: pointer; border: 1px solid var(--line);
+         background: white; }
+  .btn.skip { color: var(--warn); border-color: var(--warn); }
+  .btn.next { background: var(--accent); color: white; border-color: var(--accent);
+              font-size: 14px; padding: 8px 22px; }
+  .btn.next:disabled { background: #bbb; border-color: #bbb; cursor: not-allowed; }
+  .btn.prev { color: var(--muted); }
+  .hint-rule {
+    font-size: 11px; color: var(--muted); line-height: 1.35;
+    background: #fafafa; border: 1px dashed #e0e0e0; padding: 6px 8px; border-radius: 4px;
+  }
+  .next-hint { font-size: 10.5px; color: var(--muted); text-align: right; min-height: 12px; }
+
+  @media (max-height: 760px) {
+    .summary-card { min-height: 110px; font-size: 12px; }
+    .summary-card .head { font-size: 13px; }
+    .metric-row { padding: 3px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ZONE 1: header -->
+<div class="zone-header">
+  <div class="header-row">
+    <h1 id="header-title">Blind Review v2</h1>
+    <div class="progress-track"><div class="progress-fill" id="progress-bar" style="width:0%"></div></div>
+    <span class="counter" id="counter">– / –</span>
+    <span class="save-status" id="save-status">idle</span>
+  </div>
+  <div class="deja-vu">Query già viste nel test precedente — i candidati potrebbero essere parzialmente sovrapposti.</div>
+</div>
+
+<!-- ZONE 2: summaries -->
+<div class="zone-summaries">
+  <div class="summary-card query" id="query-card">
+    <div class="tag">QUERY</div>
+    <div class="head" id="q-head">—</div>
+    <div class="meta" id="q-meta"></div>
+    <div class="summary-text" id="q-summary">—</div>
+    <div class="macro" id="q-macro"></div>
+  </div>
+  <div class="summary-card cand" id="cand-card">
+    <div class="tag" id="c-tag">CANDIDATE —</div>
+    <span class="group-badge" id="c-group">—</span>
+    <div class="head" id="c-head">—</div>
+    <div class="meta" id="c-meta"></div>
+    <div class="summary-text" id="c-summary">—</div>
+    <div class="macro" id="c-macro"></div>
+  </div>
+</div>
+
+<!-- ZONE 3: chart -->
+<div class="zone-chart">
+  <canvas id="chart"></canvas>
+</div>
+
+<!-- ZONE 4: rating -->
+<div class="zone-rating">
+  <div class="metrics-block" id="metrics-block"></div>
+  <div class="right-col">
+    <div class="notes-area">
+      <textarea id="notes" placeholder="Note opzionali (3-8 parole)..."></textarea>
+    </div>
+    <div class="hint-rule">
+      <strong>Regola pratica:</strong> se sei indeciso tra due voti, scegli il più basso.
+      Il 3 è quando sei "mhm, parzialmente".
+    </div>
+    <div class="actions">
+      <button class="btn prev" id="prev-btn" title="← / Prev">← Prev</button>
+      <button class="btn skip" id="skip-btn" title="S">Skip / Cannot eval</button>
+      <button class="btn next" id="next-btn" disabled title="Enter / →">NEXT →</button>
+    </div>
+    <div class="next-hint" id="next-hint">Vota tutte le metriche per procedere</div>
+  </div>
+</div>
+
+<script>
+// ===========================================================================
+// Metric definitions (label, question, per-value tooltips).
+// ===========================================================================
+const METRICS = [
+  {
+    key: 'same_dynamic',
+    label: 'Stessa storia',
+    question: 'Sta succedendo la stessa cosa all\'azienda, per le stesse ragioni?',
+    tips: [
+      'Per niente. Stanno succedendo cose totalmente diverse.',
+      'Poco. Solo una vaga somiglianza superficiale.',
+      'In parte. Alcuni elementi in comune ma molti diversi.',
+      'Molto. Dinamica simile con piccole differenze.',
+      'Esattamente la stessa cosa, stesse cause.'
+    ],
+  },
+  {
+    key: 'same_regime',
+    label: 'Stesso clima di mercato',
+    question: 'Il mercato era nello stesso stato d\'animo? (VIX, tassi simili)',
+    tips: [
+      'Totalmente diverso (es. mercato calmo vs crisi).',
+      'Molto diverso.',
+      'Parzialmente simile.',
+      'Molto simile.',
+      'Praticamente identico (VIX, tassi, sentiment).'
+    ],
+  },
+  {
+    key: 'same_surprise',
+    label: 'Stesso tipo di notizia',
+    question: 'Era una buona/cattiva notizia dello stesso tipo? (es. beat+raise vs miss+cut)',
+    tips: [
+      'Opposto (es. buona vs cattiva notizia).',
+      'Molto diverso.',
+      'Stessa direzione (entrambe buone o cattive) ma intensità diversa.',
+      'Stesso tipo con piccole differenze.',
+      'Identico (es. entrambi beat+raise, entrambi miss+cut).'
+    ],
+  },
+  {
+    key: 'mental_precedent',
+    label: 'Utile come esempio storico',
+    question: 'Mi servirebbe come precedente per ragionare sulla query?',
+    tips: [
+      'Non mi aiuta per niente a capire la query.',
+      'Aiuta poco.',
+      'Qualche spunto utile ma contesto diverso.',
+      'Buon precedente, mi aiuta a ragionare.',
+      'Esempio perfetto, lo userei subito come paragone.'
+    ],
+  },
+];
+const METRIC_KEYS = METRICS.map(m => m.key);
+
+// ===========================================================================
+// State
+// ===========================================================================
+let DATA = null;
+let FLAT = [];          // [{qIdx, cIdx, q, c}, ...] flattened candidate list
+let RESPONSES = {};     // {qid: {label: {ratings:{}, notes, cannot_evaluate}}}
+let cursor = 0;         // index into FLAT
+let activeMetricIdx = 0;
+let chart = null;
+const LS_KEY = 'blind_review_v2_local';
+
+// ===========================================================================
+// Fetch / save
+// ===========================================================================
+async function fetchJSON(url, opts) {
+  const r = await fetch(url, opts);
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  return await r.json();
+}
+let _inflight = 0;
+function setSave(state, msg) {
+  const el = document.getElementById('save-status');
+  const colors = { idle:'var(--muted)', saving:'var(--accent)', saved:'var(--ok)', error:'var(--warn)' };
+  el.style.color = colors[state] || 'var(--muted)';
+  el.textContent = msg || state;
+}
+async function postResponse(payload) {
+  _inflight++;
+  setSave('saving', `saving (${_inflight})`);
+  try {
+    const res = await fetchJSON('/api/responses', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    });
+    _inflight--;
+    if (_inflight === 0) setSave('saved', `saved ${new Date().toLocaleTimeString()}`);
+    return res;
+  } catch (e) {
+    _inflight--;
+    setSave('error', `SAVE FAILED — ${e.message}`);
+    alert(`Save failed: ${e.message}. Re-click NEXT to retry.`);
+    throw e;
+  }
+}
+function lsLoad() {
+  try { return JSON.parse(localStorage.getItem(LS_KEY) || '{}'); } catch (e) { return {}; }
+}
+function lsSave() {
+  try { localStorage.setItem(LS_KEY, JSON.stringify(RESPONSES)); } catch (e) {}
+}
+
+// ===========================================================================
+// Init
+// ===========================================================================
+async function init() {
+  DATA = await fetchJSON('/api/data');
+  const saved = await fetchJSON('/api/responses');
+  RESPONSES = {};
+  for (const r of saved.responses || []) {
+    if (r.skipped) continue;
+    if (!RESPONSES[r.query_id]) RESPONSES[r.query_id] = {};
+    const bucket = { notes: r.notes || '' };
+    if (r.cannot_evaluate) bucket.cannot_evaluate = true;
+    if (r.ratings) bucket.ratings = {...r.ratings};
+    else {
+      const legacy = {};
+      for (const k of ['utility','insight','transferability'])
+        if (r[k] != null) legacy[k] = r[k];
+      if (Object.keys(legacy).length) bucket.ratings = legacy;
+    }
+    RESPONSES[r.query_id][r.candidate_label] = bucket;
+  }
+  // Merge LS for any unsynced ratings (server is source of truth, LS only adds)
+  const ls = lsLoad();
+  for (const qid in ls) {
+    for (const lbl in ls[qid]) {
+      if (!RESPONSES[qid]) RESPONSES[qid] = {};
+      if (!RESPONSES[qid][lbl]) RESPONSES[qid][lbl] = ls[qid][lbl];
+    }
+  }
+
+  // Flatten
+  FLAT = [];
+  DATA.queries.forEach((q, qi) => {
+    q.candidates.forEach((c, ci) => FLAT.push({ qIdx: qi, cIdx: ci, q, c }));
+  });
+
+  // Resume cursor: first incomplete candidate
+  cursor = FLAT.findIndex(f => !isCandComplete(f));
+  if (cursor < 0) cursor = FLAT.length - 1;
+
+  buildMetricsUI();
+  bindKeys();
+  document.getElementById('next-btn').addEventListener('click', goNext);
+  document.getElementById('prev-btn').addEventListener('click', goPrev);
+  document.getElementById('skip-btn').addEventListener('click', skipCurrent);
+  document.getElementById('notes').addEventListener('input', e => {
+    const f = FLAT[cursor];
+    ensureBucket(f.q.query_id, f.c.label).notes = e.target.value;
+    lsSave();
+  });
+  render();
+}
+
+function buildMetricsUI() {
+  const blk = document.getElementById('metrics-block');
+  blk.innerHTML = '';
+  METRICS.forEach((m, mi) => {
+    const row = document.createElement('div');
+    row.className = 'metric-row';
+    row.dataset.metric = m.key;
+    row.dataset.idx = mi;
+    row.innerHTML = `
+      <div class="metric-label">
+        <div class="name">${m.label}</div>
+        <div class="question">${m.question}</div>
+      </div>
+      <div class="scale-btns">
+        ${[1,2,3,4,5].map(v =>
+          `<button data-v="${v}" title="${escapeAttr(v + '. ' + m.tips[v-1])}">${v}</button>`
+        ).join('')}
+      </div>
+    `;
+    row.querySelectorAll('.scale-btns button').forEach(b => {
+      b.addEventListener('click', e => {
+        e.stopPropagation();
+        setRating(m.key, parseInt(b.dataset.v, 10));
+        activeMetricIdx = mi;
+        highlightActive();
+      });
+    });
+    row.addEventListener('click', () => { activeMetricIdx = mi; highlightActive(); });
+    blk.appendChild(row);
+  });
+}
+
+// ===========================================================================
+// Helpers
+// ===========================================================================
+function ensureBucket(qid, lbl) {
+  if (!RESPONSES[qid]) RESPONSES[qid] = {};
+  if (!RESPONSES[qid][lbl]) RESPONSES[qid][lbl] = { notes:'', ratings:{} };
+  if (!RESPONSES[qid][lbl].ratings) RESPONSES[qid][lbl].ratings = {};
+  return RESPONSES[qid][lbl];
+}
+function getBucket(qid, lbl) {
+  return (RESPONSES[qid] || {})[lbl] || null;
+}
+function isCandComplete(f) {
+  const b = getBucket(f.q.query_id, f.c.label);
+  if (!b) return false;
+  if (b.cannot_evaluate) return true;
+  if (!b.ratings) return false;
+  return METRIC_KEYS.every(k => b.ratings[k]);
+}
+function nCompleted() { return FLAT.filter(isCandComplete).length; }
+
+// ===========================================================================
+// Render
+// ===========================================================================
+function render() {
+  const f = FLAT[cursor];
+  if (!f) return;
+  const total = FLAT.length, done = nCompleted();
+  document.getElementById('progress-bar').style.width = (100 * done / total) + '%';
+  document.getElementById('counter').textContent =
+    `Candidate ${cursor+1} / ${total} — Query ${f.qIdx+1} / ${DATA.queries.length}`;
+  document.getElementById('header-title').textContent =
+    `Blind Review v2 — ${DATA.review_id || ''}`;
+
+  renderQuery(f.q);
+  renderCandidate(f.c);
+  renderChart(f.q, f.c);
+  renderRatings(f);
+
+  document.getElementById('prev-btn').disabled = cursor === 0;
+  activeMetricIdx = METRICS.findIndex(m => {
+    const b = getBucket(f.q.query_id, f.c.label);
+    return !(b && b.ratings && b.ratings[m.key]);
+  });
+  if (activeMetricIdx < 0) activeMetricIdx = 0;
+  highlightActive();
+  updateNext();
+}
+
+function renderQuery(q) {
+  const ev = q.event;
+  document.getElementById('q-head').textContent = `${ev.ticker}  ·  ${ev.date}`;
+  document.getElementById('q-meta').textContent = ev.sector_gics || '';
+  const sEl = document.getElementById('q-summary');
+  const s = ev.narrative_summary || '[summary non disponibile]';
+  sEl.textContent = s;
+  sEl.className = 'summary-text' + (s.startsWith('[') ? ' unavailable' : '');
+  const m = ev.macro || {};
+  document.getElementById('q-macro').textContent =
+    `VIX=${fmtN(m.vix)}  ·  yield_10y=${fmtN(m.yield_10y)}  ·  credit=${fmtN(m.credit_spread)}`;
+}
+function renderCandidate(c) {
+  document.getElementById('c-tag').textContent = `CANDIDATE ${c.label}`;
+  const g = c.group_label || '?';
+  const badge = document.getElementById('c-group');
+  badge.textContent = `Group ${g}`;
+  badge.className = `group-badge group-${g}`;
+  document.getElementById('c-head').textContent = `${c.ticker}  ·  ${c.date}`;
+  document.getElementById('c-meta').textContent = c.sector_gics || '';
+  const sEl = document.getElementById('c-summary');
+  const s = c.narrative_summary || '[summary non disponibile]';
+  sEl.textContent = s;
+  sEl.className = 'summary-text' + (s.startsWith('[') ? ' unavailable' : '');
+  const m = c.macro || {};
+  document.getElementById('c-macro').textContent =
+    `VIX=${fmtN(m.vix)}  ·  yield_10y=${fmtN(m.yield_10y)}  ·  credit=${fmtN(m.credit_spread)}`;
+}
+function renderRatings(f) {
+  const b = getBucket(f.q.query_id, f.c.label) || { ratings: {} };
+  document.getElementById('notes').value = b.notes || '';
+  METRICS.forEach(m => {
+    const row = document.querySelector(`.metric-row[data-metric="${m.key}"]`);
+    const v = (b.ratings || {})[m.key];
+    row.querySelectorAll('button').forEach(btn => {
+      btn.classList.toggle('selected', parseInt(btn.dataset.v,10) === v);
+    });
+  });
+}
+
+// ===========================================================================
+// Chart
+// ===========================================================================
+function normalizedSeries(series) {
+  if (!series || !series.length) return [];
+  const base = series[0].price || 1;
+  return series.map(p => ({ x: p.day, y: 100 * p.price / base }));
+}
+function renderChart(q, c) {
+  const qData = normalizedSeries(q.event.price_series_post_event);
+  const cData = normalizedSeries(c.price_series_post_event);
+  if (chart) { chart.destroy(); chart = null; }
+  const ctx = document.getElementById('chart').getContext('2d');
+  chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      datasets: [
+        {
+          label: `Query: ${q.event.ticker}`,
+          data: qData,
+          borderColor: getCss('--query'),
+          backgroundColor: 'rgba(30,58,138,0.08)',
+          borderWidth: 2.5, pointRadius: 0, tension: 0.15,
+          parsing: false,
+        },
+        {
+          label: `Candidate: ${c.ticker}`,
+          data: cData,
+          borderColor: getCss('--cand'),
+          backgroundColor: 'rgba(194,65,12,0.08)',
+          borderWidth: 2.5, pointRadius: 0, tension: 0.15,
+          parsing: false,
+        },
+      ],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      animation: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'top', align: 'end', labels: { font: { size: 12 } } },
+        tooltip: {
+          callbacks: {
+            title: items => `Day ${items[0].parsed.x}`,
+            label: item => {
+              const dp = item.parsed.y - 100;
+              const sign = dp >= 0 ? '+' : '';
+              return `${item.dataset.label}: ${sign}${dp.toFixed(2)}%`;
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          type: 'linear', min: -5, max: 120,
+          title: { display: true, text: 'Days from event', font: { size: 11 } },
+          grid: { color: '#f0f0f0' },
+          ticks: { stepSize: 30 },
+        },
+        y: {
+          title: { display: true, text: 'Price (event=100)', font: { size: 11 } },
+          grid: { color: '#f0f0f0' },
+        },
+      },
+    },
+    plugins: [verticalMarkersPlugin([0, 30, 60, 90, 120])],
+  });
+}
+function verticalMarkersPlugin(days) {
+  return {
+    id: 'vmarkers',
+    beforeDatasetsDraw(chart) {
+      const { ctx, chartArea, scales } = chart;
+      if (!scales.x) return;
+      ctx.save();
+      for (const d of days) {
+        const x = scales.x.getPixelForValue(d);
+        if (x < chartArea.left || x > chartArea.right) continue;
+        ctx.strokeStyle = d === 0 ? '#444' : '#bbb';
+        ctx.lineWidth = d === 0 ? 1.5 : 1;
+        ctx.setLineDash(d === 0 ? [] : [4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(x, chartArea.top); ctx.lineTo(x, chartArea.bottom);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = '#777';
+        ctx.font = '10px ui-monospace, monospace';
+        ctx.fillText(`d${d}`, x + 3, chartArea.top + 10);
+      }
+      ctx.restore();
+    },
+  };
+}
+function getCss(varname) {
+  return getComputedStyle(document.documentElement).getPropertyValue(varname).trim();
+}
+
+// ===========================================================================
+// Rating actions
+// ===========================================================================
+function setRating(key, v) {
+  const f = FLAT[cursor];
+  const b = ensureBucket(f.q.query_id, f.c.label);
+  b.cannot_evaluate = false;
+  b.ratings[key] = v;
+  lsSave();
+  const row = document.querySelector(`.metric-row[data-metric="${key}"]`);
+  row.querySelectorAll('button').forEach(btn =>
+    btn.classList.toggle('selected', parseInt(btn.dataset.v,10) === v));
+  // Auto-advance active metric to next empty one
+  const nextEmpty = METRICS.findIndex(m => !b.ratings[m.key]);
+  if (nextEmpty >= 0) activeMetricIdx = nextEmpty;
+  highlightActive();
+  updateNext();
+}
+function highlightActive() {
+  document.querySelectorAll('.metric-row').forEach((r, i) =>
+    r.classList.toggle('active', i === activeMetricIdx));
+}
+function updateNext() {
+  const f = FLAT[cursor];
+  const ok = isCandComplete(f);
+  document.getElementById('next-btn').disabled = !ok;
+  document.getElementById('next-hint').textContent =
+    ok ? 'Pronto. NEXT (Enter / →)' : 'Vota tutte le metriche per procedere';
+  // Live progress bar update
+  const total = FLAT.length, done = nCompleted() + (ok && cursor === FLAT.length - 1 ? 0 : 0);
+  document.getElementById('progress-bar').style.width = (100 * nCompleted() / total) + '%';
+}
+
+// ===========================================================================
+// Navigation
+// ===========================================================================
+async function goNext() {
+  const f = FLAT[cursor];
+  const b = getBucket(f.q.query_id, f.c.label);
+  if (!b || !isCandComplete(f)) return;
+  const payload = { query_id: f.q.query_id, candidate_label: f.c.label, notes: b.notes || '' };
+  if (b.cannot_evaluate) payload.cannot_evaluate = true;
+  else payload.ratings = {...b.ratings};
+  try { await postResponse(payload); } catch (e) { return; }
+  flashIfQueryChange();
+  if (cursor < FLAT.length - 1) {
+    cursor++; render(); scrollTop();
+  } else {
+    alert('Tutti i candidati valutati. Risposte salvate.');
+    render();
+  }
+}
+function goPrev() {
+  if (cursor === 0) return;
+  cursor--; render(); scrollTop();
+}
+async function skipCurrent() {
+  const f = FLAT[cursor];
+  const b = ensureBucket(f.q.query_id, f.c.label);
+  b.cannot_evaluate = true;
+  b.ratings = {};
+  lsSave();
+  const payload = { query_id: f.q.query_id, candidate_label: f.c.label,
+                    cannot_evaluate: true, notes: b.notes || '' };
+  try { await postResponse(payload); } catch (e) { return; }
+  flashIfQueryChange();
+  if (cursor < FLAT.length - 1) { cursor++; render(); scrollTop(); } else render();
+}
+function flashIfQueryChange() {
+  if (cursor + 1 >= FLAT.length) return;
+  if (FLAT[cursor].qIdx !== FLAT[cursor+1].qIdx) {
+    const bar = document.getElementById('progress-bar');
+    bar.classList.add('flash');
+    setTimeout(() => bar.classList.remove('flash'), 350);
+  }
+}
+function scrollTop() { window.scrollTo(0, 0); }
+
+// ===========================================================================
+// Keyboard
+// ===========================================================================
+function bindKeys() {
+  document.addEventListener('keydown', e => {
+    const tag = e.target.tagName;
+    if (tag === 'TEXTAREA' || tag === 'INPUT') {
+      if (e.key === 'Escape') e.target.blur();
+      return;
+    }
+    if (e.key >= '1' && e.key <= '5') {
+      const v = parseInt(e.key, 10);
+      const f = FLAT[cursor];
+      const b = ensureBucket(f.q.query_id, f.c.label);
+      // Fill the active metric (which is auto-set to next empty)
+      const m = METRICS[activeMetricIdx];
+      if (m) setRating(m.key, v);
+      e.preventDefault();
+    } else if (e.key === 'Tab') {
+      activeMetricIdx = (activeMetricIdx + (e.shiftKey ? -1 : 1) + METRICS.length) % METRICS.length;
+      highlightActive();
+      e.preventDefault();
+    } else if (e.key === 'Enter' || e.key === 'ArrowRight') {
+      if (!document.getElementById('next-btn').disabled) goNext();
+      e.preventDefault();
+    } else if (e.key === 'ArrowLeft') {
+      goPrev(); e.preventDefault();
+    } else if (e.key === 's' || e.key === 'S') {
+      skipCurrent(); e.preventDefault();
+    } else if (e.key === 'n' || e.key === 'N') {
+      document.getElementById('notes').focus(); e.preventDefault();
+    }
+  });
+}
+
+// ===========================================================================
+// Format
+// ===========================================================================
+function fmtN(x) {
+  if (x == null) return '?';
+  if (typeof x !== 'number') return x;
+  return Math.abs(x) >= 100 ? x.toFixed(0) : x.toFixed(2);
+}
+function escapeAttr(s) { return (s || '').replace(/"/g,'&quot;').replace(/\n/g, ' '); }
+
+init();
+</script>
+</body>
+</html>

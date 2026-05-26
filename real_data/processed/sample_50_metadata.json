@@ -1,0 +1,126 @@
+{
+  "n_events": 50,
+  "n_failed_candidates": 9,
+  "year_dist": {
+    "2020": 7,
+    "2023": 10,
+    "2021": 6,
+    "2019": 7,
+    "2022": 7,
+    "2024": 10,
+    "2018": 2,
+    "2025": 1
+  },
+  "sector_dist": {
+    "Real Estate": 4,
+    "Health Care": 5,
+    "Utilities": 6,
+    "Communication Services": 5,
+    "Information Technology": 4,
+    "Materials": 6,
+    "Energy": 4,
+    "Consumer Discretionary": 7,
+    "Consumer Staples": 4,
+    "Financials": 5
+  },
+  "feature_stats": {
+    "macro_features": {
+      "vix": {
+        "mean": 18.7712,
+        "min": 11.54,
+        "max": 41.98
+      },
+      "yield_10y": {
+        "mean": 2.9352,
+        "min": 0.56,
+        "max": 4.83
+      },
+      "yield_curve_slope": {
+        "mean": 0.08039999999999997,
+        "min": -0.9900000000000002,
+        "max": 1.46
+      },
+      "credit_spread": {
+        "mean": 1.973,
+        "min": 1.45,
+        "max": 3.3
+      },
+      "dxy": {
+        "mean": 100.56180053710938,
+        "min": 90.91000366210938,
+        "max": 112.93000030517578
+      }
+    },
+    "micro_features": {
+      "return_60d": {
+        "mean": 0.0649882582463337,
+        "min": -0.31061678253138836,
+        "max": 0.4113732453249197
+      },
+      "realized_vol_60d": {
+        "mean": 0.32266314910400595,
+        "min": 0.1263946830449812,
+        "max": 1.0043841926116406
+      },
+      "drawdown_from_high": {
+        "mean": -0.17978673259196623,
+        "min": -0.5978990555374427,
+        "max": 0.0
+      },
+      "sector_return_60d": {
+        "mean": 0.029090640408707336,
+        "min": -0.1775775410590723,
+        "max": 0.22178145610255662
+      },
+      "relative_strength": {
+        "mean": 0.5364228144483836,
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    "semantic_features": {
+      "confidence_score": {
+        "mean": 0.6051264183528889,
+        "min": 0.1875,
+        "max": 1.0
+      },
+      "hedging_count": {
+        "mean": 0.54,
+        "min": 0.0,
+        "max": 9.0
+      },
+      "guidance_direction": {
+        "mean": 0.04,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "uncertainty_markers": {
+        "mean": 2.26,
+        "min": 0.0,
+        "max": 11.0
+      }
+    },
+    "reaction_30d": {
+      "return": {
+        "mean": -0.0026864147732106967,
+        "min": -0.34179536011798606,
+        "max": 0.23292501526227816
+      },
+      "realized_vol": {
+        "mean": 0.30612525227964743,
+        "min": 0.1284947367489151,
+        "max": 1.0104902961195414
+      },
+      "max_drawdown": {
+        "mean": -0.10121984464388413,
+        "min": -0.3927606779874258,
+        "max": -0.022809517690979317
+      },
+      "persistence": {
+        "mean": 0.5479999999999999,
+        "min": 0.36666666666666664,
+        "max": 0.7
+      }
+    }
+  }
+}

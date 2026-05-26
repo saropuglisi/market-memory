@@ -1,0 +1,10 @@
+contrastive_v2 fit log
+=== RAW reaction euclidean (pre z-score) ===
+n_pairs=59685 mean=0.2744 std=0.1982
+quantiles 0/10/20/50/80/90/100 = 0.003 0.096 0.129 0.220 0.378 0.524 1.388
+=== Z-SCORED reaction euclidean ===
+n_pairs=59685 mean=2.3748 std=1.5439
+quantiles 0/10/20/50/80/90/100 = 0.034 0.910 1.189 2.014 3.280 4.198 11.619
+thresholds: pos<=1.1890 (q=0.2) neg>=3.2799 (q=0.8) | pos pairs=11937 (20.0%) neg pairs=11937 (20.0%)
+per-anchor pos: mean=69.0 min=0 max=162 | per-anchor neg: mean=69.0 min=20 max=341 | valid anchors (have both): 335/346
+final loss curve (every 5): 3.110 0.526 0.080 0.024 0.007 0.004 0.002 0.002 0.002 0.002 0.001 0.001 0.001 0.001 0.001 0.001

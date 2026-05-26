@@ -1,0 +1,102 @@
+[
+  {
+    "id": "evt_0038",
+    "cluster": "A",
+    "ticker": "STX",
+    "sector": "tech",
+    "date": "2024-02-05",
+    "kind": "easy",
+    "centroid_dist": 1.3798120021820068,
+    "reason": "closest to cluster A centroid (dist=1.38)"
+  },
+  {
+    "id": "evt_0037",
+    "cluster": "A",
+    "ticker": "AMD",
+    "sector": "tech",
+    "date": "2025-08-01",
+    "kind": "hard",
+    "centroid_dist": 3.5971662998199463,
+    "reason": "farthest from cluster A centroid in test (dist=3.60)"
+  },
+  {
+    "id": "evt_0071",
+    "cluster": "B",
+    "ticker": "HON",
+    "sector": "industrial",
+    "date": "2023-05-20",
+    "kind": "easy",
+    "centroid_dist": 1.939993977546692,
+    "reason": "closest to cluster B centroid (dist=1.94)"
+  },
+  {
+    "id": "evt_0075",
+    "cluster": "B",
+    "ticker": "TGT",
+    "sector": "consumer",
+    "date": "2024-07-25",
+    "kind": "hard",
+    "centroid_dist": 3.544424295425415,
+    "reason": "farthest from cluster B centroid in test (dist=3.54)"
+  },
+  {
+    "id": "evt_0111",
+    "cluster": "C",
+    "ticker": "GM",
+    "sector": "consumer",
+    "date": "2023-11-08",
+    "kind": "easy",
+    "centroid_dist": 1.7097461223602295,
+    "reason": "closest to cluster C centroid (dist=1.71)"
+  },
+  {
+    "id": "evt_0118",
+    "cluster": "C",
+    "ticker": "WDC",
+    "sector": "tech",
+    "date": "2025-09-02",
+    "kind": "hard",
+    "centroid_dist": 3.0241665840148926,
+    "reason": "farthest from cluster C centroid in test (dist=3.02)"
+  },
+  {
+    "id": "evt_0154",
+    "cluster": "D",
+    "ticker": "C",
+    "sector": "financial",
+    "date": "2022-03-05",
+    "kind": "easy",
+    "centroid_dist": 2.768094301223755,
+    "reason": "closest to cluster D centroid (dist=2.77)"
+  },
+  {
+    "id": "evt_0152",
+    "cluster": "D",
+    "ticker": "BAC",
+    "sector": "financial",
+    "date": "2024-08-21",
+    "kind": "hard",
+    "centroid_dist": 5.311169147491455,
+    "reason": "farthest from cluster D centroid in test (dist=5.31)"
+  },
+  {
+    "id": "evt_0192",
+    "cluster": "NOISE",
+    "ticker": "XYZ",
+    "sector": "mixed",
+    "date": "2025-02-12",
+    "kind": "noise_a",
+    "centroid_dist": null,
+    "reason": "most diverse reaction pair (within noise test set)"
+  },
+  {
+    "id": "evt_0197",
+    "cluster": "NOISE",
+    "ticker": "GHI",
+    "sector": "mixed",
+    "date": "2025-11-15",
+    "kind": "noise_b",
+    "centroid_dist": null,
+    "reason": "most diverse reaction pair (within noise test set)"
+  }
+]

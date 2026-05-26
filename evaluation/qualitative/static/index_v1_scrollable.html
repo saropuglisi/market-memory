@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Blind Review v2</title>
+<script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+<style>
+  :root {
+    --bg: #fafafa; --fg: #222; --muted: #666; --line: #ddd;
+    --accent: #2766d6; --warn: #d65a2d; --ok: #2a8e3a;
+    --group-x: #6b46c1; --group-y: #0891b2; --group-z: #d97706;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         margin: 0; padding: 16px 24px; background: var(--bg); color: var(--fg); }
+  header { display: flex; justify-content: space-between; align-items: center;
+           padding-bottom: 8px; border-bottom: 1px solid var(--line); margin-bottom: 12px;
+           position: sticky; top: 0; background: var(--bg); z-index: 20; }
+  header h1 { font-size: 16px; margin: 0; font-weight: 600; }
+  .progress { flex: 1; margin: 0 24px; background: #eee; height: 8px; border-radius: 4px; overflow: hidden; }
+  .progress > div { height: 100%; background: var(--accent); transition: width .25s; }
+  .counter { font-size: 13px; color: var(--muted); margin-right: 12px; }
+  button { font: inherit; padding: 6px 14px; border: 1px solid var(--line); border-radius: 4px;
+           background: white; cursor: pointer; }
+  button.primary { background: var(--accent); color: white; border-color: var(--accent); }
+  button.primary:disabled { background: #aaa; border-color: #aaa; cursor: not-allowed; }
+  button.warn { background: white; color: var(--warn); border-color: var(--warn); }
+  .card { border: 1px solid var(--line); border-radius: 6px; padding: 12px 16px;
+          background: white; margin-bottom: 12px; }
+  .query-card { border-left: 4px solid var(--accent); }
+  .candidate-card { border-left: 4px solid #888; }
+  .candidate-card.complete { border-left-color: var(--ok); }
+  .candidate-card.cannot-eval { background: #fbf6f3; border-left-color: var(--warn); opacity: 0.85; }
+  .candidate-card.collapsed .cand-body { display: none; }
+  .cand-header { cursor: pointer; user-select: none; display: flex;
+                 align-items: center; gap: 8px; flex-wrap: wrap; }
+  .chevron { display: inline-block; width: 14px; transition: transform .15s;
+             color: var(--muted); font-size: 12px; }
+  .candidate-card.collapsed .chevron { transform: rotate(-90deg); }
+  .group-badge { display: inline-block; font-size: 11px; font-weight: 700;
+                 padding: 2px 8px; border-radius: 10px; color: white;
+                 letter-spacing: 0.5px; }
+  .group-X { background: var(--group-x); }
+  .group-Y { background: var(--group-y); }
+  .group-Z { background: var(--group-z); }
+  .label-pill { display: inline-block; background: var(--accent); color: white;
+                font-weight: 600; padding: 2px 10px; border-radius: 4px; }
+  .meta { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .meta strong { color: var(--fg); }
+  .summary-box { background: #f0f6ff; border: 1px solid #c8d8f0; padding: 10px 12px;
+                 border-radius: 5px; margin: 8px 0; font-size: 13.5px; line-height: 1.45;
+                 color: #1d2c4a; }
+  .summary-box .summary-label { font-size: 10.5px; color: #5b6a85; letter-spacing: 0.8px;
+                                font-weight: 700; margin-bottom: 4px; text-transform: uppercase; }
+  .summary-unavailable { color: var(--warn); font-style: italic; }
+  .text-link { color: var(--accent); font-size: 12px; cursor: pointer;
+               margin-top: 6px; display: inline-block; text-decoration: underline; }
+  .row { display: flex; gap: 16px; align-items: flex-start; }
+  .charts { display: flex; gap: 12px; margin-top: 8px; align-items: center; flex-wrap: wrap; }
+  .chart-box { background: #f9f9f9; padding: 4px 6px; border-radius: 4px; }
+  .scale { display: flex; gap: 8px; align-items: center; margin: 4px 0; font-size: 13px; }
+  .scale-label { display: inline-block; width: 380px; color: var(--fg); font-weight: 500; }
+  .scale-buttons button { width: 32px; padding: 4px 0; font-size: 13px; text-align: center; }
+  .scale-buttons button.selected { background: var(--accent); color: white; border-color: var(--accent); }
+  .notes input { width: 100%; padding: 6px 8px; font: inherit; border: 1px solid var(--line); border-radius: 4px; }
+  .cannot-btn { margin-top: 6px; font-size: 12px; padding: 4px 10px; }
+  .help { color: var(--muted); font-size: 12px; margin-top: 8px; }
+  .kbd { display: inline-block; background: #eee; padding: 1px 6px; border-radius: 3px;
+         font-family: ui-monospace, monospace; font-size: 11px; }
+  /* modal */
+  .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.55); display: none;
+              z-index: 100; align-items: center; justify-content: center; }
+  .modal-bg.open { display: flex; }
+  .modal { background: white; max-width: 880px; width: 90%; max-height: 85vh;
+           overflow: auto; border-radius: 6px; padding: 18px 24px; }
+  .modal h3 { margin: 0 0 8px 0; font-size: 14px; }
+  .modal pre { white-space: pre-wrap; font: 13px ui-monospace, monospace;
+               background: #f6f6f6; padding: 10px; border-radius: 4px; }
+  .modal .close-x { float: right; cursor: pointer; color: var(--muted); font-size: 18px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 id="header-title">Blind Review v2</h1>
+  <div class="progress"><div id="progress-bar" style="width:0%"></div></div>
+  <span class="counter" id="counter">0 / 0</span>
+  <span id="save-status" style="font-size:12px;color:var(--muted);margin-right:8px">idle</span>
+  <div>
+    <button id="prev-btn">← Prev</button>
+    <button id="skip-btn" class="warn">Skip query</button>
+    <button id="next-btn" class="primary" disabled>Save &amp; Next →</button>
+  </div>
+</header>
+
+<div id="query-area"></div>
+<div style="margin-bottom:6px; font-size:12px;">
+  <button id="collapse-all-btn" style="padding:3px 8px; font-size:12px">Collapse all</button>
+  <button id="expand-all-btn" style="padding:3px 8px; font-size:12px">Expand all</button>
+  <span style="color:var(--muted); margin-left:8px">Group X/Y/Z = three hidden encoder buckets, permuted per query.</span>
+</div>
+<div id="candidates-area"></div>
+
+<div class="help">
+  <strong>Charts</strong>: drag = pan, scroll = zoom, click = anchor ruler.<br>
+  <strong>Keys</strong>: <span class="kbd">1</span>-<span class="kbd">5</span> fills the next empty metric,
+  <span class="kbd">Tab</span>/<span class="kbd">Shift+Tab</span> nav candidates,
+  <span class="kbd">Enter</span> Save &amp; Next when complete.
+</div>
+
+<!-- full text modal -->
+<div class="modal-bg" id="text-modal">
+  <div class="modal">
+    <span class="close-x" id="modal-close">×</span>
+    <h3 id="modal-title">Full text</h3>
+    <pre id="modal-body"></pre>
+  </div>
+</div>
+
+<script>
+let DATA = null;
+let RESPONSES = {};   // {query_id: {cand_label: {ratings:{}, notes, cannot_evaluate}}}
+let METRICS = [];     // [{key,label}, ...]
+let qIdx = 0;
+let activeCandIdx = 0;
+const charts = new Map();
+
+const TOOLTIPS = {
+  same_dynamic: [
+    'Per nulla — driver economici radicalmente diversi',
+    'Quasi no — sovrapposizione marginale',
+    'Parziale — qualche elemento condiviso',
+    'Sì — stessa dinamica di fondo',
+    'Identica — stesso meccanismo causale'
+  ],
+  same_regime: [
+    'Regime opposto (es. risk-on vs panic)',
+    'Regime molto diverso',
+    'Regime parzialmente comparabile',
+    'Regime simile (vol/liquidity/sentiment vicini)',
+    'Stesso regime di mercato'
+  ],
+  same_surprise: [
+    'Sorpresa opposta (es. miss vs beat)',
+    'Tipo di sorpresa diverso',
+    'Sorpresa parzialmente analoga',
+    'Stesso tipo di sorpresa',
+    'Stesso tipo e magnitudine di sorpresa'
+  ],
+  mental_precedent: [
+    'Inutile — non mi aiuta a ragionare',
+    'Poco utile',
+    'Plausibile ma generico',
+    'Utile — buon precedente mentale',
+    'Molto utile — precedente specifico e azionabile'
+  ],
+};
+
+async function fetchJSON(url, opts) {
+  const r = await fetch(url, opts);
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  return await r.json();
+}
+
+let _saveInflight = 0;
+function setSaveStatus(state, msg) {
+  const el = document.getElementById('save-status');
+  if (!el) return;
+  const colors = { idle:'var(--muted)', saving:'var(--accent)', saved:'var(--ok)', error:'var(--warn)' };
+  el.style.color = colors[state] || 'var(--muted)';
+  el.textContent = msg || state;
+}
+
+async function postResponse(payload) {
+  _saveInflight++;
+  setSaveStatus('saving', `saving (${_saveInflight})`);
+  try {
+    const res = await fetchJSON('/api/responses', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    });
+    _saveInflight--;
+    if (_saveInflight === 0) {
+      const t = new Date().toLocaleTimeString();
+      setSaveStatus('saved', `saved ✓ ${t} (n=${res.n_responses})`);
+    }
+    return res;
+  } catch (e) {
+    _saveInflight--;
+    setSaveStatus('error', `SAVE FAILED — ${e.message}`);
+    alert(`Save failed: ${e.message}\nYour rating was NOT persisted.`);
+    throw e;
+  }
+}
+
+async function init() {
+  DATA = await fetchJSON('/api/data');
+  METRICS = DATA.metrics || [
+    {key:'utility', label:'Utility'},
+    {key:'insight', label:'Insight'},
+    {key:'transferability', label:'Transferability'},
+  ];
+  const saved = await fetchJSON('/api/responses');
+  RESPONSES = {};
+  for (const r of saved.responses || []) {
+    if (r.skipped) { RESPONSES[r.query_id] = '__skipped__'; continue; }
+    if (!RESPONSES[r.query_id]) RESPONSES[r.query_id] = {};
+    const bucket = { notes: r.notes || '' };
+    if (r.cannot_evaluate) bucket.cannot_evaluate = true;
+    if (r.ratings) bucket.ratings = {...r.ratings};
+    else {
+      // legacy v1 -> map to ratings dict using whatever keys exist
+      const legacy = {};
+      for (const k of ['utility','insight','transferability'])
+        if (r[k] != null) legacy[k] = r[k];
+      if (Object.keys(legacy).length) bucket.ratings = legacy;
+    }
+    RESPONSES[r.query_id][r.candidate_label] = bucket;
+  }
+  document.getElementById('header-title').textContent = `Blind Review — ${DATA.review_id}`;
+  qIdx = DATA.queries.findIndex(q => !isQueryComplete(q.query_id));
+  if (qIdx < 0) qIdx = DATA.queries.length - 1;
+  render();
+  bindKeys();
+  document.getElementById('next-btn').addEventListener('click', saveAndNext);
+  document.getElementById('prev-btn').addEventListener('click', () => { qIdx = Math.max(0, qIdx-1); render(); });
+  document.getElementById('skip-btn').addEventListener('click', skipQuery);
+  document.getElementById('collapse-all-btn').addEventListener('click', () => {
+    document.querySelectorAll('.candidate-card').forEach(c => c.classList.add('collapsed'));
+  });
+  document.getElementById('expand-all-btn').addEventListener('click', () => {
+    document.querySelectorAll('.candidate-card').forEach(c => c.classList.remove('collapsed'));
+    charts.forEach((ch, id) => { if (id.startsWith('chart-') && id !== 'chart-query') { try { ch.timeScale().fitContent(); } catch(e){} } });
+  });
+  document.getElementById('modal-close').addEventListener('click', () => closeModal());
+  document.getElementById('text-modal').addEventListener('click', e => {
+    if (e.target.id === 'text-modal') closeModal();
+  });
+}
+
+function openModal(title, body) {
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-body').textContent = body || '(no text)';
+  document.getElementById('text-modal').classList.add('open');
+}
+function closeModal() { document.getElementById('text-modal').classList.remove('open'); }
+
+function isCandComplete(label) {
+  const r = (RESPONSES[DATA.queries[qIdx].query_id] || {})[label];
+  if (!r) return false;
+  if (r.cannot_evaluate) return true;
+  if (!r.ratings) return false;
+  return METRICS.every(m => r.ratings[m.key]);
+}
+
+function isQueryComplete(qid) {
+  const q = DATA.queries.find(qq => qq.query_id === qid);
+  const r = RESPONSES[qid];
+  if (r === '__skipped__') return true;
+  if (!r) return false;
+  return q.candidates.every(c => {
+    const rr = r[c.label];
+    if (!rr) return false;
+    if (rr.cannot_evaluate) return true;
+    return rr.ratings && METRICS.every(m => rr.ratings[m.key]);
+  });
+}
+
+function nCompletedQueries() {
+  return DATA.queries.filter(q => isQueryComplete(q.query_id)).length;
+}
+
+function render() {
+  const q = DATA.queries[qIdx];
+  const total = DATA.queries.length;
+  const done = nCompletedQueries();
+  document.getElementById('progress-bar').style.width = (100 * done / total) + '%';
+  document.getElementById('header-title').textContent =
+    `Blind Review v2 — Query ${qIdx+1} of ${total}`;
+  document.getElementById('counter').textContent = `${done} / ${total} complete`;
+  document.getElementById('prev-btn').disabled = qIdx === 0;
+  charts.forEach(c => { try { c.remove(); } catch(e) {} }); charts.clear();
+  renderQuery(q);
+  renderCandidates(q);
+  updateNextButton();
+  activeCandIdx = 0;
+  highlightActive();
+}
+
+function renderQuery(q) {
+  const ev = q.event;
+  const el = document.getElementById('query-area');
+  el.innerHTML = '';
+  const card = document.createElement('div');
+  card.className = 'card query-card';
+  const r = ev.reaction_30d || {};
+  const m = ev.macro || {};
+  const summary = ev.narrative_summary || '[summary unavailable]';
+  const summaryClass = summary === '[summary unavailable]' ? ' summary-unavailable' : '';
+  card.innerHTML = `
+    <div><strong style="font-size:15px">${ev.ticker}</strong>
+      <span class="meta">${ev.date} · ${ev.sector_gics || ''}</span></div>
+    <div class="meta">Macro: VIX=${m.vix ?? '?'}, yield_10y=${m.yield_10y ?? '?'}, credit=${m.credit_spread ?? '?'}</div>
+    <div class="meta">Reaction 30d: ret=<strong>${pct(r.return)}</strong> · vol=${(r.vol ?? '?').toString()} · max_dd=${pct(r.max_dd)}</div>
+    <div class="summary-box">
+      <div class="summary-label">Narrative summary</div>
+      <div class="${summaryClass}">${escapeHtml(summary)}</div>
+    </div>
+    <span class="text-link" id="show-text-query">▸ Read full text</span>
+    <div class="charts"><div class="chart-box"><div id="chart-query" style="width:560px;height:220px"></div></div></div>
+  `;
+  el.appendChild(card);
+  card.querySelector('#show-text-query').addEventListener('click', () =>
+    openModal(`${ev.ticker} ${ev.date} — full text`, ev.text_full || ''));
+  drawChart('chart-query', ev.price_series_post_event || [], 560, 220, true);
+}
+
+function renderCandidates(q) {
+  const el = document.getElementById('candidates-area');
+  el.innerHTML = '';
+  q.candidates.forEach((c, idx) => {
+    const r = c.reaction_30d || {};
+    const card = document.createElement('div');
+    card.className = 'card candidate-card';
+    card.id = `cand-${c.label}`;
+    card.dataset.label = c.label;
+    const grp = c.group_label || '?';
+    const summary = c.narrative_summary || '[summary unavailable]';
+    const summaryClass = summary === '[summary unavailable]' ? ' summary-unavailable' : '';
+    card.innerHTML = `
+      <div class="cand-header" data-label="${c.label}">
+        <span class="chevron">▼</span>
+        <span class="label-pill">${c.label}</span>
+        <span class="group-badge group-${grp}">Group ${grp}</span>
+        <strong>${c.ticker}</strong>
+        <span class="meta">${c.date} · ${c.sector_gics || ''} · ret=<strong>${pct(r.return)}</strong></span>
+      </div>
+      <div class="cand-body">
+        <div class="summary-box">
+          <div class="summary-label">Narrative summary</div>
+          <div class="${summaryClass}">${escapeHtml(summary)}</div>
+        </div>
+        <span class="text-link" data-text-link="${c.label}">▸ Read full text</span>
+        <div class="row" style="margin-top:6px">
+          <div style="flex:1">
+            <div class="meta">Reaction 30d: ret=<strong>${pct(r.return)}</strong>
+              · vol=${(r.vol ?? '?').toString()} · max_dd=${pct(r.max_dd)}
+              · persistence=${(r.persistence ?? '?').toString()}</div>
+          </div>
+          <div class="chart-box"><div id="chart-${c.label}" style="width:280px;height:130px"></div></div>
+        </div>
+        <div style="margin-top:8px">
+          ${METRICS.map(m => scaleRow(c.label, m.key, m.label)).join('')}
+          <div class="scale notes">
+            <span class="scale-label">Notes</span>
+            <input type="text" id="notes-${c.label}" placeholder="(optional)"
+                   value="${escapeAttr((getResp(c.label) || {}).notes || '')}">
+          </div>
+          <button class="warn cannot-btn" data-cannot="${c.label}">
+            ${(getResp(c.label) || {}).cannot_evaluate ? '✓ marked: cannot evaluate (click to undo)' : 'Mark as: cannot evaluate'}
+          </button>
+        </div>
+      </div>
+    `;
+    card.addEventListener('click', () => { activeCandIdx = idx; highlightActive(); });
+    el.appendChild(card);
+    card.querySelector('.cand-header').addEventListener('click', e => {
+      e.stopPropagation();
+      card.classList.toggle('collapsed');
+      if (!card.classList.contains('collapsed')) {
+        const ch = charts.get(`chart-${c.label}`);
+        if (ch) { try { ch.timeScale().fitContent(); } catch(e){} }
+      }
+      activeCandIdx = idx; highlightActive();
+    });
+    card.querySelector(`[data-text-link="${c.label}"]`).addEventListener('click', () =>
+      openModal(`${c.ticker} ${c.date} — full text`, c.text_full || ''));
+    drawChart(`chart-${c.label}`, c.price_series_post_event || [], 280, 130, false);
+    bindScaleButtons(c.label);
+    document.getElementById(`notes-${c.label}`).addEventListener('input', e => {
+      const r = ensureRespBucket(c.label);
+      r.notes = e.target.value;
+      autosave(c.label);
+    });
+    card.querySelector(`[data-cannot="${c.label}"]`).addEventListener('click', e => {
+      e.stopPropagation();
+      toggleCannotEvaluate(c.label);
+    });
+    if (isCandComplete(c.label)) card.classList.add('complete');
+    if ((getResp(c.label) || {}).cannot_evaluate) card.classList.add('cannot-eval');
+  });
+}
+
+function scaleRow(label, key, title) {
+  const tips = TOOLTIPS[key] || ['1','2','3','4','5'];
+  let html = `<div class="scale" data-key="${key}" data-label="${label}">
+                <span class="scale-label">${escapeHtml(title)}</span>
+                <span class="scale-buttons">`;
+  for (let v = 1; v <= 5; v++) {
+    html += `<button data-v="${v}" title="${escapeAttr(v + ': ' + tips[v-1])}">${v}</button>`;
+  }
+  html += `</span></div>`;
+  return html;
+}
+
+function bindScaleButtons(label) {
+  const card = document.getElementById(`cand-${label}`);
+  card.querySelectorAll('.scale').forEach(row => {
+    const key = row.dataset.key;
+    row.querySelectorAll('button').forEach(b => {
+      const v = parseInt(b.dataset.v, 10);
+      b.addEventListener('click', e => { e.stopPropagation(); setScale(label, key, v); });
+      const cur = (getResp(label) || {}).ratings || {};
+      if (cur[key] === v) b.classList.add('selected');
+    });
+  });
+}
+
+function getResp(label) {
+  const q = DATA.queries[qIdx];
+  const r = RESPONSES[q.query_id];
+  if (!r || r === '__skipped__') return null;
+  return r[label] || null;
+}
+function ensureRespBucket(label) {
+  const q = DATA.queries[qIdx];
+  if (!RESPONSES[q.query_id] || RESPONSES[q.query_id] === '__skipped__')
+    RESPONSES[q.query_id] = {};
+  if (!RESPONSES[q.query_id][label]) RESPONSES[q.query_id][label] = { notes:'', ratings:{} };
+  if (!RESPONSES[q.query_id][label].ratings) RESPONSES[q.query_id][label].ratings = {};
+  return RESPONSES[q.query_id][label];
+}
+
+function setScale(label, key, v) {
+  const r = ensureRespBucket(label);
+  r.cannot_evaluate = false;
+  r.ratings[key] = v;
+  const card = document.getElementById(`cand-${label}`);
+  card.classList.remove('cannot-eval');
+  card.querySelector(`[data-cannot="${label}"]`).textContent = 'Mark as: cannot evaluate';
+  card.querySelectorAll(`.scale[data-key="${key}"] button`).forEach(b => {
+    b.classList.toggle('selected', parseInt(b.dataset.v,10) === v);
+  });
+  if (isCandComplete(label)) card.classList.add('complete'); else card.classList.remove('complete');
+  updateNextButton();
+  autosave(label);
+}
+
+function toggleCannotEvaluate(label) {
+  const r = ensureRespBucket(label);
+  r.cannot_evaluate = !r.cannot_evaluate;
+  const card = document.getElementById(`cand-${label}`);
+  if (r.cannot_evaluate) {
+    r.ratings = {};
+    card.classList.add('cannot-eval', 'complete');
+    card.querySelectorAll('.scale-buttons button').forEach(b => b.classList.remove('selected'));
+    card.querySelector(`[data-cannot="${label}"]`).textContent = '✓ marked: cannot evaluate (click to undo)';
+  } else {
+    card.classList.remove('cannot-eval', 'complete');
+    card.querySelector(`[data-cannot="${label}"]`).textContent = 'Mark as: cannot evaluate';
+  }
+  updateNextButton();
+  saveCandidate(label);
+}
+
+function updateNextButton() {
+  const q = DATA.queries[qIdx];
+  const ok = q.candidates.every(c => isCandComplete(c.label));
+  document.getElementById('next-btn').disabled = !ok;
+  const done = nCompletedQueries();
+  document.getElementById('progress-bar').style.width = (100 * done / DATA.queries.length) + '%';
+  document.getElementById('counter').textContent = `${done} / ${DATA.queries.length} complete`;
+}
+
+async function autosave(label) {
+  if (!isCandComplete(label)) return;
+  await saveCandidate(label);
+}
+
+async function saveCandidate(label) {
+  const q = DATA.queries[qIdx];
+  const r = RESPONSES[q.query_id][label];
+  const payload = { query_id: q.query_id, candidate_label: label, notes: r.notes || '' };
+  if (r.cannot_evaluate) payload.cannot_evaluate = true;
+  else payload.ratings = {...r.ratings};
+  try { await postResponse(payload); } catch (e) {}
+}
+
+async function saveAndNext() {
+  const q = DATA.queries[qIdx];
+  try {
+    for (const c of q.candidates) await saveCandidate(c.label);
+  } catch (e) { return; }
+  if (qIdx < DATA.queries.length - 1) {
+    qIdx += 1; render(); window.scrollTo(0,0);
+  } else {
+    alert('All queries reviewed.'); render();
+  }
+}
+
+async function skipQuery() {
+  const q = DATA.queries[qIdx];
+  if (!confirm(`Skip query ${q.query_id} (${q.event.ticker})?`)) return;
+  RESPONSES[q.query_id] = '__skipped__';
+  try { await postResponse({ query_id: q.query_id, skipped: true }); } catch (e) { return; }
+  if (qIdx < DATA.queries.length - 1) { qIdx += 1; render(); window.scrollTo(0,0); } else render();
+}
+
+function highlightActive() {
+  document.querySelectorAll('.candidate-card').forEach((c, i) => {
+    c.style.boxShadow = i === activeCandIdx ? '0 0 0 2px var(--accent)' : 'none';
+  });
+}
+
+function bindKeys() {
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT') return;
+    if (document.getElementById('text-modal').classList.contains('open')) {
+      if (e.key === 'Escape') closeModal();
+      return;
+    }
+    const q = DATA.queries[qIdx];
+    if (e.key >= '1' && e.key <= '5') {
+      const v = parseInt(e.key, 10);
+      const label = q.candidates[activeCandIdx].label;
+      const cur = ((RESPONSES[q.query_id]||{})[label] || {}).ratings || {};
+      const next = METRICS.find(m => !cur[m.key]);
+      if (next) setScale(label, next.key, v);
+      e.preventDefault();
+    } else if (e.key === 'Tab') {
+      activeCandIdx = (activeCandIdx + (e.shiftKey ? -1 : 1) + q.candidates.length) % q.candidates.length;
+      highlightActive();
+      document.getElementById(`cand-${q.candidates[activeCandIdx].label}`).scrollIntoView({block:'center'});
+      e.preventDefault();
+    } else if (e.key === 'Enter') {
+      const btn = document.getElementById('next-btn');
+      if (!btn.disabled) btn.click();
+    } else if (e.key === 'Escape') {
+      document.querySelectorAll('.chart-box > div').forEach(d => { if (d._clearAnchor) d._clearAnchor(); });
+    }
+  });
+}
+
+function drawChart(containerId, series, w, h, big) {
+  const el = document.getElementById(containerId);
+  if (!el || !series || !series.length || typeof LightweightCharts === 'undefined') return;
+  el.innerHTML = '';
+  el.style.position = 'relative';
+  const base = series[0].price || 1;
+  const data = series.filter(p => p.date)
+    .map(p => ({ time: p.date, value: 100 * p.price / base, rawPrice: p.price, day: p.day }));
+  const seen = new Set(); const clean = []; const meta = {};
+  for (const d of data) {
+    if (seen.has(d.time)) continue;
+    seen.add(d.time);
+    clean.push({ time: d.time, value: d.value });
+    meta[d.time] = { rawPrice: d.rawPrice, day: d.day };
+  }
+  const chart = LightweightCharts.createChart(el, {
+    width: w, height: h,
+    layout: { background:{color:'#ffffff'}, textColor:'#333', fontSize: big?11:9 },
+    grid: { vertLines:{color:'#f0f0f0'}, horzLines:{color:'#f0f0f0'} },
+    rightPriceScale: { borderColor:'#ddd', scaleMargins:{top:0.1,bottom:0.1} },
+    timeScale: { borderColor:'#ddd', timeVisible:false, secondsVisible:false },
+    crosshair: { mode:1 }, handleScroll:true, handleScale:true,
+  });
+  const s = chart.addAreaSeries({
+    lineColor:'#2766d6', topColor:'rgba(39,102,214,0.28)',
+    bottomColor:'rgba(39,102,214,0.02)', lineWidth:2, priceLineVisible:false,
+  });
+  s.setData(clean);
+  s.createPriceLine({ price:100, color:'#888', lineWidth:1, lineStyle:2,
+                      axisLabelVisible:big, title: big?'event=100':'' });
+  const targets = [0,30,60,90]; const markers = [];
+  for (const tgt of targets) {
+    let best = clean[0]; let bd = Math.abs((series[0]?.day ?? 0) - tgt);
+    for (let i=0;i<series.length;i++) {
+      const d = Math.abs(series[i].day - tgt);
+      if (d < bd) { bd = d; best = clean[i]; }
+    }
+    if (best) markers.push({ time:best.time, position:'belowBar', color:'#2766d6',
+                             shape:'circle', text: big?`d${tgt}`:'', size: big?1:0.6 });
+  }
+  s.setMarkers(markers);
+  chart.timeScale().fitContent();
+
+  // ruler tool
+  const overlay = document.createElement('div');
+  overlay.style.cssText = `position:absolute; pointer-events:none; top:4px; right:8px;
+    font:11px ui-monospace,monospace; background:rgba(255,255,255,0.92);
+    border:1px solid #ddd; padding:3px 6px; border-radius:3px; display:none; z-index:5;`;
+  el.appendChild(overlay);
+  let anchor = null, anchorLine = null;
+  function setAnchor(time, val, raw, day) {
+    if (anchorLine) try { s.removePriceLine(anchorLine); } catch(e){}
+    anchor = { time, val, raw, day };
+    anchorLine = s.createPriceLine({ price:val, color:'#d65a2d', lineWidth:1,
+      lineStyle:0, axisLabelVisible:true, title:`⚓ d${day}` });
+    overlay.style.display = 'block';
+    overlay.textContent = `⚓ anchor d${day}  px ${raw.toFixed(2)}`;
+  }
+  function clearAnchor() {
+    if (anchorLine) try { s.removePriceLine(anchorLine); } catch(e){}
+    anchorLine = null; anchor = null; overlay.style.display = 'none';
+  }
+  chart.subscribeClick(p => {
+    if (!p.time) return;
+    const v = p.seriesData.get(s); const val = v && (v.value ?? v.close);
+    if (val == null) return;
+    if (anchor && anchor.time === p.time) { clearAnchor(); return; }
+    const mm = meta[p.time];
+    setAnchor(p.time, val, (mm&&mm.rawPrice) || (val*base/100), (mm&&mm.day) ?? 0);
+  });
+  chart.subscribeCrosshairMove(p => {
+    if (!anchor || !p.time) return;
+    const v = p.seriesData.get(s); const val = v && (v.value ?? v.close);
+    if (val == null) return;
+    const mm = meta[p.time];
+    const curRaw = (mm&&mm.rawPrice) || (val*base/100);
+    const dDays = ((mm&&mm.day) ?? 0) - anchor.day;
+    const dpct = (val/anchor.val - 1) * 100;
+    const sign = dpct >= 0 ? '+' : '';
+    const color = dpct >= 0 ? '#2a8e3a' : '#d65a2d';
+    overlay.innerHTML = `<span style="color:${color};font-weight:600">${sign}${dpct.toFixed(2)}%</span> over ${dDays>0?'+':''}${dDays}d`;
+  });
+  charts.set(containerId, chart);
+  el._clearAnchor = clearAnchor;
+}
+
+function pct(x) { return (x==null) ? '?' : (x*100).toFixed(1)+'%'; }
+function escapeHtml(s) { const d=document.createElement('div'); d.textContent=s||''; return d.innerHTML; }
+function escapeAttr(s) { return (s||'').replace(/"/g,'&quot;'); }
+
+init();
+</script>
+</body>
+</html>

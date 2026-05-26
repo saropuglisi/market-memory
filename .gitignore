@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Large/regenerable artifacts.
+# Keep: real_data/raw/sp500.csv, real_data/raw/lm_dict/, real_data/cache/fred/,
+#       cache/llm_struct_*.json
+real_data/raw/sec/
+real_data/cache/prices/
+cache/text_emb_minilm.npz
+
+# Logs
+*.log
+
+# Temp
+*.tmp
+*.swp
+
+# Local AI assistant configs / scratch
+.claude/
+
+# Stale v1 review files (superseded by blind_test_v2_*)
+evaluation/qualitative/reviews/blind_test_20260525_175053_responses.json
+evaluation/qualitative/reviews/blind_test_20260525_175053_data.json

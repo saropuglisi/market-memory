@@ -1,0 +1,1282 @@
+{
+  "evt_0038": {
+    "llm_v3": [
+      {
+        "train_idx": 81,
+        "train_id": "evt_0008",
+        "train_cluster": "A",
+        "train_ticker": "MU",
+        "train_sector": "tech",
+        "sim": 0.8630396723747253
+      },
+      {
+        "train_idx": 113,
+        "train_id": "evt_0014",
+        "train_cluster": "A",
+        "train_ticker": "ANET",
+        "train_sector": "tech",
+        "sim": 0.8343380689620972
+      },
+      {
+        "train_idx": 96,
+        "train_id": "evt_0011",
+        "train_cluster": "A",
+        "train_ticker": "TGT",
+        "train_sector": "consumer",
+        "sim": 0.8298043608665466
+      },
+      {
+        "train_idx": 122,
+        "train_id": "evt_0026",
+        "train_cluster": "A",
+        "train_ticker": "ZION",
+        "train_sector": "financial",
+        "sim": 0.7891528010368347
+      },
+      {
+        "train_idx": 95,
+        "train_id": "evt_0016",
+        "train_cluster": "A",
+        "train_ticker": "AMD",
+        "train_sector": "tech",
+        "sim": 0.7844324707984924
+      }
+    ],
+    "contrastive_v2": [
+      {
+        "train_idx": 5,
+        "train_id": "evt_0107",
+        "train_cluster": "C",
+        "train_ticker": "NVDA",
+        "train_sector": "tech",
+        "sim": 0.9777176976203918
+      },
+      {
+        "train_idx": 33,
+        "train_id": "evt_0006",
+        "train_cluster": "A",
+        "train_ticker": "HON",
+        "train_sector": "industrial",
+        "sim": 0.9752182960510254
+      },
+      {
+        "train_idx": 11,
+        "train_id": "evt_0092",
+        "train_cluster": "C",
+        "train_ticker": "KMB",
+        "train_sector": "consumer",
+        "sim": 0.9741075038909912
+      },
+      {
+        "train_idx": 91,
+        "train_id": "evt_0102",
+        "train_cluster": "C",
+        "train_ticker": "QCOM",
+        "train_sector": "tech",
+        "sim": 0.9739563465118408
+      },
+      {
+        "train_idx": 129,
+        "train_id": "evt_0081",
+        "train_cluster": "C",
+        "train_ticker": "DAL",
+        "train_sector": "transport",
+        "sim": 0.9701451659202576
+      }
+    ],
+    "concat_eq": [
+      {
+        "train_idx": 81,
+        "train_id": "evt_0008",
+        "train_cluster": "A",
+        "train_ticker": "MU",
+        "train_sector": "tech",
+        "sim": 0.8435516357421875
+      },
+      {
+        "train_idx": 113,
+        "train_id": "evt_0014",
+        "train_cluster": "A",
+        "train_ticker": "ANET",
+        "train_sector": "tech",
+        "sim": 0.7541173696517944
+      },
+      {
+        "train_idx": 95,
+        "train_id": "evt_0016",
+        "train_cluster": "A",
+        "train_ticker": "AMD",
+        "train_sector": "tech",
+        "sim": 0.7377893924713135
+      },
+      {
+        "train_idx": 96,
+        "train_id": "evt_0011",
+        "train_cluster": "A",
+        "train_ticker": "TGT",
+        "train_sector": "consumer",
+        "sim": 0.7287410497665405
+      },
+      {
+        "train_idx": 117,
+        "train_id": "evt_0004",
+        "train_cluster": "A",
+        "train_ticker": "ANET",
+        "train_sector": "tech",
+        "sim": 0.7181474566459656
+      }
+    ]
+  },
+  "evt_0037": {
+    "llm_v3": [
+      {
+        "train_idx": 37,
+        "train_id": "evt_0018",
+        "train_cluster": "A",
+        "train_ticker": "INTC",
+        "train_sector": "tech",
+        "sim": 0.8464205861091614
+      },
+      {
+        "train_idx": 71,
+        "train_id": "evt_0023",
+        "train_cluster": "A",
+        "train_ticker": "MRVL",
+        "train_sector": "tech",
+        "sim": 0.8049497604370117
+      },
+      {
+        "train_idx": 31,
+        "train_id": "evt_0003",
+        "train_cluster": "A",
+        "train_ticker": "INTC",
+        "train_sector": "tech",
+        "sim": 0.7126067876815796
+      },
+      {
+        "train_idx": 76,
+        "train_id": "evt_0028",
+        "train_cluster": "A",
+        "train_ticker": "GM",
+        "train_sector": "consumer",
+        "sim": 0.7121435403823853
+      },
+      {
+        "train_idx": 68,
+        "train_id": "evt_0001",
+        "train_cluster": "A",
+        "train_ticker": "VRT",
+        "train_sector": "tech",
+        "sim": 0.7081391215324402
+      }
+    ],
+    "contrastive_v2": [
+      {
+        "train_idx": 32,
+        "train_id": "evt_0084",
+        "train_cluster": "C",
+        "train_ticker": "DAL",
+        "train_sector": "transport",
+        "sim": 0.9621647596359253
+      },
+      {
+        "train_idx": 49,
+        "train_id": "evt_0105",
+        "train_cluster": "C",
+        "train_ticker": "DE",
+        "train_sector": "industrial",
+        "sim": 0.9605358242988586
+      },
+      {
+        "train_idx": 135,
+        "train_id": "evt_0091",
+        "train_cluster": "C",
+        "train_ticker": "WHR",
+        "train_sector": "consumer",
+        "sim": 0.9596364498138428
+      },
+      {
+        "train_idx": 59,
+        "train_id": "evt_0099",
+        "train_cluster": "C",
+        "train_ticker": "MMM",
+        "train_sector": "industrial",
+        "sim": 0.9593180418014526
+      },
+      {
+        "train_idx": 107,
+        "train_id": "evt_0088",
+        "train_cluster": "C",
+        "train_ticker": "NSC",
+        "train_sector": "transport",
+        "sim": 0.9579852819442749
+      }
+    ],
+    "concat_eq": [
+      {
+        "train_idx": 37,
+        "train_id": "evt_0018",
+        "train_cluster": "A",
+        "train_ticker": "INTC",
+        "train_sector": "tech",
+        "sim": 0.764165461063385
+      },
+      {
+        "train_idx": 71,
+        "train_id": "evt_0023",
+        "train_cluster": "A",
+        "train_ticker": "MRVL",
+        "train_sector": "tech",
+        "sim": 0.7173243761062622
+      },
+      {
+        "train_idx": 68,
+        "train_id": "evt_0001",
+        "train_cluster": "A",
+        "train_ticker": "VRT",
+        "train_sector": "tech",
+        "sim": 0.7012594938278198
+      },
+      {
+        "train_idx": 33,
+        "train_id": "evt_0006",
+        "train_cluster": "A",
+        "train_ticker": "HON",
+        "train_sector": "industrial",
+        "sim": 0.6693485379219055
+      },
+      {
+        "train_idx": 31,
+        "train_id": "evt_0003",
+        "train_cluster": "A",
+        "train_ticker": "INTC",
+        "train_sector": "tech",
+        "sim": 0.652755618095398
+      }
+    ]
+  },
+  "evt_0071": {
+    "llm_v3": [
+      {
+        "train_idx": 45,
+        "train_id": "evt_0140",
+        "train_cluster": "D",
+        "train_ticker": "BAC",
+        "train_sector": "financial",
+        "sim": 0.8312051296234131
+      },
+      {
+        "train_idx": 104,
+        "train_id": "evt_0143",
+        "train_cluster": "D",
+        "train_ticker": "GE",
+        "train_sector": "industrial",
+        "sim": 0.7609200477600098
+      },
+      {
+        "train_idx": 144,
+        "train_id": "evt_0149",
+        "train_cluster": "D",
+        "train_ticker": "MU",
+        "train_sector": "tech",
+        "sim": 0.7513102293014526
+      },
+      {
+        "train_idx": 109,
+        "train_id": "evt_0121",
+        "train_cluster": "D",
+        "train_ticker": "WFC",
+        "train_sector": "financial",
+        "sim": 0.723625123500824
+      },
+      {
+        "train_idx": 16,
+        "train_id": "evt_0131",
+        "train_cluster": "D",
+        "train_ticker": "RH",
+        "train_sector": "consumer",
+        "sim": 0.7043094038963318
+      }
+    ],
+    "contrastive_v2": [
+      {
+        "train_idx": 23,
+        "train_id": "evt_0042",
+        "train_cluster": "B",
+        "train_ticker": "GE",
+        "train_sector": "industrial",
+        "sim": 0.9408755302429199
+      },
+      {
+        "train_idx": 131,
+        "train_id": "evt_0060",
+        "train_cluster": "B",
+        "train_ticker": "CAT",
+        "train_sector": "industrial",
+        "sim": 0.9291477203369141
+      },
+      {
+        "train_idx": 78,
+        "train_id": "evt_0147",
+        "train_cluster": "D",
+        "train_ticker": "NVDA",
+        "train_sector": "tech",
+        "sim": 0.9246043562889099
+      },
+      {
+        "train_idx": 3,
+        "train_id": "evt_0146",
+        "train_cluster": "D",
+        "train_ticker": "BAC",
+        "train_sector": "financial",
+        "sim": 0.9213113784790039
+      },
+      {
+        "train_idx": 133,
+        "train_id": "evt_0070",
+        "train_cluster": "B",
+        "train_ticker": "INTC",
+        "train_sector": "tech",
+        "sim": 0.8955886960029602
+      }
+    ],
+    "concat_eq": [
+      {
+        "train_idx": 45,
+        "train_id": "evt_0140",
+        "train_cluster": "D",
+        "train_ticker": "BAC",
+        "train_sector": "financial",
+        "sim": 0.7562071681022644
+      },
+      {
+        "train_idx": 144,
+        "train_id": "evt_0149",
+        "train_cluster": "D",
+        "train_ticker": "MU",
+        "train_sector": "tech",
+        "sim": 0.7022693753242493
+      },
+      {
+        "train_idx": 133,
+        "train_id": "evt_0070",
+        "train_cluster": "B",
+        "train_ticker": "INTC",
+        "train_sector": "tech",
+        "sim": 0.6385301351547241
+      },
+      {
+        "train_idx": 15,
+        "train_id": "evt_0041",
+        "train_cluster": "B",
+        "train_ticker": "EMR",
+        "train_sector": "industrial",
+        "sim": 0.6300082206726074
+      },
+      {
+        "train_idx": 109,
+        "train_id": "evt_0121",
+        "train_cluster": "D",
+        "train_ticker": "WFC",
+        "train_sector": "financial",
+        "sim": 0.6284857988357544
+      }
+    ]
+  },
+  "evt_0075": {
+    "llm_v3": [
+      {
+        "train_idx": 100,
+        "train_id": "evt_0148",
+        "train_cluster": "D",
+        "train_ticker": "DE",
+        "train_sector": "industrial",
+        "sim": 0.5937169790267944
+      },
+      {
+        "train_idx": 118,
+        "train_id": "evt_0046",
+        "train_cluster": "B",
+        "train_ticker": "MS",
+        "train_sector": "financial",
+        "sim": 0.5681091547012329
+      },
+      {
+        "train_idx": 25,
+        "train_id": "evt_0044",
+        "train_cluster": "B",
+        "train_ticker": "HON",
+        "train_sector": "industrial",
+        "sim": 0.5189600586891174
+      },
+      {
+        "train_idx": 108,
+        "train_id": "evt_0123",
+        "train_cluster": "D",
+        "train_ticker": "GS",
+        "train_sector": "financial",
+        "sim": 0.5171760320663452
+      },
+      {
+        "train_idx": 86,
+        "train_id": "evt_0058",
+        "train_cluster": "B",
+        "train_ticker": "TGT",
+        "train_sector": "consumer",
+        "sim": 0.5063509941101074
+      }
+    ],
+    "contrastive_v2": [
+      {
+        "train_idx": 4,
+        "train_id": "evt_0066",
+        "train_cluster": "B",
+        "train_ticker": "F",
+        "train_sector": "consumer",
+        "sim": 0.9276991486549377
+      },
+      {
+        "train_idx": 120,
+        "train_id": "evt_0059",
+        "train_cluster": "B",
+        "train_ticker": "GM",
+        "train_sector": "consumer",
+        "sim": 0.9188413023948669
+      },
+      {
+        "train_idx": 133,
+        "train_id": "evt_0070",
+        "train_cluster": "B",
+        "train_ticker": "INTC",
+        "train_sector": "tech",
+        "sim": 0.901436448097229
+      },
+      {
+        "train_idx": 149,
+        "train_id": "evt_0057",
+        "train_cluster": "B",
+        "train_ticker": "WDC",
+        "train_sector": "tech",
+        "sim": 0.9013334512710571
+      },
+      {
+        "train_idx": 14,
+        "train_id": "evt_0052",
+        "train_cluster": "B",
+        "train_ticker": "TGT",
+        "train_sector": "consumer",
+        "sim": 0.8891794681549072
+      }
+    ],
+    "concat_eq": [
+      {
+        "train_idx": 100,
+        "train_id": "evt_0148",
+        "train_cluster": "D",
+        "train_ticker": "DE",
+        "train_sector": "industrial",
+        "sim": 0.589809775352478
+      },
+      {
+        "train_idx": 118,
+        "train_id": "evt_0046",
+        "train_cluster": "B",
+        "train_ticker": "MS",
+        "train_sector": "financial",
+        "sim": 0.5583719611167908
+      },
+      {
+        "train_idx": 137,
+        "train_id": "evt_0141",
+        "train_cluster": "D",
+        "train_ticker": "SMCI",
+        "train_sector": "tech",
+        "sim": 0.5171457529067993
+      },
+      {
+        "train_idx": 21,
+        "train_id": "evt_0125",
+        "train_cluster": "D",
+        "train_ticker": "RH",
+        "train_sector": "consumer",
+        "sim": 0.4991971254348755
+      },
+      {
+        "train_idx": 124,
+        "train_id": "evt_0124",
+        "train_cluster": "D",
+        "train_ticker": "JPM",
+        "train_sector": "financial",
+        "sim": 0.4896698594093323
+      }
+    ]
+  },
+  "evt_0111": {
+    "llm_v3": [
+      {
+        "train_idx": 91,
+        "train_id": "evt_0102",
+        "train_cluster": "C",
+        "train_ticker": "QCOM",
+        "train_sector": "tech",
+        "sim": 0.7677053809165955
+      },
+      {
+        "train_idx": 11,
+        "train_id": "evt_0092",
+        "train_cluster": "C",
+        "train_ticker": "KMB",
+        "train_sector": "consumer",
+        "sim": 0.7024263143539429
+      },
+      {
+        "train_idx": 101,
+        "train_id": "evt_0103",
+        "train_cluster": "C",
+        "train_ticker": "DAL",
+        "train_sector": "transport",
+        "sim": 0.6837865710258484
+      },
+      {
+        "train_idx": 62,
+        "train_id": "evt_0106",
+        "train_cluster": "C",
+        "train_ticker": "CAT",
+        "train_sector": "industrial",
+        "sim": 0.6689482927322388
+      },
+      {
+        "train_idx": 24,
+        "train_id": "evt_0086",
+        "train_cluster": "C",
+        "train_ticker": "NVDA",
+        "train_sector": "tech",
+        "sim": 0.6650000810623169
+      }
+    ],
+    "contrastive_v2": [
+      {
+        "train_idx": 107,
+        "train_id": "evt_0088",
+        "train_cluster": "C",
+        "train_ticker": "NSC",
+        "train_sector": "transport",
+        "sim": 0.9882670640945435
+      },
+      {
+        "train_idx": 60,
+        "train_id": "evt_0090",
+        "train_cluster": "C",
+        "train_ticker": "DAL",
+        "train_sector": "transport",
+        "sim": 0.9858835935592651
+      },
+      {
+        "train_idx": 99,
+        "train_id": "evt_0019",
+        "train_cluster": "A",
+        "train_ticker": "ANET",
+        "train_sector": "tech",
+        "sim": 0.980783224105835
+      },
+      {
+        "train_idx": 19,
+        "train_id": "evt_0108",
+        "train_cluster": "C",
+        "train_ticker": "STX",
+        "train_sector": "tech",
+        "sim": 0.9772191047668457
+      },
+      {
+        "train_idx": 135,
+        "train_id": "evt_0091",
+        "train_cluster": "C",
+        "train_ticker": "WHR",
+        "train_sector": "consumer",
+        "sim": 0.9724223613739014
+      }
+    ],
+    "concat_eq": [
+      {
+        "train_idx": 91,
+        "train_id": "evt_0102",
+        "train_cluster": "C",
+        "train_ticker": "QCOM",
+        "train_sector": "tech",
+        "sim": 0.612323522567749
+      },
+      {
+        "train_idx": 138,
+        "train_id": "evt_0109",
+        "train_cluster": "C",
+        "train_ticker": "QCOM",
+        "train_sector": "tech",
+        "sim": 0.5443838238716125
+      },
+      {
+        "train_idx": 136,
+        "train_id": "evt_0085",
+        "train_cluster": "C",
+        "train_ticker": "CAT",
+        "train_sector": "industrial",
+        "sim": 0.5136839747428894
+      },
+      {
+        "train_idx": 107,
+        "train_id": "evt_0088",
+        "train_cluster": "C",
+        "train_ticker": "NSC",
+        "train_sector": "transport",
+        "sim": 0.4682610332965851
+      },
+      {
+        "train_idx": 12,
+        "train_id": "evt_0163",
+        "train_cluster": "NOISE",
+        "train_ticker": "JKL",
+        "train_sector": "mixed",
+        "sim": 0.4637254476547241
+      }
+    ]
+  },
+  "evt_0118": {
+    "llm_v3": [
+      {
+        "train_idx": 91,
+        "train_id": "evt_0102",
+        "train_cluster": "C",
+        "train_ticker": "QCOM",
+        "train_sector": "tech",
+        "sim": 0.7363671064376831
+      },
+      {
+        "train_idx": 94,
+        "train_id": "evt_0098",
+        "train_cluster": "C",
+        "train_ticker": "WDC",
+        "train_sector": "tech",
+        "sim": 0.6601619124412537
+      },
+      {
+        "train_idx": 101,
+        "train_id": "evt_0103",
+        "train_cluster": "C",
+        "train_ticker": "DAL",
+        "train_sector": "transport",
+        "sim": 0.6534454226493835
+      },
+      {
+        "train_idx": 19,
+        "train_id": "evt_0108",
+        "train_cluster": "C",
+        "train_ticker": "STX",
+        "train_sector": "tech",
+        "sim": 0.6435710787773132
+      },
+      {
+        "train_idx": 1,
+        "train_id": "evt_0082",
+        "train_cluster": "C",
+        "train_ticker": "AMD",
+        "train_sector": "tech",
+        "sim": 0.623563289642334
+      }
+    ],
+    "contrastive_v2": [
+      {
+        "train_idx": 11,
+        "train_id": "evt_0092",
+        "train_cluster": "C",
+        "train_ticker": "KMB",
+        "train_sector": "consumer",
+        "sim": 0.9019578695297241
+      },
+      {
+        "train_idx": 138,
+        "train_id": "evt_0109",
+        "train_cluster": "C",
+        "train_ticker": "QCOM",
+        "train_sector": "tech",
+        "sim": 0.8939054608345032
+      },
+      {
+        "train_idx": 30,
+        "train_id": "evt_0101",
+        "train_cluster": "C",
+        "train_ticker": "VRT",
+        "train_sector": "tech",
+        "sim": 0.8791010975837708
+      },
+      {
+        "train_idx": 33,
+        "train_id": "evt_0006",
+        "train_cluster": "A",
+        "train_ticker": "HON",
+        "train_sector": "industrial",
+        "sim": 0.8716002702713013
+      },
+      {
+        "train_idx": 129,
+        "train_id": "evt_0081",
+        "train_cluster": "C",
+        "train_ticker": "DAL",
+        "train_sector": "transport",
+        "sim": 0.8664035797119141
+      }
+    ],
+    "concat_eq": [
+      {
+        "train_idx": 101,
+        "train_id": "evt_0103",
+        "train_cluster": "C",
+        "train_ticker": "DAL",
+        "train_sector": "transport",
+        "sim": 0.5763060450553894
+      },
+      {
+        "train_idx": 142,
+        "train_id": "evt_0122",
+        "train_cluster": "D",
+        "train_ticker": "HBI",
+        "train_sector": "consumer",
+        "sim": 0.4937761723995209
+      },
+      {
+        "train_idx": 91,
+        "train_id": "evt_0102",
+        "train_cluster": "C",
+        "train_ticker": "QCOM",
+        "train_sector": "tech",
+        "sim": 0.4923277497291565
+      },
+      {
+        "train_idx": 94,
+        "train_id": "evt_0098",
+        "train_cluster": "C",
+        "train_ticker": "WDC",
+        "train_sector": "tech",
+        "sim": 0.48800909519195557
+      },
+      {
+        "train_idx": 5,
+        "train_id": "evt_0107",
+        "train_cluster": "C",
+        "train_ticker": "NVDA",
+        "train_sector": "tech",
+        "sim": 0.4190342128276825
+      }
+    ]
+  },
+  "evt_0154": {
+    "llm_v3": [
+      {
+        "train_idx": 125,
+        "train_id": "evt_0056",
+        "train_cluster": "B",
+        "train_ticker": "GM",
+        "train_sector": "consumer",
+        "sim": 0.7652736306190491
+      },
+      {
+        "train_idx": 112,
+        "train_id": "evt_0126",
+        "train_cluster": "D",
+        "train_ticker": "EMR",
+        "train_sector": "industrial",
+        "sim": 0.7244349718093872
+      },
+      {
+        "train_idx": 51,
+        "train_id": "evt_0132",
+        "train_cluster": "D",
+        "train_ticker": "GS",
+        "train_sector": "financial",
+        "sim": 0.6873916387557983
+      },
+      {
+        "train_idx": 39,
+        "train_id": "evt_0062",
+        "train_cluster": "B",
+        "train_ticker": "ETN",
+        "train_sector": "industrial",
+        "sim": 0.6834615468978882
+      },
+      {
+        "train_idx": 123,
+        "train_id": "evt_0135",
+        "train_cluster": "D",
+        "train_ticker": "KEY",
+        "train_sector": "financial",
+        "sim": 0.6593021750450134
+      }
+    ],
+    "contrastive_v2": [
+      {
+        "train_idx": 18,
+        "train_id": "evt_0047",
+        "train_cluster": "B",
+        "train_ticker": "CAT",
+        "train_sector": "industrial",
+        "sim": 0.959845781326294
+      },
+      {
+        "train_idx": 88,
+        "train_id": "evt_0067",
+        "train_cluster": "B",
+        "train_ticker": "TGT",
+        "train_sector": "consumer",
+        "sim": 0.9504909515380859
+      },
+      {
+        "train_idx": 118,
+        "train_id": "evt_0046",
+        "train_cluster": "B",
+        "train_ticker": "MS",
+        "train_sector": "financial",
+        "sim": 0.9452112317085266
+      },
+      {
+        "train_idx": 86,
+        "train_id": "evt_0058",
+        "train_cluster": "B",
+        "train_ticker": "TGT",
+        "train_sector": "consumer",
+        "sim": 0.9439581632614136
+      },
+      {
+        "train_idx": 40,
+        "train_id": "evt_0045",
+        "train_cluster": "B",
+        "train_ticker": "RH",
+        "train_sector": "consumer",
+        "sim": 0.9399819374084473
+      }
+    ],
+    "concat_eq": [
+      {
+        "train_idx": 51,
+        "train_id": "evt_0132",
+        "train_cluster": "D",
+        "train_ticker": "GS",
+        "train_sector": "financial",
+        "sim": 0.7116729021072388
+      },
+      {
+        "train_idx": 125,
+        "train_id": "evt_0056",
+        "train_cluster": "B",
+        "train_ticker": "GM",
+        "train_sector": "consumer",
+        "sim": 0.6277666687965393
+      },
+      {
+        "train_idx": 112,
+        "train_id": "evt_0126",
+        "train_cluster": "D",
+        "train_ticker": "EMR",
+        "train_sector": "industrial",
+        "sim": 0.6211260557174683
+      },
+      {
+        "train_idx": 123,
+        "train_id": "evt_0135",
+        "train_cluster": "D",
+        "train_ticker": "KEY",
+        "train_sector": "financial",
+        "sim": 0.6122430562973022
+      },
+      {
+        "train_idx": 140,
+        "train_id": "evt_0136",
+        "train_cluster": "D",
+        "train_ticker": "WFC",
+        "train_sector": "financial",
+        "sim": 0.5814650058746338
+      }
+    ]
+  },
+  "evt_0152": {
+    "llm_v3": [
+      {
+        "train_idx": 123,
+        "train_id": "evt_0135",
+        "train_cluster": "D",
+        "train_ticker": "KEY",
+        "train_sector": "financial",
+        "sim": 0.7061868906021118
+      },
+      {
+        "train_idx": 86,
+        "train_id": "evt_0058",
+        "train_cluster": "B",
+        "train_ticker": "TGT",
+        "train_sector": "consumer",
+        "sim": 0.6394975185394287
+      },
+      {
+        "train_idx": 40,
+        "train_id": "evt_0045",
+        "train_cluster": "B",
+        "train_ticker": "RH",
+        "train_sector": "consumer",
+        "sim": 0.6394296884536743
+      },
+      {
+        "train_idx": 25,
+        "train_id": "evt_0044",
+        "train_cluster": "B",
+        "train_ticker": "HON",
+        "train_sector": "industrial",
+        "sim": 0.6384703516960144
+      },
+      {
+        "train_idx": 39,
+        "train_id": "evt_0062",
+        "train_cluster": "B",
+        "train_ticker": "ETN",
+        "train_sector": "industrial",
+        "sim": 0.610844612121582
+      }
+    ],
+    "contrastive_v2": [
+      {
+        "train_idx": 112,
+        "train_id": "evt_0126",
+        "train_cluster": "D",
+        "train_ticker": "EMR",
+        "train_sector": "industrial",
+        "sim": 0.8996455073356628
+      },
+      {
+        "train_idx": 141,
+        "train_id": "evt_0142",
+        "train_cluster": "D",
+        "train_ticker": "MS",
+        "train_sector": "financial",
+        "sim": 0.8799324035644531
+      },
+      {
+        "train_idx": 125,
+        "train_id": "evt_0056",
+        "train_cluster": "B",
+        "train_ticker": "GM",
+        "train_sector": "consumer",
+        "sim": 0.8662906885147095
+      },
+      {
+        "train_idx": 142,
+        "train_id": "evt_0122",
+        "train_cluster": "D",
+        "train_ticker": "HBI",
+        "train_sector": "consumer",
+        "sim": 0.8554473519325256
+      },
+      {
+        "train_idx": 51,
+        "train_id": "evt_0132",
+        "train_cluster": "D",
+        "train_ticker": "GS",
+        "train_sector": "financial",
+        "sim": 0.8541048765182495
+      }
+    ],
+    "concat_eq": [
+      {
+        "train_idx": 123,
+        "train_id": "evt_0135",
+        "train_cluster": "D",
+        "train_ticker": "KEY",
+        "train_sector": "financial",
+        "sim": 0.7237829566001892
+      },
+      {
+        "train_idx": 86,
+        "train_id": "evt_0058",
+        "train_cluster": "B",
+        "train_ticker": "TGT",
+        "train_sector": "consumer",
+        "sim": 0.6474980711936951
+      },
+      {
+        "train_idx": 39,
+        "train_id": "evt_0062",
+        "train_cluster": "B",
+        "train_ticker": "ETN",
+        "train_sector": "industrial",
+        "sim": 0.5941109657287598
+      },
+      {
+        "train_idx": 124,
+        "train_id": "evt_0124",
+        "train_cluster": "D",
+        "train_ticker": "JPM",
+        "train_sector": "financial",
+        "sim": 0.5824016332626343
+      },
+      {
+        "train_idx": 141,
+        "train_id": "evt_0142",
+        "train_cluster": "D",
+        "train_ticker": "MS",
+        "train_sector": "financial",
+        "sim": 0.5801985859870911
+      }
+    ]
+  },
+  "evt_0192": {
+    "llm_v3": [
+      {
+        "train_idx": 29,
+        "train_id": "evt_0189",
+        "train_cluster": "NOISE",
+        "train_ticker": "DEF",
+        "train_sector": "mixed",
+        "sim": 0.8900991082191467
+      },
+      {
+        "train_idx": 106,
+        "train_id": "evt_0173",
+        "train_cluster": "NOISE",
+        "train_ticker": "ABC",
+        "train_sector": "mixed",
+        "sim": 0.8722134828567505
+      },
+      {
+        "train_idx": 63,
+        "train_id": "evt_0190",
+        "train_cluster": "NOISE",
+        "train_ticker": "JKL",
+        "train_sector": "mixed",
+        "sim": 0.8438224792480469
+      },
+      {
+        "train_idx": 147,
+        "train_id": "evt_0178",
+        "train_cluster": "NOISE",
+        "train_ticker": "JKL",
+        "train_sector": "mixed",
+        "sim": 0.8304927945137024
+      },
+      {
+        "train_idx": 126,
+        "train_id": "evt_0177",
+        "train_cluster": "NOISE",
+        "train_ticker": "GHI",
+        "train_sector": "mixed",
+        "sim": 0.8231940269470215
+      }
+    ],
+    "contrastive_v2": [
+      {
+        "train_idx": 29,
+        "train_id": "evt_0189",
+        "train_cluster": "NOISE",
+        "train_ticker": "DEF",
+        "train_sector": "mixed",
+        "sim": 0.9970090389251709
+      },
+      {
+        "train_idx": 121,
+        "train_id": "evt_0172",
+        "train_cluster": "NOISE",
+        "train_ticker": "GHI",
+        "train_sector": "mixed",
+        "sim": 0.9951192140579224
+      },
+      {
+        "train_idx": 115,
+        "train_id": "evt_0169",
+        "train_cluster": "NOISE",
+        "train_ticker": "GHI",
+        "train_sector": "mixed",
+        "sim": 0.9946760535240173
+      },
+      {
+        "train_idx": 12,
+        "train_id": "evt_0163",
+        "train_cluster": "NOISE",
+        "train_ticker": "JKL",
+        "train_sector": "mixed",
+        "sim": 0.9942296743392944
+      },
+      {
+        "train_idx": 42,
+        "train_id": "evt_0174",
+        "train_cluster": "NOISE",
+        "train_ticker": "ABC",
+        "train_sector": "mixed",
+        "sim": 0.9940735697746277
+      }
+    ],
+    "concat_eq": [
+      {
+        "train_idx": 29,
+        "train_id": "evt_0189",
+        "train_cluster": "NOISE",
+        "train_ticker": "DEF",
+        "train_sector": "mixed",
+        "sim": 0.8787071108818054
+      },
+      {
+        "train_idx": 106,
+        "train_id": "evt_0173",
+        "train_cluster": "NOISE",
+        "train_ticker": "ABC",
+        "train_sector": "mixed",
+        "sim": 0.8625325560569763
+      },
+      {
+        "train_idx": 63,
+        "train_id": "evt_0190",
+        "train_cluster": "NOISE",
+        "train_ticker": "JKL",
+        "train_sector": "mixed",
+        "sim": 0.8289211392402649
+      },
+      {
+        "train_idx": 147,
+        "train_id": "evt_0178",
+        "train_cluster": "NOISE",
+        "train_ticker": "JKL",
+        "train_sector": "mixed",
+        "sim": 0.8168695569038391
+      },
+      {
+        "train_idx": 126,
+        "train_id": "evt_0177",
+        "train_cluster": "NOISE",
+        "train_ticker": "GHI",
+        "train_sector": "mixed",
+        "sim": 0.8139696717262268
+      }
+    ]
+  },
+  "evt_0197": {
+    "llm_v3": [
+      {
+        "train_idx": 56,
+        "train_id": "evt_0188",
+        "train_cluster": "NOISE",
+        "train_ticker": "DEF",
+        "train_sector": "mixed",
+        "sim": 0.9083137512207031
+      },
+      {
+        "train_idx": 7,
+        "train_id": "evt_0179",
+        "train_cluster": "NOISE",
+        "train_ticker": "DEF",
+        "train_sector": "mixed",
+        "sim": 0.795796811580658
+      },
+      {
+        "train_idx": 105,
+        "train_id": "evt_0184",
+        "train_cluster": "NOISE",
+        "train_ticker": "GHI",
+        "train_sector": "mixed",
+        "sim": 0.6818610429763794
+      },
+      {
+        "train_idx": 75,
+        "train_id": "evt_0186",
+        "train_cluster": "NOISE",
+        "train_ticker": "DEF",
+        "train_sector": "mixed",
+        "sim": 0.6803216338157654
+      },
+      {
+        "train_idx": 2,
+        "train_id": "evt_0187",
+        "train_cluster": "NOISE",
+        "train_ticker": "GHI",
+        "train_sector": "mixed",
+        "sim": 0.6778280138969421
+      }
+    ],
+    "contrastive_v2": [
+      {
+        "train_idx": 121,
+        "train_id": "evt_0172",
+        "train_cluster": "NOISE",
+        "train_ticker": "GHI",
+        "train_sector": "mixed",
+        "sim": 0.996711015701294
+      },
+      {
+        "train_idx": 115,
+        "train_id": "evt_0169",
+        "train_cluster": "NOISE",
+        "train_ticker": "GHI",
+        "train_sector": "mixed",
+        "sim": 0.9937892556190491
+      },
+      {
+        "train_idx": 84,
+        "train_id": "evt_0162",
+        "train_cluster": "NOISE",
+        "train_ticker": "JKL",
+        "train_sector": "mixed",
+        "sim": 0.9932693839073181
+      },
+      {
+        "train_idx": 29,
+        "train_id": "evt_0189",
+        "train_cluster": "NOISE",
+        "train_ticker": "DEF",
+        "train_sector": "mixed",
+        "sim": 0.9924378395080566
+      },
+      {
+        "train_idx": 42,
+        "train_id": "evt_0174",
+        "train_cluster": "NOISE",
+        "train_ticker": "ABC",
+        "train_sector": "mixed",
+        "sim": 0.9914643168449402
+      }
+    ],
+    "concat_eq": [
+      {
+        "train_idx": 56,
+        "train_id": "evt_0188",
+        "train_cluster": "NOISE",
+        "train_ticker": "DEF",
+        "train_sector": "mixed",
+        "sim": 0.8962870836257935
+      },
+      {
+        "train_idx": 7,
+        "train_id": "evt_0179",
+        "train_cluster": "NOISE",
+        "train_ticker": "DEF",
+        "train_sector": "mixed",
+        "sim": 0.7646811008453369
+      },
+      {
+        "train_idx": 105,
+        "train_id": "evt_0184",
+        "train_cluster": "NOISE",
+        "train_ticker": "GHI",
+        "train_sector": "mixed",
+        "sim": 0.6513495445251465
+      },
+      {
+        "train_idx": 2,
+        "train_id": "evt_0187",
+        "train_cluster": "NOISE",
+        "train_ticker": "GHI",
+        "train_sector": "mixed",
+        "sim": 0.6366724967956543
+      },
+      {
+        "train_idx": 75,
+        "train_id": "evt_0186",
+        "train_cluster": "NOISE",
+        "train_ticker": "DEF",
+        "train_sector": "mixed",
+        "sim": 0.6364099979400635
+      }
+    ]
+  }
+}

@@ -1,0 +1,2274 @@
+{
+  "timestamp": "20260525_121442",
+  "n_train": 29,
+  "n_test": 21,
+  "results": [
+    {
+      "name": "concat_eq",
+      "self_consistency": 0.3287,
+      "random_baseline": 0.0837,
+      "sc_lift": 0.245,
+      "reaction_corr": 0.0944,
+      "utility_at_5": 0.0952,
+      "conditional_quality": 0.4476,
+      "temporal_diversity_days": 349.2,
+      "fit_s": 5.9,
+      "eval_s": 0.4,
+      "fail_count": 0
+    },
+    {
+      "name": "contrastive_v2",
+      "self_consistency": 0.7842,
+      "random_baseline": 0.3411,
+      "sc_lift": 0.4431,
+      "reaction_corr": 0.0718,
+      "utility_at_5": 0.0048,
+      "conditional_quality": 0.4,
+      "temporal_diversity_days": 586.5,
+      "fit_s": 0.3,
+      "eval_s": 0.1,
+      "fail_count": 0
+    },
+    {
+      "name": "llm_structured_v3",
+      "self_consistency": 0.4654,
+      "random_baseline": 0.2059,
+      "sc_lift": 0.2595,
+      "reaction_corr": 0.124,
+      "utility_at_5": 0.1952,
+      "conditional_quality": 0.3619,
+      "temporal_diversity_days": 364.2,
+      "fit_s": 169.8,
+      "eval_s": 127.9,
+      "fail_count": 5
+    }
+  ],
+  "retrievals": {
+    "ESS_2024Q3_8K_20241029": {
+      "query": {
+        "id": "ESS_2024Q3_8K_20241029",
+        "ticker": "ESS",
+        "sector": "Real Estate",
+        "date": "2024-10-29"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "SJM_2020Q3_8K_20201124",
+            "ticker": "SJM",
+            "sector": "Consumer Staples",
+            "date": "2020-11-24"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          },
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "SJM_2020Q3_8K_20201124",
+            "ticker": "SJM",
+            "sector": "Consumer Staples",
+            "date": "2020-11-24"
+          },
+          {
+            "id": "MGM_2019Q2_8K_20190725",
+            "ticker": "MGM",
+            "sector": "Consumer Discretionary",
+            "date": "2019-07-25"
+          },
+          {
+            "id": "D_2021Q3_8K_20211105",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2021-11-05"
+          },
+          {
+            "id": "MLM_2019Q1_8K_20190430",
+            "ticker": "MLM",
+            "sector": "Materials",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "MPC_2021Q1_8K_20210504",
+            "ticker": "MPC",
+            "sector": "Energy",
+            "date": "2021-05-04"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "SJM_2020Q3_8K_20201124",
+            "ticker": "SJM",
+            "sector": "Consumer Staples",
+            "date": "2020-11-24"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          },
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          }
+        ]
+      }
+    },
+    "FANG_2022Q3_8K_20221107": {
+      "query": {
+        "id": "FANG_2022Q3_8K_20221107",
+        "ticker": "FANG",
+        "sector": "Energy",
+        "date": "2022-11-07"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "STZ_2020Q2_8K_20200701",
+            "ticker": "STZ",
+            "sector": "Consumer Staples",
+            "date": "2020-07-01"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          },
+          {
+            "id": "CHTR_2019Q4_8K_20200131",
+            "ticker": "CHTR",
+            "sector": "Communication Services",
+            "date": "2020-01-31"
+          },
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          },
+          {
+            "id": "RCL_2022Q3_8K_20221103",
+            "ticker": "RCL",
+            "sector": "Consumer Discretionary",
+            "date": "2022-11-03"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "RCL_2022Q3_8K_20221103",
+            "ticker": "RCL",
+            "sector": "Consumer Discretionary",
+            "date": "2022-11-03"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "ALGN_2023Q1_8K_20230426",
+            "ticker": "ALGN",
+            "sector": "Health Care",
+            "date": "2023-04-26"
+          },
+          {
+            "id": "FCX_2018Q3_8K_20181024",
+            "ticker": "FCX",
+            "sector": "Materials",
+            "date": "2018-10-24"
+          },
+          {
+            "id": "CMCSA_2019Q4_8K_20200123",
+            "ticker": "CMCSA",
+            "sector": "Communication Services",
+            "date": "2020-01-23"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          },
+          {
+            "id": "STZ_2020Q2_8K_20200701",
+            "ticker": "STZ",
+            "sector": "Consumer Staples",
+            "date": "2020-07-01"
+          },
+          {
+            "id": "CHTR_2019Q4_8K_20200131",
+            "ticker": "CHTR",
+            "sector": "Communication Services",
+            "date": "2020-01-31"
+          },
+          {
+            "id": "PPL_2023Q1_8K_20230504",
+            "ticker": "PPL",
+            "sector": "Utilities",
+            "date": "2023-05-04"
+          },
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          }
+        ]
+      }
+    },
+    "SJM_2022Q2_8K_20220823": {
+      "query": {
+        "id": "SJM_2022Q2_8K_20220823",
+        "ticker": "SJM",
+        "sector": "Consumer Staples",
+        "date": "2022-08-23"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "NDAQ_2022Q2_8K_20220720",
+            "ticker": "NDAQ",
+            "sector": "Financials",
+            "date": "2022-07-20"
+          },
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          },
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          },
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "NDAQ_2022Q2_8K_20220720",
+            "ticker": "NDAQ",
+            "sector": "Financials",
+            "date": "2022-07-20"
+          },
+          {
+            "id": "GL_2018Q4_8K_20190205",
+            "ticker": "GL",
+            "sector": "Financials",
+            "date": "2019-02-05"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          },
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "NDAQ_2022Q2_8K_20220720",
+            "ticker": "NDAQ",
+            "sector": "Financials",
+            "date": "2022-07-20"
+          },
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          },
+          {
+            "id": "RCL_2022Q3_8K_20221103",
+            "ticker": "RCL",
+            "sector": "Consumer Discretionary",
+            "date": "2022-11-03"
+          }
+        ]
+      }
+    },
+    "INVH_2020Q2_8K_20200803": {
+      "query": {
+        "id": "INVH_2020Q2_8K_20200803",
+        "ticker": "INVH",
+        "sector": "Real Estate",
+        "date": "2020-08-03"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "BXP_2021Q2_8K_20210727",
+            "ticker": "BXP",
+            "sector": "Real Estate",
+            "date": "2021-07-27"
+          },
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "MPC_2021Q1_8K_20210504",
+            "ticker": "MPC",
+            "sector": "Energy",
+            "date": "2021-05-04"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "CHTR_2019Q4_8K_20200131",
+            "ticker": "CHTR",
+            "sector": "Communication Services",
+            "date": "2020-01-31"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "CHTR_2019Q4_8K_20200131",
+            "ticker": "CHTR",
+            "sector": "Communication Services",
+            "date": "2020-01-31"
+          },
+          {
+            "id": "EBAY_2022Q1_8K_20220504",
+            "ticker": "EBAY",
+            "sector": "Consumer Discretionary",
+            "date": "2022-05-04"
+          },
+          {
+            "id": "TTD_2021Q3_8K_20211108",
+            "ticker": "TTD",
+            "sector": "Communication Services",
+            "date": "2021-11-08"
+          },
+          {
+            "id": "ALGN_2023Q1_8K_20230426",
+            "ticker": "ALGN",
+            "sector": "Health Care",
+            "date": "2023-04-26"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "BXP_2021Q2_8K_20210727",
+            "ticker": "BXP",
+            "sector": "Real Estate",
+            "date": "2021-07-27"
+          },
+          {
+            "id": "MPC_2021Q1_8K_20210504",
+            "ticker": "MPC",
+            "sector": "Energy",
+            "date": "2021-05-04"
+          },
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "GL_2018Q4_8K_20190205",
+            "ticker": "GL",
+            "sector": "Financials",
+            "date": "2019-02-05"
+          }
+        ]
+      }
+    },
+    "EIX_2023Q4_8K_20240222": {
+      "query": {
+        "id": "EIX_2023Q4_8K_20240222",
+        "ticker": "EIX",
+        "sector": "Utilities",
+        "date": "2024-02-22"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          },
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          },
+          {
+            "id": "BXP_2021Q2_8K_20210727",
+            "ticker": "BXP",
+            "sector": "Real Estate",
+            "date": "2021-07-27"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          }
+        ]
+      }
+    },
+    "CBOE_2020Q4_8K_20210205": {
+      "query": {
+        "id": "CBOE_2020Q4_8K_20210205",
+        "ticker": "CBOE",
+        "sector": "Financials",
+        "date": "2021-02-05"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "CHTR_2019Q4_8K_20200131",
+            "ticker": "CHTR",
+            "sector": "Communication Services",
+            "date": "2020-01-31"
+          },
+          {
+            "id": "MPC_2021Q1_8K_20210504",
+            "ticker": "MPC",
+            "sector": "Energy",
+            "date": "2021-05-04"
+          },
+          {
+            "id": "FCX_2018Q3_8K_20181024",
+            "ticker": "FCX",
+            "sector": "Materials",
+            "date": "2018-10-24"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "BXP_2021Q2_8K_20210727",
+            "ticker": "BXP",
+            "sector": "Real Estate",
+            "date": "2021-07-27"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "D_2021Q3_8K_20211105",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2021-11-05"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "MLM_2019Q1_8K_20190430",
+            "ticker": "MLM",
+            "sector": "Materials",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "STZ_2020Q2_8K_20200701",
+            "ticker": "STZ",
+            "sector": "Consumer Staples",
+            "date": "2020-07-01"
+          },
+          {
+            "id": "MPC_2021Q1_8K_20210504",
+            "ticker": "MPC",
+            "sector": "Energy",
+            "date": "2021-05-04"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "BXP_2021Q2_8K_20210727",
+            "ticker": "BXP",
+            "sector": "Real Estate",
+            "date": "2021-07-27"
+          },
+          {
+            "id": "MPC_2021Q1_8K_20210504",
+            "ticker": "MPC",
+            "sector": "Energy",
+            "date": "2021-05-04"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "MGM_2019Q2_8K_20190725",
+            "ticker": "MGM",
+            "sector": "Consumer Discretionary",
+            "date": "2019-07-25"
+          },
+          {
+            "id": "CMCSA_2019Q4_8K_20200123",
+            "ticker": "CMCSA",
+            "sector": "Communication Services",
+            "date": "2020-01-23"
+          }
+        ]
+      }
+    },
+    "NKE_2019Q3_8K_20190924": {
+      "query": {
+        "id": "NKE_2019Q3_8K_20190924",
+        "ticker": "NKE",
+        "sector": "Consumer Discretionary",
+        "date": "2019-09-24"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "GL_2018Q4_8K_20190205",
+            "ticker": "GL",
+            "sector": "Financials",
+            "date": "2019-02-05"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "BXP_2021Q2_8K_20210727",
+            "ticker": "BXP",
+            "sector": "Real Estate",
+            "date": "2021-07-27"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "GL_2018Q4_8K_20190205",
+            "ticker": "GL",
+            "sector": "Financials",
+            "date": "2019-02-05"
+          },
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "NDAQ_2022Q2_8K_20220720",
+            "ticker": "NDAQ",
+            "sector": "Financials",
+            "date": "2022-07-20"
+          },
+          {
+            "id": "BXP_2021Q2_8K_20210727",
+            "ticker": "BXP",
+            "sector": "Real Estate",
+            "date": "2021-07-27"
+          }
+        ]
+      }
+    },
+    "HRL_2019Q3_8K_20191126": {
+      "query": {
+        "id": "HRL_2019Q3_8K_20191126",
+        "ticker": "HRL",
+        "sector": "Consumer Staples",
+        "date": "2019-11-26"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "GL_2018Q4_8K_20190205",
+            "ticker": "GL",
+            "sector": "Financials",
+            "date": "2019-02-05"
+          },
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "BXP_2021Q2_8K_20210727",
+            "ticker": "BXP",
+            "sector": "Real Estate",
+            "date": "2021-07-27"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          },
+          {
+            "id": "GL_2018Q4_8K_20190205",
+            "ticker": "GL",
+            "sector": "Financials",
+            "date": "2019-02-05"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "GL_2018Q4_8K_20190205",
+            "ticker": "GL",
+            "sector": "Financials",
+            "date": "2019-02-05"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "CMCSA_2019Q4_8K_20200123",
+            "ticker": "CMCSA",
+            "sector": "Communication Services",
+            "date": "2020-01-23"
+          }
+        ]
+      }
+    },
+    "TTD_2022Q4_8K_20230215": {
+      "query": {
+        "id": "TTD_2022Q4_8K_20230215",
+        "ticker": "TTD",
+        "sector": "Communication Services",
+        "date": "2023-02-15"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          },
+          {
+            "id": "ALGN_2023Q1_8K_20230426",
+            "ticker": "ALGN",
+            "sector": "Health Care",
+            "date": "2023-04-26"
+          },
+          {
+            "id": "RCL_2022Q3_8K_20221103",
+            "ticker": "RCL",
+            "sector": "Consumer Discretionary",
+            "date": "2022-11-03"
+          },
+          {
+            "id": "TTD_2021Q3_8K_20211108",
+            "ticker": "TTD",
+            "sector": "Communication Services",
+            "date": "2021-11-08"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "RCL_2022Q3_8K_20221103",
+            "ticker": "RCL",
+            "sector": "Consumer Discretionary",
+            "date": "2022-11-03"
+          },
+          {
+            "id": "ALGN_2023Q1_8K_20230426",
+            "ticker": "ALGN",
+            "sector": "Health Care",
+            "date": "2023-04-26"
+          },
+          {
+            "id": "EBAY_2022Q1_8K_20220504",
+            "ticker": "EBAY",
+            "sector": "Consumer Discretionary",
+            "date": "2022-05-04"
+          },
+          {
+            "id": "FCX_2018Q3_8K_20181024",
+            "ticker": "FCX",
+            "sector": "Materials",
+            "date": "2018-10-24"
+          },
+          {
+            "id": "TTD_2021Q3_8K_20211108",
+            "ticker": "TTD",
+            "sector": "Communication Services",
+            "date": "2021-11-08"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "ALGN_2023Q1_8K_20230426",
+            "ticker": "ALGN",
+            "sector": "Health Care",
+            "date": "2023-04-26"
+          },
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          },
+          {
+            "id": "RCL_2022Q3_8K_20221103",
+            "ticker": "RCL",
+            "sector": "Consumer Discretionary",
+            "date": "2022-11-03"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          },
+          {
+            "id": "TTD_2021Q3_8K_20211108",
+            "ticker": "TTD",
+            "sector": "Communication Services",
+            "date": "2021-11-08"
+          }
+        ]
+      }
+    },
+    "APA_2023Q3_8K_20231102": {
+      "query": {
+        "id": "APA_2023Q3_8K_20231102",
+        "ticker": "APA",
+        "sector": "Energy",
+        "date": "2023-11-02"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          },
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          },
+          {
+            "id": "BXP_2021Q2_8K_20210727",
+            "ticker": "BXP",
+            "sector": "Real Estate",
+            "date": "2021-07-27"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "PPL_2023Q1_8K_20230504",
+            "ticker": "PPL",
+            "sector": "Utilities",
+            "date": "2023-05-04"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          }
+        ]
+      }
+    },
+    "ELV_2023Q2_8K_20230719": {
+      "query": {
+        "id": "ELV_2023Q2_8K_20230719",
+        "ticker": "ELV",
+        "sector": "Health Care",
+        "date": "2023-07-19"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          },
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          }
+        ]
+      }
+    },
+    "LEN_2024Q2_8K_20240617": {
+      "query": {
+        "id": "LEN_2024Q2_8K_20240617",
+        "ticker": "LEN",
+        "sector": "Consumer Discretionary",
+        "date": "2024-06-17"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          },
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          }
+        ]
+      }
+    },
+    "HAS_2021Q4_8K_20220207": {
+      "query": {
+        "id": "HAS_2021Q4_8K_20220207",
+        "ticker": "HAS",
+        "sector": "Consumer Discretionary",
+        "date": "2022-02-07"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "EBAY_2022Q1_8K_20220504",
+            "ticker": "EBAY",
+            "sector": "Consumer Discretionary",
+            "date": "2022-05-04"
+          },
+          {
+            "id": "CMCSA_2019Q4_8K_20200123",
+            "ticker": "CMCSA",
+            "sector": "Communication Services",
+            "date": "2020-01-23"
+          },
+          {
+            "id": "PPL_2023Q1_8K_20230504",
+            "ticker": "PPL",
+            "sector": "Utilities",
+            "date": "2023-05-04"
+          },
+          {
+            "id": "TTD_2021Q3_8K_20211108",
+            "ticker": "TTD",
+            "sector": "Communication Services",
+            "date": "2021-11-08"
+          },
+          {
+            "id": "NDAQ_2022Q2_8K_20220720",
+            "ticker": "NDAQ",
+            "sector": "Financials",
+            "date": "2022-07-20"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "FCX_2018Q3_8K_20181024",
+            "ticker": "FCX",
+            "sector": "Materials",
+            "date": "2018-10-24"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "D_2021Q3_8K_20211105",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2021-11-05"
+          },
+          {
+            "id": "MLM_2019Q1_8K_20190430",
+            "ticker": "MLM",
+            "sector": "Materials",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "MGM_2019Q2_8K_20190725",
+            "ticker": "MGM",
+            "sector": "Consumer Discretionary",
+            "date": "2019-07-25"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "EBAY_2022Q1_8K_20220504",
+            "ticker": "EBAY",
+            "sector": "Consumer Discretionary",
+            "date": "2022-05-04"
+          },
+          {
+            "id": "TTD_2021Q3_8K_20211108",
+            "ticker": "TTD",
+            "sector": "Communication Services",
+            "date": "2021-11-08"
+          },
+          {
+            "id": "CMCSA_2019Q4_8K_20200123",
+            "ticker": "CMCSA",
+            "sector": "Communication Services",
+            "date": "2020-01-23"
+          },
+          {
+            "id": "FCX_2018Q3_8K_20181024",
+            "ticker": "FCX",
+            "sector": "Materials",
+            "date": "2018-10-24"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          }
+        ]
+      }
+    },
+    "DOW_2024Q1_8K_20240425": {
+      "query": {
+        "id": "DOW_2024Q1_8K_20240425",
+        "ticker": "DOW",
+        "sector": "Materials",
+        "date": "2024-04-25"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          },
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          }
+        ]
+      }
+    },
+    "ROP_2024Q4_8K_20250130": {
+      "query": {
+        "id": "ROP_2024Q4_8K_20250130",
+        "ticker": "ROP",
+        "sector": "Information Technology",
+        "date": "2025-01-30"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          },
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          }
+        ]
+      }
+    },
+    "SYK_2022Q1_8K_20220428": {
+      "query": {
+        "id": "SYK_2022Q1_8K_20220428",
+        "ticker": "SYK",
+        "sector": "Health Care",
+        "date": "2022-04-28"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "STZ_2020Q2_8K_20200701",
+            "ticker": "STZ",
+            "sector": "Consumer Staples",
+            "date": "2020-07-01"
+          },
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          },
+          {
+            "id": "D_2021Q3_8K_20211105",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2021-11-05"
+          },
+          {
+            "id": "FCX_2018Q3_8K_20181024",
+            "ticker": "FCX",
+            "sector": "Materials",
+            "date": "2018-10-24"
+          },
+          {
+            "id": "NDAQ_2022Q2_8K_20220720",
+            "ticker": "NDAQ",
+            "sector": "Financials",
+            "date": "2022-07-20"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "RCL_2022Q3_8K_20221103",
+            "ticker": "RCL",
+            "sector": "Consumer Discretionary",
+            "date": "2022-11-03"
+          },
+          {
+            "id": "ALGN_2023Q1_8K_20230426",
+            "ticker": "ALGN",
+            "sector": "Health Care",
+            "date": "2023-04-26"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "FCX_2018Q3_8K_20181024",
+            "ticker": "FCX",
+            "sector": "Materials",
+            "date": "2018-10-24"
+          },
+          {
+            "id": "CMCSA_2019Q4_8K_20200123",
+            "ticker": "CMCSA",
+            "sector": "Communication Services",
+            "date": "2020-01-23"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "STZ_2020Q2_8K_20200701",
+            "ticker": "STZ",
+            "sector": "Consumer Staples",
+            "date": "2020-07-01"
+          },
+          {
+            "id": "FCX_2018Q3_8K_20181024",
+            "ticker": "FCX",
+            "sector": "Materials",
+            "date": "2018-10-24"
+          },
+          {
+            "id": "D_2021Q3_8K_20211105",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2021-11-05"
+          },
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          },
+          {
+            "id": "NDAQ_2022Q2_8K_20220720",
+            "ticker": "NDAQ",
+            "sector": "Financials",
+            "date": "2022-07-20"
+          }
+        ]
+      }
+    },
+    "ADI_2022Q4_8K_20230215": {
+      "query": {
+        "id": "ADI_2022Q4_8K_20230215",
+        "ticker": "ADI",
+        "sector": "Information Technology",
+        "date": "2023-02-15"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          },
+          {
+            "id": "STZ_2020Q2_8K_20200701",
+            "ticker": "STZ",
+            "sector": "Consumer Staples",
+            "date": "2020-07-01"
+          },
+          {
+            "id": "PPL_2023Q1_8K_20230504",
+            "ticker": "PPL",
+            "sector": "Utilities",
+            "date": "2023-05-04"
+          },
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          },
+          {
+            "id": "CHTR_2019Q4_8K_20200131",
+            "ticker": "CHTR",
+            "sector": "Communication Services",
+            "date": "2020-01-31"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          },
+          {
+            "id": "CMCSA_2019Q4_8K_20200123",
+            "ticker": "CMCSA",
+            "sector": "Communication Services",
+            "date": "2020-01-23"
+          },
+          {
+            "id": "ALGN_2023Q1_8K_20230426",
+            "ticker": "ALGN",
+            "sector": "Health Care",
+            "date": "2023-04-26"
+          },
+          {
+            "id": "RCL_2022Q3_8K_20221103",
+            "ticker": "RCL",
+            "sector": "Consumer Discretionary",
+            "date": "2022-11-03"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          },
+          {
+            "id": "MLM_2019Q1_8K_20190430",
+            "ticker": "MLM",
+            "sector": "Materials",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          },
+          {
+            "id": "PPL_2023Q1_8K_20230504",
+            "ticker": "PPL",
+            "sector": "Utilities",
+            "date": "2023-05-04"
+          }
+        ]
+      }
+    },
+    "WBD_2019Q3_8K_20191107": {
+      "query": {
+        "id": "WBD_2019Q3_8K_20191107",
+        "ticker": "WBD",
+        "sector": "Communication Services",
+        "date": "2019-11-07"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "CHTR_2019Q4_8K_20200131",
+            "ticker": "CHTR",
+            "sector": "Communication Services",
+            "date": "2020-01-31"
+          },
+          {
+            "id": "MGM_2019Q2_8K_20190725",
+            "ticker": "MGM",
+            "sector": "Consumer Discretionary",
+            "date": "2019-07-25"
+          },
+          {
+            "id": "MLM_2019Q1_8K_20190430",
+            "ticker": "MLM",
+            "sector": "Materials",
+            "date": "2019-04-30"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "GL_2018Q4_8K_20190205",
+            "ticker": "GL",
+            "sector": "Financials",
+            "date": "2019-02-05"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "L_2024Q3_8K_20241104",
+            "ticker": "L",
+            "sector": "Financials",
+            "date": "2024-11-04"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "MGM_2019Q2_8K_20190725",
+            "ticker": "MGM",
+            "sector": "Consumer Discretionary",
+            "date": "2019-07-25"
+          },
+          {
+            "id": "MRK_2019Q1_8K_20190430",
+            "ticker": "MRK",
+            "sector": "Health Care",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "MLM_2019Q1_8K_20190430",
+            "ticker": "MLM",
+            "sector": "Materials",
+            "date": "2019-04-30"
+          },
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          },
+          {
+            "id": "CHTR_2019Q4_8K_20200131",
+            "ticker": "CHTR",
+            "sector": "Communication Services",
+            "date": "2020-01-31"
+          }
+        ]
+      }
+    },
+    "CPAY_2023Q3_8K_20231108": {
+      "query": {
+        "id": "CPAY_2023Q3_8K_20231108",
+        "ticker": "CPAY",
+        "sector": "Financials",
+        "date": "2023-11-08"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "CIEN_2023Q4_8K_20240307",
+            "ticker": "CIEN",
+            "sector": "Information Technology",
+            "date": "2024-03-07"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "CRH_2024Q2_8K_20240808",
+            "ticker": "CRH",
+            "sector": "Materials",
+            "date": "2024-08-08"
+          },
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          },
+          {
+            "id": "PLD_2023Q3_8K_20231017",
+            "ticker": "PLD",
+            "sector": "Real Estate",
+            "date": "2023-10-17"
+          },
+          {
+            "id": "KEYS_2023Q3_8K_20231120",
+            "ticker": "KEYS",
+            "sector": "Information Technology",
+            "date": "2023-11-20"
+          },
+          {
+            "id": "D_2022Q4_8K_20230208",
+            "ticker": "D",
+            "sector": "Utilities",
+            "date": "2023-02-08"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          }
+        ]
+      }
+    },
+    "STLD_2020Q1_8K_20200422": {
+      "query": {
+        "id": "STLD_2020Q1_8K_20200422",
+        "ticker": "STLD",
+        "sector": "Materials",
+        "date": "2020-04-22"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "EBAY_2022Q1_8K_20220504",
+            "ticker": "EBAY",
+            "sector": "Consumer Discretionary",
+            "date": "2022-05-04"
+          },
+          {
+            "id": "FCX_2018Q3_8K_20181024",
+            "ticker": "FCX",
+            "sector": "Materials",
+            "date": "2018-10-24"
+          },
+          {
+            "id": "RCL_2022Q3_8K_20221103",
+            "ticker": "RCL",
+            "sector": "Consumer Discretionary",
+            "date": "2022-11-03"
+          },
+          {
+            "id": "NDAQ_2022Q2_8K_20220720",
+            "ticker": "NDAQ",
+            "sector": "Financials",
+            "date": "2022-07-20"
+          },
+          {
+            "id": "STZ_2020Q2_8K_20200701",
+            "ticker": "STZ",
+            "sector": "Consumer Staples",
+            "date": "2020-07-01"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "FCX_2018Q3_8K_20181024",
+            "ticker": "FCX",
+            "sector": "Materials",
+            "date": "2018-10-24"
+          },
+          {
+            "id": "EBAY_2022Q1_8K_20220504",
+            "ticker": "EBAY",
+            "sector": "Consumer Discretionary",
+            "date": "2022-05-04"
+          },
+          {
+            "id": "RCL_2022Q3_8K_20221103",
+            "ticker": "RCL",
+            "sector": "Consumer Discretionary",
+            "date": "2022-11-03"
+          },
+          {
+            "id": "CHTR_2019Q4_8K_20200131",
+            "ticker": "CHTR",
+            "sector": "Communication Services",
+            "date": "2020-01-31"
+          },
+          {
+            "id": "TTD_2021Q3_8K_20211108",
+            "ticker": "TTD",
+            "sector": "Communication Services",
+            "date": "2021-11-08"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "EBAY_2022Q1_8K_20220504",
+            "ticker": "EBAY",
+            "sector": "Consumer Discretionary",
+            "date": "2022-05-04"
+          },
+          {
+            "id": "FCX_2018Q3_8K_20181024",
+            "ticker": "FCX",
+            "sector": "Materials",
+            "date": "2018-10-24"
+          },
+          {
+            "id": "RCL_2022Q3_8K_20221103",
+            "ticker": "RCL",
+            "sector": "Consumer Discretionary",
+            "date": "2022-11-03"
+          },
+          {
+            "id": "NDAQ_2022Q2_8K_20220720",
+            "ticker": "NDAQ",
+            "sector": "Financials",
+            "date": "2022-07-20"
+          },
+          {
+            "id": "STZ_2020Q2_8K_20200701",
+            "ticker": "STZ",
+            "sector": "Consumer Staples",
+            "date": "2020-07-01"
+          }
+        ]
+      }
+    },
+    "PCG_2018Q1_8K_20180503": {
+      "query": {
+        "id": "PCG_2018Q1_8K_20180503",
+        "ticker": "PCG",
+        "sector": "Utilities",
+        "date": "2018-05-03"
+      },
+      "top5": {
+        "concat_eq": [
+          {
+            "id": "BXP_2021Q2_8K_20210727",
+            "ticker": "BXP",
+            "sector": "Real Estate",
+            "date": "2021-07-27"
+          },
+          {
+            "id": "MPC_2021Q1_8K_20210504",
+            "ticker": "MPC",
+            "sector": "Energy",
+            "date": "2021-05-04"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "ALGN_2023Q1_8K_20230426",
+            "ticker": "ALGN",
+            "sector": "Health Care",
+            "date": "2023-04-26"
+          },
+          {
+            "id": "PNW_2019Q4_8K_20200221",
+            "ticker": "PNW",
+            "sector": "Utilities",
+            "date": "2020-02-21"
+          }
+        ],
+        "contrastive_v2": [
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "DHI_2023Q4_8K_20240123",
+            "ticker": "DHI",
+            "sector": "Consumer Discretionary",
+            "date": "2024-01-23"
+          },
+          {
+            "id": "GL_2018Q4_8K_20190205",
+            "ticker": "GL",
+            "sector": "Financials",
+            "date": "2019-02-05"
+          },
+          {
+            "id": "STLD_2023Q4_8K_20240124",
+            "ticker": "STLD",
+            "sector": "Materials",
+            "date": "2024-01-24"
+          },
+          {
+            "id": "TPL_2023Q4_8K_20240221",
+            "ticker": "TPL",
+            "sector": "Energy",
+            "date": "2024-02-21"
+          }
+        ],
+        "llm_v3": [
+          {
+            "id": "MPC_2021Q1_8K_20210504",
+            "ticker": "MPC",
+            "sector": "Energy",
+            "date": "2021-05-04"
+          },
+          {
+            "id": "BXP_2021Q2_8K_20210727",
+            "ticker": "BXP",
+            "sector": "Real Estate",
+            "date": "2021-07-27"
+          },
+          {
+            "id": "CNC_2021Q1_8K_20210427",
+            "ticker": "CNC",
+            "sector": "Health Care",
+            "date": "2021-04-27"
+          },
+          {
+            "id": "ALGN_2023Q1_8K_20230426",
+            "ticker": "ALGN",
+            "sector": "Health Care",
+            "date": "2023-04-26"
+          },
+          {
+            "id": "MGM_2019Q2_8K_20190725",
+            "ticker": "MGM",
+            "sector": "Consumer Discretionary",
+            "date": "2019-07-25"
+          }
+        ]
+      }
+    }
+  }
+}

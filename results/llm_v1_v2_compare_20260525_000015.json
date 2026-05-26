@@ -1,0 +1,114 @@
+{
+  "timestamp": "20260525_000015",
+  "metrics": [
+    {
+      "name": "concat_eq",
+      "P@5": 1.0,
+      "ReactCorr": 0.5463,
+      "Utility@5": 0.7639,
+      "fit_s": 0.0,
+      "eval_s": 0.1,
+      "fail_count": 0,
+      "use_mock": false
+    },
+    {
+      "name": "llm_structured",
+      "P@5": 0.995,
+      "ReactCorr": 0.5432,
+      "Utility@5": 0.7627,
+      "fit_s": 0.0,
+      "eval_s": 0.1,
+      "fail_count": 0,
+      "use_mock": false
+    },
+    {
+      "name": "llm_structured_v2",
+      "P@5": 1.0,
+      "ReactCorr": 0.5687,
+      "Utility@5": 0.7631,
+      "fit_s": 386.3,
+      "eval_s": 127.9,
+      "fail_count": 0,
+      "use_mock": false
+    }
+  ],
+  "v1_distribution": {
+    "dominant_narrative": {
+      "growth_acceleration": 60,
+      "growth_deceleration": 17,
+      "margin_expansion": 0,
+      "margin_compression": 12,
+      "guidance_cut": 1,
+      "guidance_raise": 0,
+      "macro_pressure": 56,
+      "competitive_threat": 0,
+      "demand_shift": 30,
+      "supply_constraint": 0
+    },
+    "surprise_type": {
+      "positive_beat": 69,
+      "negative_miss": 31,
+      "mixed": 1,
+      "in_line": 54,
+      "guidance_only": 21
+    },
+    "risk_asymmetry": {
+      "upside": 70,
+      "downside": 69,
+      "balanced": 37
+    },
+    "implicit_cycle_phase": {
+      "early": 35,
+      "mid": 90,
+      "late": 11,
+      "recession": 20,
+      "recovery": 20
+    },
+    "confidence_level": {
+      "1": 0,
+      "2": 11,
+      "3": 105,
+      "4": 51,
+      "5": 9
+    }
+  },
+  "v2_distribution": {
+    "event_polarity": {
+      "positive": 80,
+      "negative": 61,
+      "neutral": 35
+    },
+    "surprise_magnitude": {
+      "large": 24,
+      "moderate": 76,
+      "minimal": 76
+    },
+    "dominant_driver": {
+      "demand": 88,
+      "margins": 23,
+      "guidance": 25,
+      "macro": 40,
+      "competitive": 0,
+      "operational": 0
+    },
+    "risk_asymmetry": {
+      "upside": 80,
+      "downside": 69,
+      "balanced": 27
+    },
+    "cycle_phase": {
+      "early": 10,
+      "mid": 127,
+      "late": 0,
+      "recession": 19,
+      "recovery": 20
+    },
+    "confidence_level": {
+      "1": 0,
+      "2": 19,
+      "3": 71,
+      "4": 36,
+      "5": 50
+    }
+  }
+}
