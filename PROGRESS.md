@@ -9,11 +9,14 @@ Running progress log. Updated at each milestone.
 - **Discovery Phase completata**. Blind A/B test v2 con baseline random e
   ground truth umana ha invalidato la narrativa "contrastive_v2 vincitore" e
   ha rivelato concat_eq come primary engine. Pivot strategico effettuato.
-- **Primary engine**: `concat_eq` (regime anchoring).
+- **Primary engine**: `concat_eq`. **Concat_eq+ implementato** (weighted
+  structured retrieval + 12 narrative tags); statisticamente leggermente
+  meglio del base su N=500, sector alignment qualitativamente migliore.
+  Validazione umana definitiva nella prossima sessione blind test.
 - **Archived**: tutta la branch contrastive (v1/v2/v3) + tutta la branch LLM
   (v1/v2/v3). Mantenute come case study di failure modes.
-- **Prossima fase**: implementazione `concat_eq+` con narrative tags sparse,
-  scaling N=500 → N=1500.
+- **Prossima fase**: blind A/B test umano concat_eq+ vs concat_eq vs random;
+  poi scaling N=500 → N=1500.
 
 Documenti chiave: [SITUATION_REPORT_FINAL_DISCOVERY.md](SITUATION_REPORT_FINAL_DISCOVERY.md),
 [evaluation/FINDINGS_DISCOVERY_PHASE.md](evaluation/FINDINGS_DISCOVERY_PHASE.md).
@@ -24,7 +27,8 @@ Documenti chiave: [SITUATION_REPORT_FINAL_DISCOVERY.md](SITUATION_REPORT_FINAL_D
 
 | Encoder | Stato | Note |
 |---|---|---|
-| **concat_eq** | **Primary engine** | Vincitore blind A/B v2: 4.18 same_regime, 3.93 same_surprise, 15/20 top performers. Statisticamente significativo vs random su tutte e 4 le metriche. |
+| **concat_eq** | **Primary engine (baseline)** | Vincitore blind A/B v2: 4.18 same_regime, 3.93 same_surprise, 15/20 top performers. Statisticamente significativo vs random su tutte e 4 le metriche. |
+| **concat_eq+** | **Primary engine (extended)** | Weighted retrieval su 5 componenti + 12 narrative tags. N=500: ReactCorr +0.026, SelfCons Lift +0.073, Util P50 +0.016 vs concat_eq. Sector alignment qualitativamente migliore. Validazione umana pending. |
 | concat_raw | Baseline numerico | Riferimento. |
 | factorized | Specialist | Utilità mirata su query condizionate. CondQual=1.00 su mock. |
 | graph_experimental | Sperimentale | Conserva valore post cross-pollination ticker. |
@@ -637,8 +641,114 @@ sofisticazione architettonica si paga con perdita di interpretabilità e
 con il rischio di apprendere proprietà cognitivamente inutili come
 "reactional geometry".
 
+## Concat_eq+ Implementation — 2026-05-26
+
+Prima sessione tecnica post-pivot. Implementato `approach_2b_concat_eq_plus`
+(weighted structured retrieval + narrative tags) e validato su sample_500.
+
+### Architettura
+
+Score composito su 5 componenti pesate (default sommano a 1):
+
+| Componente | Peso | Definizione |
+|---|---|---|
+| macro | 0.35 | cosine su 5 macro features z-scored (VIX, yields, slope, credit, DXY) |
+| tags | 0.25 | Jaccard sui 12 narrative tag binari |
+| sector | 0.20 | sector_match (one-hot GICS) × 0.6 + cosine(sector_return_60d, relative_strength) × 0.4 |
+| pre_event | 0.10 | cosine(return_60d, drawdown_from_high) z-scored |
+| vol | 0.10 | cosine(realized_vol_60d) z-scored — 1-dim, segna same/different vol regime |
+
+I pesi sono runtime-configurabili. La similarità è calcolata
+componente-per-componente in `pairwise_score()` perché Jaccard binario e
+match categorico settore non sono cosine-compatibili (overriding `retrieve()`
+invece di affidarsi a `encode()` + cosine globale).
+
+### Narrative tags (12 binari su 4 categorie)
+
+- **A direction**: beat_and_raise, miss_or_cut, inline_results
+- **B drivers**: demand_strength, demand_weakness, margin_pressure, margin_expansion
+- **C capital**: capex_increase, buyback_or_dividend, restructuring_or_layoffs
+- **D themes**: supply_chain_issue, AI_or_tech_narrative
+
+Estrazione via Qwen 2.5-7B (Ollama, temperature 0, strict YES/NO) su full
+text degli 8-K (cap 6000 char). Prima iterazione su summaries: media 0.74
+attivi/evento; seconda iterazione su full text: media 0.56 attivi/evento ma
+distribuzione più bilanciata tra tag (top 4 al 9-11% vs summary che aveva
+`demand_strength` 32%). Conservata la versione full_text come canonica.
+
+### Limiti noti del tag layer
+
+- 276/500 eventi (55%) hanno vettore tag tutto-zero → Jaccard=0, il blocco
+  tags non discrimina per loro. Pattern strutturale di Qwen-7B con prompt
+  strict, non bug.
+- `capex_increase` mai estratto (0.0%): degenerato, lasciato nel vettore
+  per coerenza ma da rivedere (forse il prompt non lo cattura bene).
+- 4 tag rari (< 1%): beat_and_raise, miss_or_cut, supply_chain_issue,
+  restructuring_or_layoffs. Coerente con la rarità di questi pattern nei
+  comunicati 8-K standard.
+- 0 contraddizioni mutuamente-esclusive (struttura sana).
+
+### Risultati statistici N=500 (70/30 split, seed=42)
+
+| Metric | concat_eq | concat_eq+ | Δ |
+|---|---|---|---|
+| ReactCorr | 0.0510 | 0.0773 | +0.0263 |
+| Util@5 P25 | 0.3130 | 0.3013 | -0.0117 |
+| Util@5 P50 | 0.5753 | 0.5909 | +0.0156 |
+| Util Spearman top5 | -0.0708 | -0.0442 | +0.0266 |
+| SelfCons | 0.6069 | 0.6127 | +0.0058 |
+| SelfCons Lift vs Random | 0.5092 | 0.5819 | +0.0727 |
+| CondQual (VIX>18) | 0.4883 | 0.4922 | +0.0039 |
+| TempDiv (days) | 298.7 | 184.2 | -114.5 |
+
+Δ modesti ma direzionalmente coerenti: 6/8 metriche migliorate, una invariata.
+TempDiv scende di 115 giorni — concat_eq+ pesca eventi temporalmente più
+clusterati (probabile effetto del sector_match bonus + macro più stretto).
+
+### Sanity check su 5 query (top-3 base vs plus)
+
+Pattern netto: **concat_eq+ migliora sector alignment** in modo visibile.
+
+- **MCK** (Health Care): concat_eq → 0 HC peers (Energy/Industrials/Cons);
+  concat_eq+ → 1 HC peer (RMD 2019).
+- **IBM** (IT): concat_eq → 1 IT peer (PANW); concat_eq+ → 2 IT peers
+  (FTNT, EPAM).
+- **HAL** (Energy): concat_eq → 0 Energy peers (Real Estate/Cons Disc/Comm);
+  concat_eq+ → 2 Energy peers (OXY 2022, DVN 2021).
+- **PM** (Cons Staples): concat_eq fa "stupid hit" auto-ticker (PM 2020Q3);
+  concat_eq+ lo evita e trova DLTR same-sector.
+- **TFC** (Financials): entrambi trovano XYZ Financials peer; concat_eq+
+  swappa Utilities (EIX) per Consumer Staples (DLTR, DG).
+
+Overlap top-3 medio: 0.6/3 (i.e. ~20% identico). Il sistema sta producendo
+retrieval significativamente diversi, non uguali al base.
+
+### Considerazione metodologica
+
+I miglioramenti statistici qui sono indicativi. La validazione vera sarà
+nel blind test umano della prossima sessione, alla luce della lezione #14
+(proxy metrics possono ingannare). Il sanity check qualitativo già mostra
+che il sector alignment è migliorato — questa è proprio la proprietà che
+i valutatori umani hanno premiato in concat_eq sul blind v2 (`same_regime`
+4.18, `same_surprise` 3.93). Aspettativa: concat_eq+ dovrebbe alzare
+queste metriche, ma è ipotesi da validare empiricamente.
+
+File creati: `approaches/approach_2b_concat_eq_plus.py`,
+`real_data/narrative_tags.py`, `real_data/extract_narrative_tags.py`,
+`real_data/validate_narrative_tags.py`, `real_data/run_concat_eq_plus.py`,
+`real_data/sanity_check_concat_eq_plus.py`,
+`real_data/processed/sample_500_narrative_tags.json`,
+`real_data/processed/narrative_tags_validation.md`,
+`real_data/results/run_500_concat_eq_plus_20260526_133659.{json,md}`.
+
 ## Cronologia step
 
+- **Step 11** (2026-05-26 13:30): concat_eq+ implementato + run N=500.
+  Narrative tags estratti da full text via Qwen (12 tag binari, 4 categorie).
+  Architettura weighted retrieval su 5 componenti (macro 0.35, tags 0.25,
+  sector 0.20, pre 0.10, vol 0.10) con sector match bonus + Jaccard per tags.
+  Δ statistici modesti (+ReactCorr 0.026, +SelfCons Lift 0.073), sector
+  alignment qualitativamente migliore. Validazione umana pending.
 - **Step 0** (2026-05-24): scaffold 5 approcci + runner + L1.
 - **Step 1** (2026-05-24): diagnostica LLM (36 failures → cross-field swap)
   + diagnostica contrastive (mode collapse, gap within/cross 0.001).

@@ -1,6 +1,7 @@
 from .base import EpisodeEncoder
 from .approach_1_concat import ConcatBaseline
 from .approach_2_factorized import FactorizedMultiStage
+from .approach_2b_concat_eq_plus import ConcatEqPlus
 from .approach_4_graph import GraphEncoder
 
 # Contrastive encoders v1/v2/v3 archived 2026-05-26 after the blind A/B test v2
@@ -20,5 +21,6 @@ __all__ = [
     "EpisodeEncoder",
     "ConcatBaseline",
     "FactorizedMultiStage",
+    "ConcatEqPlus",
     "GraphEncoder",
 ]
