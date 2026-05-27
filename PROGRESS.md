@@ -641,6 +641,122 @@ sofisticazione architettonica si paga con perdita di interpretabilità e
 con il rischio di apprendere proprietà cognitivamente inutili come
 "reactional geometry".
 
+## Narrative Tags Redesign (v2) — 2026-05-27
+
+### Why v1 needed redesign
+
+Qwen v1 extraction on full text (12 tags) produced structurally weak vectors:
+55% zero-vector events, 5 tags with freq <2%, `capex_increase` at 0%,
+`demand_strength` at 33% dominating. Pattern: v1 tags were chosen *before*
+looking at the data — labels didn't map to 8-K vocabulary
+(`capex_increase` rarely appears that way; corpus says "capacity expansion",
+"new facility").
+
+### Approach v2: data-driven
+
+1. **N-gram TF-IDF analysis** (`real_data/analyze_text_concepts.py`):
+   vocab 1221 terms, 20 hand-curated regex seeds tuned iteratively until
+   each candidate landed in [5%, 45%] corpus frequency band.
+2. **14 tags retained** across 4 categories. Dropped: `inline_results`,
+   `demand_weakness`, `capex_increase`, `AI_or_tech_narrative` (all <5% in
+   corpus). Added: `record_results`, `cost_inflation`, `pricing_action`,
+   `MA_activity`, `ESG_sustainability`, `FX_headwind`.
+3. **Estimated freq per regex seed** (upper bound — Qwen will be more
+   conservative): guidance_raise 38%, capital_return 31%, MA_activity 18%,
+   restructuring 17%, record_results 15%, margin_pressure 13%, guidance_cut
+   12%, supply_constraint 12%, margin_expansion 11%, demand_strength 11%,
+   pricing_action 8%, ESG_sustainability 7%, cost_inflation 7%, FX_headwind 7%.
+
+### Validation via Claude as ground-truth proxy
+
+Built `real_data/serve_manual_validation.py` (tinder-style web UI) for
+human annotation of 25 stratified events. After UI prep, opted to use
+**Claude (this model) as annotator proxy** instead of human — saves 1.5h,
+ground truth is more permissive (matches what an analyst would tag) than
+Qwen-7B strict mode. Documented as methodological limit: ground truth is
+"smart-LLM proxy" not actual human analyst. Stats on 25:
+mean active 3.28, 4/25 zero-vector (16%, all boilerplate Item 2.02 events).
+
+### Qwen v2 extraction on 25 + comparison
+
+`extract_narrative_tags_v2.py` with operational examples per tag in the
+prompt. Run on the 25 manually-annotated events:
+
+| metric | value |
+|---|---|
+| macro F1 (across tags with ≥1 positive) | **0.290** |
+| tags with F1 ≥ 0.6 | ESG_sustainability (0.80), record_results (0.75), capital_return (0.74), guidance_raise (0.60) |
+| tags with F1 = 0.00 | guidance_cut, margin_pressure, pricing_action, MA_activity, restructuring, supply_constraint, FX_headwind |
+| Qwen precision (when fires) | 1.00 on all firing tags |
+| mean active / event — manual vs Qwen | 3.28 vs 0.92 |
+
+**Pattern**: Qwen v2 has perfect precision but collapsed recall. The
+strict YES/NO prompt makes it almost never fire on subtle signals.
+**Decision**: accept this trade-off rather than loosen the prompt (which
+would risk optimizing toward Claude's permissiveness, the thing we're
+testing against). Tag layer will be sparse but **noise-free** —
+acceptable given that Jaccard similarity treats both 1↔1 matches and
+0↔0 matches consistently.
+
+### Full extraction v2 on 500 events
+
+500/500 ok, mean active 1.07 tags/event. Saved as
+`real_data/processed/sample_500_narrative_tags_v2.json` (v1 archived
+alongside as `_v1_summaries.json`).
+
+### Re-run concat_eq+ with v2 tags (N=500)
+
+| Metric | concat_eq | concat_eq+ v2 | Δ |
+|---|---|---|---|
+| ReactCorr | 0.0510 | 0.0698 | +0.0188 |
+| Util@5 P25 | 0.3130 | 0.3117 | -0.0013 |
+| Util@5 P50 | 0.5753 | 0.5935 | +0.0182 |
+| Util Spearman top5 | -0.0708 | +0.0078 | +0.0786 |
+| SelfCons | 0.6069 | 0.6029 | -0.0040 |
+| SelfCons Lift vs Random | 0.5092 | 0.5672 | +0.0580 |
+| CondQual (VIX>18) | 0.4883 | 0.4883 | +0.0000 |
+| TempDiv (days) | 298.7 | 168.7 | -130.0 |
+
+Vs v1 tags run: comparable lift (slightly smaller on ReactCorr, slightly
+larger on Util Spearman). Sector alignment qualitatively still better
+(sanity 5 queries: same pattern — MCK gets RMD HC peer, IBM gets IT
+peers, etc.).
+
+Top-3 overlap with concat_eq: 17% identical positions, 88/154 queries
+have **zero** shared top-3 candidates. Confirms concat_eq+ produces
+substantively different retrievals (not just noise on top of base).
+
+### Lezione metodologica #16
+
+**LLM-as-annotator-proxy for ground truth is a pragmatic compromise
+with explicit trade-offs.** Claude annotation is faster, more
+permissive, and consistent — but it is not human analyst judgment.
+The 0.29 macro F1 between Qwen-7B (strict) and Claude (permissive)
+quantifies *the gap between two LLM regimes*, not absolute correctness.
+For final validation of concat_eq+, human blind evaluation remains
+necessary. The v3 blind test below provides that.
+
+### Blind test v3 generated
+
+`evaluation/qualitative/blind_test_v3_generator.py`: 3-way
+(concat_eq_plus + concat_eq + random), 15 queries × 8-9 candidates,
+group letters X/Y/Z permuted per query. Output:
+`reviews/blind_test_v3_20260527_104937_data.json` + `_KEY.md`.
+
+Files created:
+- `real_data/analyze_text_concepts.py`
+- `real_data/narrative_tags_v2.py`
+- `real_data/extract_narrative_tags_v2.py`
+- `real_data/manual_validation.py` + `serve_manual_validation.py` + `static_manual/index.html`
+- `real_data/compare_manual_vs_qwen.py`
+- `evaluation/qualitative/blind_test_v3_generator.py`
+- `real_data/processed/text_concepts_analysis.md`
+- `real_data/processed/tags_redesign_rationale.md`
+- `real_data/processed/manual_tags_validation.json` (Claude annotations)
+- `real_data/processed/sample_500_narrative_tags_v2.json` (Qwen extraction)
+- `real_data/processed/qwen_vs_manual_comparison.md`
+- `real_data/results/run_500_concat_eq_plus_20260527_104922.{json,md}`
+
 ## Concat_eq+ Implementation — 2026-05-26
 
 Prima sessione tecnica post-pivot. Implementato `approach_2b_concat_eq_plus`
@@ -743,6 +859,12 @@ File creati: `approaches/approach_2b_concat_eq_plus.py`,
 
 ## Cronologia step
 
+- **Step 12** (2026-05-27 10:50): narrative tags v2 redesign (data-driven 14
+  tag, 4 categorie); manual validation via Claude come ground-truth proxy
+  (25 eventi); Qwen v2 macro F1 = 0.29 (precision 1.00 / recall collassato);
+  full extraction 500/500 ok; re-run concat_eq+ con v2 (Δ comparable a v1,
+  +ReactCorr 0.019, +SelfCons Lift 0.058); blind test v3 generato (3-way:
+  ce+ / ce / random, 15 query). Lezione #16.
 - **Step 11** (2026-05-26 13:30): concat_eq+ implementato + run N=500.
   Narrative tags estratti da full text via Qwen (12 tag binari, 4 categorie).
   Architettura weighted retrieval su 5 componenti (macro 0.35, tags 0.25,

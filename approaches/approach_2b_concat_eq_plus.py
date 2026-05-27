@@ -56,7 +56,7 @@ SECTOR_MATCH_FRACTION = 0.6
 
 TAG_JSON_DEFAULT = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-    "real_data", "processed", "sample_500_narrative_tags.json"
+    "real_data", "processed", "sample_500_narrative_tags_v2.json"
 )
 
 
