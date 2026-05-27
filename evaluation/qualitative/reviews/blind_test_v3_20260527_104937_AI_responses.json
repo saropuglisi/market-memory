@@ -1,0 +1,1411 @@
+{
+  "review_id": "blind_test_v3_20260527_104937",
+  "completed_at": "2026-05-27T11:25:06",
+  "evaluator": "ai",
+  "model": "",
+  "metric_keys": [
+    "same_dynamic",
+    "same_regime",
+    "same_surprise",
+    "mental_precedent"
+  ],
+  "responses": [
+    {
+      "query_id": 1,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Both beat COVID-era, but very different businesses"
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Tech vs energy, totally different drivers"
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "IT vs staples, different drivers, VIX gap"
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Different sectors, different stories entirely"
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "IT vs Materials; gold miner vs photonics/5G"
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "IT vs Utilities, macro regime very different"
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, drivers, scale of beat"
+    },
+    {
+      "query_id": 1,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "different sectors, scale, and growth drivers"
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "Strong beat vs COVID miss; opposite macro regime"
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Both COVID hits, different sectors/reactions"
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Both COVID-hit, but IT vs REIT differ sharply"
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Both COVID cost cuts, different sector dynamics"
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "HPE miss+restructure vs FDX beat+volume surge"
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "IT miss vs financials record beat, opposite"
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "IT hardware miss vs REIT stable income"
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 3
+      },
+      "notes": "Both COVID revenue hits, different sectors/magnitude"
+    },
+    {
+      "query_id": 2,
+      "candidate_label": "I",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Different sector, story, reaction direction"
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Both HC beat, but scale/driver differ"
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 3,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      },
+      "notes": "Both beat+raise, different growth drivers"
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, acquisition vs organic growth story"
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "different sectors, macro regime more stressed"
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      },
+      "notes": "Both beat+raise, but sector/driver differ"
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "STE beat+raise; KMB miss+cut on costs"
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      },
+      "notes": "Both beat+raise post-COVID recovery, different sectors"
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, STE acquisition-driven vs organic growth"
+    },
+    {
+      "query_id": 3,
+      "candidate_label": "I",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors; rates diverge significantly"
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      },
+      "notes": "Different sector, similar beat+raise pattern"
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Different sector, story, macro regime entirely"
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Different sector, story, macro regime entirely"
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Different sectors, drivers, and business context"
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different companies, macro regime, one-time charges differ"
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, different growth drivers"
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "different sectors, both beat but unrelated drivers"
+    },
+    {
+      "query_id": 4,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 1,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sector, COVID macro, unrelated drivers"
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 5,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Insurance broker vs regulated utility, different drivers"
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      },
+      "notes": "Both beat+growth, different sector/drivers"
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Insurance broker vs commodity chemicals, opposite sectors"
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "different sectors, VIX/rates diverge, mixed guidance vs clean beat"
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sector, different growth magnitude, weak analog"
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sector, AJG strong beat vs MKC cautious"
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Insurance broker vs pharma, unrelated dynamics"
+    },
+    {
+      "query_id": 5,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "different sector, similar beat but unrelated drivers"
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, REIT vs industrial tools"
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different REIT subsectors, opposite return outcomes"
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "REIT vs pharma, totally different drivers"
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "REIT operator vs RE data/marketplace, different business"
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "REIT vs SaaS, unrelated drivers"
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "REIT vs steel; unrelated sectors and dynamics"
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      },
+      "notes": "Both residential REITs Q4 2023, supply headwinds differ"
+    },
+    {
+      "query_id": 6,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "REIT vs QSR, macro regimes opposite"
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Steel vs food delivery, no structural overlap"
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sector, rates diverge sharply, both positive"
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Steel cycle vs lithium strategic update"
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Steel vs bank, unrelated drivers"
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Steel vs consumer staples, unrelated dynamics"
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors; steel vs refining dynamics"
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Steel cyclical vs healthcare COVID; macro regimes opposite"
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Steel cyclical vs regulated utility, unrelated"
+    },
+    {
+      "query_id": 7,
+      "candidate_label": "I",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Steel vs adtech, no structural overlap"
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Energy vs Financials, totally different business dynamics"
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, both beat+raise but unrelated drivers"
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 2
+      },
+      "notes": "OXY beat+raise; PSX weak miss, different setup"
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "KMI midstream fees vs OXY upstream production beat"
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Energy vs Utilities, macro regimes totally different"
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Energy vs staples, different macro regime"
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Energy vs staples, different drivers entirely"
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Energy vs SaaS, macro regimes totally different"
+    },
+    {
+      "query_id": 8,
+      "candidate_label": "I",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      },
+      "notes": "Both beat+raise, but sector/drivers differ"
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 2
+      },
+      "notes": "CPB miss+cut vs DGX beat+raise"
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Consumer staples miss vs energy beat, unrelated"
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "CPB miss post-COVID bump; FTV beat recovery"
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 3
+      },
+      "notes": "Both staples hit inflation; CPB volume decline vs KMB cost squeeze"
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "CPB post-COVID normalization; SYY pre-COVID growth"
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "Opposite stories: CPB miss, SMCI beat+raise"
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Consumer staples normalization vs utility regulated growth"
+    },
+    {
+      "query_id": 9,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Different sector, different direction, different cause"
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 1,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sector, regime; both resilient beat narratives"
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Different sector, story, news type entirely"
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, different headwind types"
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, pandemic drag vs one-offs"
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors; both beat despite headwinds"
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Different sector, opposite results, unrelated dynamics"
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "TAP miss+reaffirm vs LOW beat+raise"
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Different sector, drivers, news type entirely"
+    },
+    {
+      "query_id": 10,
+      "candidate_label": "I",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Different sector, story, headwinds vs strength"
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 3,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      },
+      "notes": "Both industrials beat+raise, different end-markets"
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, URI equipment rental vs STZ beer"
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors; both beat+raise post-2020 rebound"
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 1,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, macro regime very different"
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Industrial recovery vs insurance tax windfall"
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      },
+      "notes": "Both beat+raise, different sector/driver"
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      },
+      "notes": "Both beat+raise but sectors and drivers differ"
+    },
+    {
+      "query_id": 11,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 3,
+        "mental_precedent": 1
+      },
+      "notes": "Industrials rental vs financials insurance, unrelated"
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "NDSN modest decline, CLX pandemic winner"
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "NDSN mild miss; VRTX strong beat+raise"
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "COVID industrial miss vs energy record beat"
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 2
+      },
+      "notes": "Both mild rev declines, macro context differs greatly"
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "COVID resilience similar, but sector/scale differ"
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 3
+      },
+      "notes": "Both COVID resilience, but Linde stronger results"
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 2
+      },
+      "notes": "TSCO beat+accelerate vs NDSN mild miss"
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "COVID context similar, but industrial vs e-commerce diverge"
+    },
+    {
+      "query_id": 12,
+      "candidate_label": "I",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "COVID drag vs COVID boom, opposite dynamics"
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "miss+restructure vs beat+reaffirm, different sectors"
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 2
+      },
+      "notes": "Different sector, write-offs vs structural slowdown"
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 4,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      },
+      "notes": "Both miss+restructure, different sector/drivers"
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, STLD beat expectations vs MMM miss"
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Industrials miss vs staples modest beat"
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Different sector, COVID shock vs industrial slowdown"
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "PNR positive, MMM miss+restructure"
+    },
+    {
+      "query_id": 13,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 3,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "MMM miss+restructure vs URI beat+raise"
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 2,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      },
+      "notes": "Both beat+raise industrials, different macro regime"
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Industrials automation vs insurance financials, unrelated"
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Industrials beat vs REIT pandemic stress"
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 5,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Industrial beat vs financial miss, different stories"
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 4,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "EMR beat+raise vs EXPD miss+cut"
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "PNR smaller, cautious tone vs EMR confident beat"
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 4,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      },
+      "notes": "Both beat+raise, different sectors/drivers"
+    },
+    {
+      "query_id": 14,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 3,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Different sectors, different drivers, weak analog"
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "A",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 1,
+        "mental_precedent": 1
+      },
+      "notes": "Crisis withdrawal vs confident raise, opposite macro"
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "B",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 5,
+        "same_surprise": 4,
+        "mental_precedent": 4
+      },
+      "notes": "Both industrials, COVID Q1, guidance withdrawn"
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "C",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "Same macro moment, different sector/business model"
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "D",
+      "ratings": {
+        "same_dynamic": 4,
+        "same_regime": 4,
+        "same_surprise": 4,
+        "mental_precedent": 3
+      },
+      "notes": "Both COVID cost-cut/liquidity, diff sector"
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "E",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "COVID hit, different sector, REIT vs industrial"
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "F",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 1,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "URI crisis withdrawal vs DGX raise guidance"
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "G",
+      "ratings": {
+        "same_dynamic": 2,
+        "same_regime": 4,
+        "same_surprise": 3,
+        "mental_precedent": 2
+      },
+      "notes": "COVID withdrawal same, but CL defensive vs URI cyclical"
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "H",
+      "ratings": {
+        "same_dynamic": 3,
+        "same_regime": 5,
+        "same_surprise": 3,
+        "mental_precedent": 3
+      },
+      "notes": "Both COVID resilience, different business models"
+    },
+    {
+      "query_id": 15,
+      "candidate_label": "I",
+      "ratings": {
+        "same_dynamic": 1,
+        "same_regime": 2,
+        "same_surprise": 2,
+        "mental_precedent": 1
+      },
+      "notes": "Crisis defense vs post-recovery beat; opposite contexts"
+    }
+  ]
+}

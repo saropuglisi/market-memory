@@ -743,6 +743,58 @@ necessary. The v3 blind test below provides that.
 group letters X/Y/Z permuted per query. Output:
 `reviews/blind_test_v3_20260527_104937_data.json` + `_KEY.md`.
 
+### AI evaluator results (PRELIMINARY — pending human validation)
+
+`evaluation/qualitative/ai_evaluator_v3.py`: invokes the `claude` CLI
+once per (query, candidate) pair, using the exact same 4 metrics +
+1-5 tooltip text shown to the human evaluator in `static/index.html`.
+127 candidates evaluated, 127/127 ok. Output:
+`reviews/blind_test_v3_20260527_104937_AI_responses.json` (tagged
+`"evaluator": "ai"`) + AI_REPORT.md.
+
+**Means per encoder × metric** (AI evaluator, N=45 per encoder):
+
+| Metric | concat_eq_plus | concat_eq | random |
+|---|---|---|---|
+| same_dynamic | 1.91 | 1.93 | 1.38 |
+| same_regime | 3.11 | 3.22 | 1.84 |
+| same_surprise | 2.84 | 2.98 | 2.47 |
+| mental_precedent | 1.87 | 1.87 | 1.36 |
+
+**Kruskal-Wallis 3-way**: all 4 metrics significant at p < 0.05.
+
+**Pairwise Mann-Whitney** (relevant rows):
+- concat_eq_plus vs concat_eq: p ∈ [0.59, 0.87] on all 4 metrics → **NOT significant**
+- concat_eq_plus vs random: p ∈ [0.0006, 0.025] on all 4 → significant
+- concat_eq vs random: p ∈ [0.0001, 0.005] on all 4 → significant
+
+**Hard failures (mean ≤ 2.0)**: 60 candidates total — majority `random`.
+
+### Interpretation (PRELIMINARY)
+
+Per AI evaluator (Claude Sonnet 4.5 via CLI, single pass, independent
+per-candidate calls): **concat_eq_plus does not statistically beat
+concat_eq on any of the 4 metrics**. Both encoders beat random clearly.
+The tag layer + weighted retrieval lifts statistical metrics slightly
+(ReactCorr +0.019, SelfCons Lift +0.058) and produces qualitatively
+different retrievals (17% top-3 overlap vs concat_eq), but those
+differences do not translate into measurable analog-quality gains as
+judged by the AI evaluator.
+
+**Do NOT declare concat_eq+ validated or invalidated based on these
+results.** This is FASE A of a two-phase validation:
+- FASE A (this session): AI evaluator → preliminary baseline
+- FASE B (later, separate session): human evaluator on same data
+- Final result will include AI vs human evaluator comparison
+
+The AI evaluator may share Claude's permissiveness bias documented in
+lesson #16 (see earlier "Qwen vs manual" section, where Claude's
+permissive ground truth gave Qwen macro F1 = 0.29). The human blind
+test is the deciding signal.
+
+**Do NOT begin N=1500 scaling** before the human validation lands.
+**Do NOT archive or modify any encoder** based on the AI results.
+
 Files created:
 - `real_data/analyze_text_concepts.py`
 - `real_data/narrative_tags_v2.py`
@@ -859,6 +911,13 @@ File creati: `approaches/approach_2b_concat_eq_plus.py`,
 
 ## Cronologia step
 
+- **Step 13** (2026-05-27 11:25): FASE A blind test v3 + AI evaluator
+  (Claude Sonnet 4.5 via CLI, 127/127 ok). Risultati PRELIMINARI:
+  concat_eq+ ≈ concat_eq (p > 0.5 su tutte 4 metriche), entrambi battono
+  random (p < 0.01). Hard failures 60 candidates (majority random).
+  Validazione umana (FASE B) prossima sessione necessaria — risultati AI
+  potrebbero condividere permissiveness bias di Claude (vedi lezione #16).
+  Nessuna modifica encoder, nessuno scaling N=1500 prima di FASE B.
 - **Step 12** (2026-05-27 10:50): narrative tags v2 redesign (data-driven 14
   tag, 4 categorie); manual validation via Claude come ground-truth proxy
   (25 eventi); Qwen v2 macro F1 = 0.29 (precision 1.00 / recall collassato);

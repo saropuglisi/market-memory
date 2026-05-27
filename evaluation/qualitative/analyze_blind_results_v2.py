@@ -38,7 +38,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REVIEWS = os.path.join(HERE, "reviews")
 
 METRICS = ["same_dynamic", "same_regime", "same_surprise", "mental_precedent"]
-GROUPS = ["contrastive_v2", "concat_eq", "random"]
+GROUPS = ["concat_eq_plus", "concat_eq", "contrastive_v2", "random"]
 
 QUERY_RE = re.compile(r"^## Query #(\d+):", re.MULTILINE)
 KEY_ROW_RE = re.compile(
@@ -202,9 +202,9 @@ def build_report(responses, keys, data, run_meta):
         lines.append("")
         lines.append("| metric | pair | U | p | sig |")
         lines.append("|---|---|---|---|---|")
-        pairs = [("contrastive_v2","concat_eq"),
-                 ("contrastive_v2","random"),
-                 ("concat_eq","random")]
+        # Auto-pick pairs from groups actually present in the responses.
+        present = [g for g in GROUPS if any(per[g].values())]
+        pairs = [(a, b) for i, a in enumerate(present) for b in present[i+1:]]
         for m in METRICS:
             for a, b in pairs:
                 va, vb = per[a][m], per[b][m]
